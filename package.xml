@@ -22,14 +22,12 @@
  <license>PHP</license>
  <release>
   <state>beta</state>
-  <version>0.1</version>
-  <date>2004-10-24</date>
+  <version>0.2</version>
+  <date>2004-11-10</date>
   <notes>
-Initial release, supported transliteration filters include: Cyrillic-to-Latin
-transliteration, Greek-to-Latin transliteration, Han-to-Latin transliteration,
-Hebrew-to-Latin transliteration; case converting filters for Greek, Latin and
-Cyrillic and filters to remove diacriticals from text, normalizing ligatures
-and normalizing punctuation.
+Added more filters: hangul to jamo, jamo to latin, normalize numbers and digits,
+special decompositions (© -> (c)). And fixed some small bugs in filters and
+the extension.
   </notes>
  </release>
  <filelist>
@@ -44,18 +42,32 @@ and normalizing punctuation.
    <file role="src" name="diacritical_remove.c" />
    <file role="src" name="greek_transliterate.c" />
    <file role="src" name="han_transliterate.c" />
+   <file role="src" name="hangul_to_jamo_transliterate.c" />
    <file role="src" name="hebrew_transliterate.c" />
+   <file role="src" name="jamo_transliterate.c" />
    <file role="src" name="lowercase_cyrillic.c" />
    <file role="src" name="lowercase_greek.c" />
    <file role="src" name="lowercase_latin.c" />
    <file role="src" name="normalize_ligature.c" />
    <file role="src" name="normalize_punctuation.c" />
+   <file role="src" name="numbers.c" />
+   <file role="src" name="special_decompose.c" />
    <file role="src" name="uppercase_cyrillic.c" />
    <file role="src" name="uppercase_greek.c" />
    <file role="src" name="uppercase_latin.c" />
   </dir>
  </filelist>
  <changelog>
+  <release>
+   <state>beta</state>
+   <version>0.2</version>
+   <date>2004-11-10</date>
+   <notes>
+Added more filters: hangul to jamo, jamo to latin, normalize numbers and
+digits, special decompositions (© -> (c)). And fixed some small bugs in filters
+and the extension.
+   </notes>
+  </release>
   <release>
    <state>beta</state>
    <version>0.1</version>

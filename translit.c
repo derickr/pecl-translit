@@ -49,7 +49,7 @@ zend_module_entry translit_module_entry = {
 	NULL,
 	PHP_MINFO(translit),
 #if ZEND_MODULE_API_NO >= 20010901
-	"0.1", /* Replace with version number for your extension */
+	"0.2", /* Replace with version number for your extension */
 #endif
 	STANDARD_MODULE_PROPERTIES
 };
