@@ -40,6 +40,7 @@ filters and added support for aliases of filters with the ALIAS pragma in the
    <file role="src" name="filter_table.h" />
    <file role="src" name="translit_filters.h" />
    <file role="src" name="translit_types.h" />
+   <file role="src" name="compact_underscores.c" />
    <file role="src" name="cyrillic_transliterate.c" />
    <file role="src" name="diacritical_remove.c" />
    <file role="src" name="greek_transliterate.c" />

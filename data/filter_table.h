@@ -15,6 +15,8 @@
 	{ "latin_lowercase", lowercase_latin_convert },
 	{ "normalize_ligature", normalize_ligature_convert },
 	{ "normalize_punctuation", normalize_punctuation_convert },
+	{ "remove_punctuation", remove_punctuation_convert },
+	{ "spaces_to_underscore", spaces_to_underscore_convert },
 	{ "normalize_superscript_numbers", normalize_superscript_numbers_convert },
 	{ "normalize_subscript_numbers", normalize_subscript_numbers_convert },
 	{ "normalize_numbers", normalize_numbers_convert },
@@ -30,4 +32,5 @@
 	{ "uppercase_latin", uppercase_latin_convert },
 	{ "latin_uppercase", uppercase_latin_convert },
 	{ "hangul_to_jamo", hangul_to_jamo_transliterate_convert },
+	{ "compact_underscores", compact_underscores_convert },
 #endif

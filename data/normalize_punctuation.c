@@ -27,7 +27,7 @@ static unsigned char normalize_punctuation_jump_map_0[256] = {
 static unsigned char normalize_punctuation_jump_map_32[256] = {
 	3, 1, 3, 1, 1, 1, 1, 1, 1, 3, 3, 3, 0, 0, 0, 0, 
 	1, 1, 1, 2, 2, 2, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 
-	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 
+	0, 0, 0, 0, 1, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 3, 
 	0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 2, 2, 1, 0, 
 	0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 0, 0, 0, 0, 0, 0, 
 	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
@@ -68,6 +68,25 @@ static unsigned char normalize_punctuation_jump_map_39[256] = {
 	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
 	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
 	0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+};
+
+static unsigned char normalize_punctuation_jump_map_48[256] = {
+	0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 
+	1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 
+	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
 	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
 	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
 	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
@@ -122,7 +141,7 @@ static unsigned short normalize_punctuation_replace_map_0[256] = {
 static unsigned short normalize_punctuation_replace_map_32[256] = {
 	 0, 32,  0, 32, 32, 32, 32, 32, 32,  0,  0,  0,  0,  0,  0,  0, 
 	45, 45, 45,  0,  0,  0,  0, 32, 39, 39, 39, 39, 34, 34, 34, 34, 
-	 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 
+	 0,  0,  0,  0, 46,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 
 	 0,  0, 39, 34, 34, 39, 34, 34,  0,  0,  0,  0,  0,  0, 32,  0, 
 	 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 
 	 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 
@@ -176,6 +195,25 @@ static unsigned short normalize_punctuation_replace_map_39[256] = {
 	 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0
 };
 
+static unsigned short normalize_punctuation_replace_map_48[256] = {
+	 0, 44, 46, 34,  0,  0,  0,  0, 91, 93, 91, 93, 91, 93, 91, 93, 
+	91, 93,  0,  0, 91, 93, 91, 93, 91, 93, 91, 93,  0,  0,  0,  0, 
+	 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 
+	 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 
+	 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 
+	 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 
+	 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 
+	 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 
+	 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 
+	 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 
+	 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 
+	 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 
+	 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 
+	 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 
+	 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 
+	 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0
+};
+
 static unsigned short normalize_punctuation_replace_map_38[256] = {
 	 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 
 	 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 
@@ -195,12 +233,12 @@ static unsigned short normalize_punctuation_replace_map_38[256] = {
 	 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0
 };
 
-static us2 normalize_punctuation_expand_map_32[256] = {
+static us3 normalize_punctuation_expand_map_32[256] = {
 	{ 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, 
 	{ 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, 
 	{ 0, 0}, { 0, 0}, { 0, 0}, { 2, 45, 45}, { 2, 45, 45}, { 2, 45, 45}, { 0, 0}, { 0, 0}, 
 	{ 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, 
-	{ 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, 
+	{ 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 2, 46, 46}, { 3, 46, 46, 46}, { 0, 0}, 
 	{ 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, 
 	{ 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, 
 	{ 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 2, 33, 33}, { 2, 63, 33}, { 0, 0}, { 0, 0}, 
@@ -230,21 +268,23 @@ static us2 normalize_punctuation_expand_map_32[256] = {
 	{ 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}
 };
 
-static unsigned char *normalize_punctuation_jump_table[5] = {
+static unsigned char *normalize_punctuation_jump_table[6] = {
 	normalize_punctuation_jump_map_0,
 	normalize_punctuation_jump_map_32,
 	normalize_punctuation_jump_map_2,
 	normalize_punctuation_jump_map_39,
+	normalize_punctuation_jump_map_48,
 	normalize_punctuation_jump_map_38,
 };
-static unsigned short *normalize_punctuation_map_table[5] = {
+static unsigned short *normalize_punctuation_map_table[6] = {
 	normalize_punctuation_replace_map_0,
 	normalize_punctuation_replace_map_32,
 	normalize_punctuation_replace_map_2,
 	normalize_punctuation_replace_map_39,
+	normalize_punctuation_replace_map_48,
 	normalize_punctuation_replace_map_38,
 };
-static us2 *normalize_punctuation_expand_table[1] = {
+static us3 *normalize_punctuation_expand_table[1] = {
 	normalize_punctuation_expand_map_32,
 };
 
@@ -255,7 +295,7 @@ int normalize_punctuation_convert(unsigned short *in, unsigned int in_length, un
 	unsigned char block, cp;
 	unsigned char *jump_map;
 	unsigned short *replace_map, *transpose_map;
-	us2 *expand_map;
+	us3 *expand_map;
 	unsigned short *tmp_out = NULL;
 	unsigned int    str_length;
 
@@ -287,7 +327,8 @@ int normalize_punctuation_convert(unsigned short *in, unsigned int in_length, un
 			case 32: jump_map = normalize_punctuation_jump_table[1]; replace_map = normalize_punctuation_map_table[1]; expand_map = normalize_punctuation_expand_table[0]; break;
 			case 2: jump_map = normalize_punctuation_jump_table[2]; replace_map = normalize_punctuation_map_table[2]; break;
 			case 39: jump_map = normalize_punctuation_jump_table[3]; replace_map = normalize_punctuation_map_table[3]; break;
-			case 38: jump_map = normalize_punctuation_jump_table[4]; replace_map = normalize_punctuation_map_table[4]; break;
+			case 48: jump_map = normalize_punctuation_jump_table[4]; replace_map = normalize_punctuation_map_table[4]; break;
+			case 38: jump_map = normalize_punctuation_jump_table[5]; replace_map = normalize_punctuation_map_table[5]; break;
 			default: no_jump = 1;
 		}
 		if (no_jump) {
@@ -310,6 +351,233 @@ int normalize_punctuation_convert(unsigned short *in, unsigned int in_length, un
 					tmp_out[out_idx] = expand_map[cp][j];
 					out_idx++;
 				}
+				break;
+			case 3: /* Skip */
+				break;
+		}
+	}
+	*out_length = out_idx;
+	*out = tmp_out;
+	return 0;
+}
+static unsigned char remove_punctuation_jump_map_0[256] = {
+	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+	0, 3, 3, 0, 0, 0, 0, 3, 3, 3, 0, 0, 3, 3, 3, 0, 
+	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 0, 0, 0, 3, 
+	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 3, 0, 0, 
+	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+};
+
+static unsigned char *remove_punctuation_jump_table[1] = {
+	remove_punctuation_jump_map_0,
+};
+
+
+int remove_punctuation_convert(unsigned short *in, unsigned int in_length, unsigned short **out, unsigned int *out_length)
+{
+	unsigned int i, j, no_jump, jump, out_idx;
+	unsigned char block, cp;
+	unsigned char *jump_map;
+	unsigned short *replace_map, *transpose_map;
+	us0 *expand_map;
+	unsigned short *tmp_out = NULL;
+	unsigned int    str_length;
+
+	/* Init table pointers */
+	jump_map = NULL;
+	replace_map = NULL;
+	transpose_map = NULL;
+	expand_map = NULL;
+	j = 0;
+
+	/* Determine initial string length */
+	str_length = in_length;
+	tmp_out = (unsigned short *) malloc((str_length * sizeof(unsigned short)) + 8);
+	out_idx = 0;
+
+	/* Loop over input array */
+	for (i = 0; i < in_length; i++) {
+		if (out_idx > str_length) {
+			str_length += 128;
+			tmp_out = (unsigned short *) realloc(tmp_out, str_length * sizeof(unsigned short));
+		}
+		
+		block = in[i] / 256;
+		cp    = in[i] % 256;
+
+		no_jump = 0;
+		switch (block) {
+			case 0: jump_map = remove_punctuation_jump_table[0]; break;
+			default: no_jump = 1;
+		}
+		if (no_jump) {
+			jump = 0;
+		} else {
+			jump = jump_map[cp];
+		}
+
+		switch (jump) {
+			case 0: /* No changes */
+				tmp_out[out_idx] = in[i];
+				out_idx++;
+				break;
+			case 3: /* Skip */
+				break;
+		}
+	}
+	*out_length = out_idx;
+	*out = tmp_out;
+	return 0;
+}
+static unsigned char spaces_to_underscore_jump_map_0[256] = {
+	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+	1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+	1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+};
+
+static unsigned char spaces_to_underscore_jump_map_32[256] = {
+	3, 1, 3, 1, 1, 1, 1, 1, 1, 3, 3, 3, 0, 0, 0, 0, 
+	0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 
+	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 
+	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 
+	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+};
+
+static unsigned short spaces_to_underscore_replace_map_0[256] = {
+	 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 
+	 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 
+	95,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 
+	 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 
+	 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 
+	 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 
+	 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 
+	 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 
+	 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 
+	 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 
+	95,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 
+	 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 
+	 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 
+	 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 
+	 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 
+	 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0
+};
+
+static unsigned short spaces_to_underscore_replace_map_32[256] = {
+	 0, 95,  0, 95, 95, 95, 95, 95, 95,  0,  0,  0,  0,  0,  0,  0, 
+	 0,  0,  0,  0,  0,  0,  0, 95,  0,  0,  0,  0,  0,  0,  0,  0, 
+	 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 
+	 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 95,  0, 
+	 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 
+	 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 
+	 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 
+	 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 
+	 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 
+	 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 
+	 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 
+	 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 
+	 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 
+	 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 
+	 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 
+	 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0
+};
+
+static unsigned char *spaces_to_underscore_jump_table[2] = {
+	spaces_to_underscore_jump_map_0,
+	spaces_to_underscore_jump_map_32,
+};
+static unsigned short *spaces_to_underscore_map_table[2] = {
+	spaces_to_underscore_replace_map_0,
+	spaces_to_underscore_replace_map_32,
+};
+
+
+int spaces_to_underscore_convert(unsigned short *in, unsigned int in_length, unsigned short **out, unsigned int *out_length)
+{
+	unsigned int i, j, no_jump, jump, out_idx;
+	unsigned char block, cp;
+	unsigned char *jump_map;
+	unsigned short *replace_map, *transpose_map;
+	us0 *expand_map;
+	unsigned short *tmp_out = NULL;
+	unsigned int    str_length;
+
+	/* Init table pointers */
+	jump_map = NULL;
+	replace_map = NULL;
+	transpose_map = NULL;
+	expand_map = NULL;
+	j = 0;
+
+	/* Determine initial string length */
+	str_length = in_length;
+	tmp_out = (unsigned short *) malloc((str_length * sizeof(unsigned short)) + 8);
+	out_idx = 0;
+
+	/* Loop over input array */
+	for (i = 0; i < in_length; i++) {
+		if (out_idx > str_length) {
+			str_length += 128;
+			tmp_out = (unsigned short *) realloc(tmp_out, str_length * sizeof(unsigned short));
+		}
+		
+		block = in[i] / 256;
+		cp    = in[i] % 256;
+
+		no_jump = 0;
+		switch (block) {
+			case 0: jump_map = spaces_to_underscore_jump_table[0]; replace_map = spaces_to_underscore_map_table[0]; break;
+			case 32: jump_map = spaces_to_underscore_jump_table[1]; replace_map = spaces_to_underscore_map_table[1]; break;
+			default: no_jump = 1;
+		}
+		if (no_jump) {
+			jump = 0;
+		} else {
+			jump = jump_map[cp];
+		}
+
+		switch (jump) {
+			case 0: /* No changes */
+				tmp_out[out_idx] = in[i];
+				out_idx++;
+				break;
+			case 1: /* Simple mapping */
+				tmp_out[out_idx] = replace_map[cp];
+				out_idx++;
 				break;
 			case 3: /* Skip */
 				break;

@@ -151,6 +151,8 @@ PHP_FUNCTION(transliterate)
 				}
 				in = out;
 				inl = outl;
+			} else {
+				php_error_docref(NULL TSRMLS_CC, E_NOTICE, "Filter '%s' does not exist.", Z_STRVAL_PP(entry));
 			}
 		}
 		zend_hash_move_forward_ex(target_hash, &pos);

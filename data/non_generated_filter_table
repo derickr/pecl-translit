@@ -1,1 +1,2 @@
 	{ "hangul_to_jamo", hangul_to_jamo_transliterate_convert },
+	{ "compact_underscores", compact_underscores_convert },
