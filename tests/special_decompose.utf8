@@ -1,0 +1,12 @@
+decompose special:
+§ © « ® ± »
+
+decompose currency signs:
+¢ £ ¥
+₠ ₡ ₢ ₣ ₤ ₥ ₦ ₧ ₨ ₩ ₪ ₫ € ₮
+
+decompose:
+§ © « ® ± »
+¢ £
+
+# vim: encoding=utf8

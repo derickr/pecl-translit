@@ -81,15 +81,15 @@ static unsigned short lowercase_cyrillic_transpose_map_5[256] = {
 	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 };
 
-static unsigned char *jump_table[2] = {
+static unsigned char *lowercase_cyrillic_jump_table[2] = {
 	lowercase_cyrillic_jump_map_4,
 	lowercase_cyrillic_jump_map_5,
 };
-static unsigned short *map_table[0] = {
+static unsigned short *lowercase_cyrillic_map_table[0] = {
 };
-static us0 *expand_table[0] = {
+static us0 *lowercase_cyrillic_expand_table[0] = {
 };
-static unsigned short *transpose_table[2] = {
+static unsigned short *lowercase_cyrillic_transpose_table[2] = {
 	lowercase_cyrillic_transpose_map_4,
 	lowercase_cyrillic_transpose_map_5,
 };
@@ -122,8 +122,8 @@ int lowercase_cyrillic_convert(unsigned short *in, unsigned int in_length, unsig
 
 		no_jump = 0;
 		switch (block) {
-			case 4: jump_map = jump_table[0]; transpose_map = transpose_table[0]; break;
-			case 5: jump_map = jump_table[1]; transpose_map = transpose_table[1]; break;
+			case 4: jump_map = lowercase_cyrillic_jump_table[0]; transpose_map = lowercase_cyrillic_transpose_table[0]; break;
+			case 5: jump_map = lowercase_cyrillic_jump_table[1]; transpose_map = lowercase_cyrillic_transpose_table[1]; break;
 			default: no_jump = 1;
 		}
 		if (no_jump) {
@@ -163,24 +163,3 @@ int lowercase_cyrillic_convert(unsigned short *in, unsigned int in_length, unsig
 	*out = tmp_out;
 	return 0;
 }
-
-#if DEBUG_FILTER
-int main(void)
-{
-	unsigned char *str, *outs;
-	unsigned short *in, *out;
-	unsigned int inl, outl, i, c;
-
-	str = (char*) malloc(2049);
-	in = (unsigned short*) str;
-
-	while ((c = read(0, str, 2048)) > 0) {
-		lowercase_cyrillic_convert(in, c/2, &out, &outl);
-		outs = (unsigned char*) out;
-
-		for (i = 0; i < (outl * sizeof(unsigned short)); i++) {
-			printf("%c", outs[i]);
-		}
-	}
-}
-#endif

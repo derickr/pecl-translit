@@ -5945,7 +5945,7 @@ static us6 han_transliterate_expand_map_249[256] = {
 	{ 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}
 };
 
-static unsigned char *jump_table[110] = {
+static unsigned char *han_transliterate_jump_table[110] = {
 	han_transliterate_jump_map_84,
 	han_transliterate_jump_map_147,
 	han_transliterate_jump_map_149,
@@ -6057,9 +6057,9 @@ static unsigned char *jump_table[110] = {
 	han_transliterate_jump_map_250,
 	han_transliterate_jump_map_249,
 };
-static unsigned short *map_table[0] = {
+static unsigned short *han_transliterate_map_table[0] = {
 };
-static us6 *expand_table[110] = {
+static us6 *han_transliterate_expand_table[110] = {
 	han_transliterate_expand_map_84,
 	han_transliterate_expand_map_147,
 	han_transliterate_expand_map_149,
@@ -6171,7 +6171,7 @@ static us6 *expand_table[110] = {
 	han_transliterate_expand_map_250,
 	han_transliterate_expand_map_249,
 };
-static unsigned short *transpose_table[0] = {
+static unsigned short *han_transliterate_transpose_table[0] = {
 };
 
 
@@ -6202,116 +6202,116 @@ int han_transliterate_convert(unsigned short *in, unsigned int in_length, unsign
 
 		no_jump = 0;
 		switch (block) {
-			case 84: jump_map = jump_table[0]; expand_map = expand_table[0]; break;
-			case 147: jump_map = jump_table[1]; expand_map = expand_table[1]; break;
-			case 149: jump_map = jump_table[2]; expand_map = expand_table[2]; break;
-			case 150: jump_map = jump_table[3]; expand_map = expand_table[3]; break;
-			case 85: jump_map = jump_table[4]; expand_map = expand_table[4]; break;
-			case 87: jump_map = jump_table[5]; expand_map = expand_table[5]; break;
-			case 99: jump_map = jump_table[6]; expand_map = expand_table[6]; break;
-			case 146: jump_map = jump_table[7]; expand_map = expand_table[7]; break;
-			case 60: jump_map = jump_table[8]; expand_map = expand_table[8]; break;
-			case 72: jump_map = jump_table[9]; expand_map = expand_table[9]; break;
-			case 77: jump_map = jump_table[10]; expand_map = expand_table[10]; break;
-			case 86: jump_map = jump_table[11]; expand_map = expand_table[11]; break;
-			case 93: jump_map = jump_table[12]; expand_map = expand_table[12]; break;
-			case 101: jump_map = jump_table[13]; expand_map = expand_table[13]; break;
-			case 118: jump_map = jump_table[14]; expand_map = expand_table[14]; break;
-			case 154: jump_map = jump_table[15]; expand_map = expand_table[15]; break;
-			case 52: jump_map = jump_table[16]; expand_map = expand_table[16]; break;
-			case 53: jump_map = jump_table[17]; expand_map = expand_table[17]; break;
-			case 56: jump_map = jump_table[18]; expand_map = expand_table[18]; break;
-			case 68: jump_map = jump_table[19]; expand_map = expand_table[19]; break;
-			case 74: jump_map = jump_table[20]; expand_map = expand_table[20]; break;
-			case 79: jump_map = jump_table[21]; expand_map = expand_table[21]; break;
-			case 90: jump_map = jump_table[22]; expand_map = expand_table[22]; break;
-			case 102: jump_map = jump_table[23]; expand_map = expand_table[23]; break;
-			case 107: jump_map = jump_table[24]; expand_map = expand_table[24]; break;
-			case 119: jump_map = jump_table[25]; expand_map = expand_table[25]; break;
-			case 133: jump_map = jump_table[26]; expand_map = expand_table[26]; break;
-			case 142: jump_map = jump_table[27]; expand_map = expand_table[27]; break;
-			case 151: jump_map = jump_table[28]; expand_map = expand_table[28]; break;
-			case 153: jump_map = jump_table[29]; expand_map = expand_table[29]; break;
-			case 54: jump_map = jump_table[30]; expand_map = expand_table[30]; break;
-			case 55: jump_map = jump_table[31]; expand_map = expand_table[31]; break;
-			case 57: jump_map = jump_table[32]; expand_map = expand_table[32]; break;
-			case 63: jump_map = jump_table[33]; expand_map = expand_table[33]; break;
-			case 64: jump_map = jump_table[34]; expand_map = expand_table[34]; break;
-			case 65: jump_map = jump_table[35]; expand_map = expand_table[35]; break;
-			case 69: jump_map = jump_table[36]; expand_map = expand_table[36]; break;
-			case 71: jump_map = jump_table[37]; expand_map = expand_table[37]; break;
-			case 75: jump_map = jump_table[38]; expand_map = expand_table[38]; break;
-			case 80: jump_map = jump_table[39]; expand_map = expand_table[39]; break;
-			case 83: jump_map = jump_table[40]; expand_map = expand_table[40]; break;
-			case 88: jump_map = jump_table[41]; expand_map = expand_table[41]; break;
-			case 91: jump_map = jump_table[42]; expand_map = expand_table[42]; break;
-			case 97: jump_map = jump_table[43]; expand_map = expand_table[43]; break;
-			case 111: jump_map = jump_table[44]; expand_map = expand_table[44]; break;
-			case 114: jump_map = jump_table[45]; expand_map = expand_table[45]; break;
-			case 116: jump_map = jump_table[46]; expand_map = expand_table[46]; break;
-			case 120: jump_map = jump_table[47]; expand_map = expand_table[47]; break;
-			case 121: jump_map = jump_table[48]; expand_map = expand_table[48]; break;
-			case 130: jump_map = jump_table[49]; expand_map = expand_table[49]; break;
-			case 139: jump_map = jump_table[50]; expand_map = expand_table[50]; break;
-			case 140: jump_map = jump_table[51]; expand_map = expand_table[51]; break;
-			case 148: jump_map = jump_table[52]; expand_map = expand_table[52]; break;
-			case 157: jump_map = jump_table[53]; expand_map = expand_table[53]; break;
-			case 92: jump_map = jump_table[54]; expand_map = expand_table[54]; break;
-			case 94: jump_map = jump_table[55]; expand_map = expand_table[55]; break;
-			case 108: jump_map = jump_table[56]; expand_map = expand_table[56]; break;
-			case 117: jump_map = jump_table[57]; expand_map = expand_table[57]; break;
-			case 129: jump_map = jump_table[58]; expand_map = expand_table[58]; break;
-			case 131: jump_map = jump_table[59]; expand_map = expand_table[59]; break;
-			case 132: jump_map = jump_table[60]; expand_map = expand_table[60]; break;
-			case 138: jump_map = jump_table[61]; expand_map = expand_table[61]; break;
-			case 158: jump_map = jump_table[62]; expand_map = expand_table[62]; break;
-			case 115: jump_map = jump_table[63]; expand_map = expand_table[63]; break;
-			case 127: jump_map = jump_table[64]; expand_map = expand_table[64]; break;
-			case 62: jump_map = jump_table[65]; expand_map = expand_table[65]; break;
-			case 67: jump_map = jump_table[66]; expand_map = expand_table[66]; break;
-			case 81: jump_map = jump_table[67]; expand_map = expand_table[67]; break;
-			case 104: jump_map = jump_table[68]; expand_map = expand_table[68]; break;
-			case 109: jump_map = jump_table[69]; expand_map = expand_table[69]; break;
-			case 155: jump_map = jump_table[70]; expand_map = expand_table[70]; break;
-			case 59: jump_map = jump_table[71]; expand_map = expand_table[71]; break;
-			case 103: jump_map = jump_table[72]; expand_map = expand_table[72]; break;
-			case 145: jump_map = jump_table[73]; expand_map = expand_table[73]; break;
-			case 70: jump_map = jump_table[74]; expand_map = expand_table[74]; break;
-			case 73: jump_map = jump_table[75]; expand_map = expand_table[75]; break;
-			case 100: jump_map = jump_table[76]; expand_map = expand_table[76]; break;
-			case 110: jump_map = jump_table[77]; expand_map = expand_table[77]; break;
-			case 113: jump_map = jump_table[78]; expand_map = expand_table[78]; break;
-			case 128: jump_map = jump_table[79]; expand_map = expand_table[79]; break;
-			case 135: jump_map = jump_table[80]; expand_map = expand_table[80]; break;
-			case 144: jump_map = jump_table[81]; expand_map = expand_table[81]; break;
-			case 156: jump_map = jump_table[82]; expand_map = expand_table[82]; break;
-			case 159: jump_map = jump_table[83]; expand_map = expand_table[83]; break;
-			case 98: jump_map = jump_table[84]; expand_map = expand_table[84]; break;
-			case 136: jump_map = jump_table[85]; expand_map = expand_table[85]; break;
-			case 137: jump_map = jump_table[86]; expand_map = expand_table[86]; break;
-			case 89: jump_map = jump_table[87]; expand_map = expand_table[87]; break;
-			case 78: jump_map = jump_table[88]; expand_map = expand_table[88]; break;
-			case 124: jump_map = jump_table[89]; expand_map = expand_table[89]; break;
-			case 76: jump_map = jump_table[90]; expand_map = expand_table[90]; break;
-			case 112: jump_map = jump_table[91]; expand_map = expand_table[91]; break;
-			case 141: jump_map = jump_table[92]; expand_map = expand_table[92]; break;
-			case 152: jump_map = jump_table[93]; expand_map = expand_table[93]; break;
-			case 61: jump_map = jump_table[94]; expand_map = expand_table[94]; break;
-			case 95: jump_map = jump_table[95]; expand_map = expand_table[95]; break;
-			case 123: jump_map = jump_table[96]; expand_map = expand_table[96]; break;
-			case 125: jump_map = jump_table[97]; expand_map = expand_table[97]; break;
-			case 122: jump_map = jump_table[98]; expand_map = expand_table[98]; break;
-			case 134: jump_map = jump_table[99]; expand_map = expand_table[99]; break;
-			case 143: jump_map = jump_table[100]; expand_map = expand_table[100]; break;
-			case 58: jump_map = jump_table[101]; expand_map = expand_table[101]; break;
-			case 66: jump_map = jump_table[102]; expand_map = expand_table[102]; break;
-			case 82: jump_map = jump_table[103]; expand_map = expand_table[103]; break;
-			case 96: jump_map = jump_table[104]; expand_map = expand_table[104]; break;
-			case 126: jump_map = jump_table[105]; expand_map = expand_table[105]; break;
-			case 105: jump_map = jump_table[106]; expand_map = expand_table[106]; break;
-			case 106: jump_map = jump_table[107]; expand_map = expand_table[107]; break;
-			case 250: jump_map = jump_table[108]; expand_map = expand_table[108]; break;
-			case 249: jump_map = jump_table[109]; expand_map = expand_table[109]; break;
+			case 84: jump_map = han_transliterate_jump_table[0]; expand_map = han_transliterate_expand_table[0]; break;
+			case 147: jump_map = han_transliterate_jump_table[1]; expand_map = han_transliterate_expand_table[1]; break;
+			case 149: jump_map = han_transliterate_jump_table[2]; expand_map = han_transliterate_expand_table[2]; break;
+			case 150: jump_map = han_transliterate_jump_table[3]; expand_map = han_transliterate_expand_table[3]; break;
+			case 85: jump_map = han_transliterate_jump_table[4]; expand_map = han_transliterate_expand_table[4]; break;
+			case 87: jump_map = han_transliterate_jump_table[5]; expand_map = han_transliterate_expand_table[5]; break;
+			case 99: jump_map = han_transliterate_jump_table[6]; expand_map = han_transliterate_expand_table[6]; break;
+			case 146: jump_map = han_transliterate_jump_table[7]; expand_map = han_transliterate_expand_table[7]; break;
+			case 60: jump_map = han_transliterate_jump_table[8]; expand_map = han_transliterate_expand_table[8]; break;
+			case 72: jump_map = han_transliterate_jump_table[9]; expand_map = han_transliterate_expand_table[9]; break;
+			case 77: jump_map = han_transliterate_jump_table[10]; expand_map = han_transliterate_expand_table[10]; break;
+			case 86: jump_map = han_transliterate_jump_table[11]; expand_map = han_transliterate_expand_table[11]; break;
+			case 93: jump_map = han_transliterate_jump_table[12]; expand_map = han_transliterate_expand_table[12]; break;
+			case 101: jump_map = han_transliterate_jump_table[13]; expand_map = han_transliterate_expand_table[13]; break;
+			case 118: jump_map = han_transliterate_jump_table[14]; expand_map = han_transliterate_expand_table[14]; break;
+			case 154: jump_map = han_transliterate_jump_table[15]; expand_map = han_transliterate_expand_table[15]; break;
+			case 52: jump_map = han_transliterate_jump_table[16]; expand_map = han_transliterate_expand_table[16]; break;
+			case 53: jump_map = han_transliterate_jump_table[17]; expand_map = han_transliterate_expand_table[17]; break;
+			case 56: jump_map = han_transliterate_jump_table[18]; expand_map = han_transliterate_expand_table[18]; break;
+			case 68: jump_map = han_transliterate_jump_table[19]; expand_map = han_transliterate_expand_table[19]; break;
+			case 74: jump_map = han_transliterate_jump_table[20]; expand_map = han_transliterate_expand_table[20]; break;
+			case 79: jump_map = han_transliterate_jump_table[21]; expand_map = han_transliterate_expand_table[21]; break;
+			case 90: jump_map = han_transliterate_jump_table[22]; expand_map = han_transliterate_expand_table[22]; break;
+			case 102: jump_map = han_transliterate_jump_table[23]; expand_map = han_transliterate_expand_table[23]; break;
+			case 107: jump_map = han_transliterate_jump_table[24]; expand_map = han_transliterate_expand_table[24]; break;
+			case 119: jump_map = han_transliterate_jump_table[25]; expand_map = han_transliterate_expand_table[25]; break;
+			case 133: jump_map = han_transliterate_jump_table[26]; expand_map = han_transliterate_expand_table[26]; break;
+			case 142: jump_map = han_transliterate_jump_table[27]; expand_map = han_transliterate_expand_table[27]; break;
+			case 151: jump_map = han_transliterate_jump_table[28]; expand_map = han_transliterate_expand_table[28]; break;
+			case 153: jump_map = han_transliterate_jump_table[29]; expand_map = han_transliterate_expand_table[29]; break;
+			case 54: jump_map = han_transliterate_jump_table[30]; expand_map = han_transliterate_expand_table[30]; break;
+			case 55: jump_map = han_transliterate_jump_table[31]; expand_map = han_transliterate_expand_table[31]; break;
+			case 57: jump_map = han_transliterate_jump_table[32]; expand_map = han_transliterate_expand_table[32]; break;
+			case 63: jump_map = han_transliterate_jump_table[33]; expand_map = han_transliterate_expand_table[33]; break;
+			case 64: jump_map = han_transliterate_jump_table[34]; expand_map = han_transliterate_expand_table[34]; break;
+			case 65: jump_map = han_transliterate_jump_table[35]; expand_map = han_transliterate_expand_table[35]; break;
+			case 69: jump_map = han_transliterate_jump_table[36]; expand_map = han_transliterate_expand_table[36]; break;
+			case 71: jump_map = han_transliterate_jump_table[37]; expand_map = han_transliterate_expand_table[37]; break;
+			case 75: jump_map = han_transliterate_jump_table[38]; expand_map = han_transliterate_expand_table[38]; break;
+			case 80: jump_map = han_transliterate_jump_table[39]; expand_map = han_transliterate_expand_table[39]; break;
+			case 83: jump_map = han_transliterate_jump_table[40]; expand_map = han_transliterate_expand_table[40]; break;
+			case 88: jump_map = han_transliterate_jump_table[41]; expand_map = han_transliterate_expand_table[41]; break;
+			case 91: jump_map = han_transliterate_jump_table[42]; expand_map = han_transliterate_expand_table[42]; break;
+			case 97: jump_map = han_transliterate_jump_table[43]; expand_map = han_transliterate_expand_table[43]; break;
+			case 111: jump_map = han_transliterate_jump_table[44]; expand_map = han_transliterate_expand_table[44]; break;
+			case 114: jump_map = han_transliterate_jump_table[45]; expand_map = han_transliterate_expand_table[45]; break;
+			case 116: jump_map = han_transliterate_jump_table[46]; expand_map = han_transliterate_expand_table[46]; break;
+			case 120: jump_map = han_transliterate_jump_table[47]; expand_map = han_transliterate_expand_table[47]; break;
+			case 121: jump_map = han_transliterate_jump_table[48]; expand_map = han_transliterate_expand_table[48]; break;
+			case 130: jump_map = han_transliterate_jump_table[49]; expand_map = han_transliterate_expand_table[49]; break;
+			case 139: jump_map = han_transliterate_jump_table[50]; expand_map = han_transliterate_expand_table[50]; break;
+			case 140: jump_map = han_transliterate_jump_table[51]; expand_map = han_transliterate_expand_table[51]; break;
+			case 148: jump_map = han_transliterate_jump_table[52]; expand_map = han_transliterate_expand_table[52]; break;
+			case 157: jump_map = han_transliterate_jump_table[53]; expand_map = han_transliterate_expand_table[53]; break;
+			case 92: jump_map = han_transliterate_jump_table[54]; expand_map = han_transliterate_expand_table[54]; break;
+			case 94: jump_map = han_transliterate_jump_table[55]; expand_map = han_transliterate_expand_table[55]; break;
+			case 108: jump_map = han_transliterate_jump_table[56]; expand_map = han_transliterate_expand_table[56]; break;
+			case 117: jump_map = han_transliterate_jump_table[57]; expand_map = han_transliterate_expand_table[57]; break;
+			case 129: jump_map = han_transliterate_jump_table[58]; expand_map = han_transliterate_expand_table[58]; break;
+			case 131: jump_map = han_transliterate_jump_table[59]; expand_map = han_transliterate_expand_table[59]; break;
+			case 132: jump_map = han_transliterate_jump_table[60]; expand_map = han_transliterate_expand_table[60]; break;
+			case 138: jump_map = han_transliterate_jump_table[61]; expand_map = han_transliterate_expand_table[61]; break;
+			case 158: jump_map = han_transliterate_jump_table[62]; expand_map = han_transliterate_expand_table[62]; break;
+			case 115: jump_map = han_transliterate_jump_table[63]; expand_map = han_transliterate_expand_table[63]; break;
+			case 127: jump_map = han_transliterate_jump_table[64]; expand_map = han_transliterate_expand_table[64]; break;
+			case 62: jump_map = han_transliterate_jump_table[65]; expand_map = han_transliterate_expand_table[65]; break;
+			case 67: jump_map = han_transliterate_jump_table[66]; expand_map = han_transliterate_expand_table[66]; break;
+			case 81: jump_map = han_transliterate_jump_table[67]; expand_map = han_transliterate_expand_table[67]; break;
+			case 104: jump_map = han_transliterate_jump_table[68]; expand_map = han_transliterate_expand_table[68]; break;
+			case 109: jump_map = han_transliterate_jump_table[69]; expand_map = han_transliterate_expand_table[69]; break;
+			case 155: jump_map = han_transliterate_jump_table[70]; expand_map = han_transliterate_expand_table[70]; break;
+			case 59: jump_map = han_transliterate_jump_table[71]; expand_map = han_transliterate_expand_table[71]; break;
+			case 103: jump_map = han_transliterate_jump_table[72]; expand_map = han_transliterate_expand_table[72]; break;
+			case 145: jump_map = han_transliterate_jump_table[73]; expand_map = han_transliterate_expand_table[73]; break;
+			case 70: jump_map = han_transliterate_jump_table[74]; expand_map = han_transliterate_expand_table[74]; break;
+			case 73: jump_map = han_transliterate_jump_table[75]; expand_map = han_transliterate_expand_table[75]; break;
+			case 100: jump_map = han_transliterate_jump_table[76]; expand_map = han_transliterate_expand_table[76]; break;
+			case 110: jump_map = han_transliterate_jump_table[77]; expand_map = han_transliterate_expand_table[77]; break;
+			case 113: jump_map = han_transliterate_jump_table[78]; expand_map = han_transliterate_expand_table[78]; break;
+			case 128: jump_map = han_transliterate_jump_table[79]; expand_map = han_transliterate_expand_table[79]; break;
+			case 135: jump_map = han_transliterate_jump_table[80]; expand_map = han_transliterate_expand_table[80]; break;
+			case 144: jump_map = han_transliterate_jump_table[81]; expand_map = han_transliterate_expand_table[81]; break;
+			case 156: jump_map = han_transliterate_jump_table[82]; expand_map = han_transliterate_expand_table[82]; break;
+			case 159: jump_map = han_transliterate_jump_table[83]; expand_map = han_transliterate_expand_table[83]; break;
+			case 98: jump_map = han_transliterate_jump_table[84]; expand_map = han_transliterate_expand_table[84]; break;
+			case 136: jump_map = han_transliterate_jump_table[85]; expand_map = han_transliterate_expand_table[85]; break;
+			case 137: jump_map = han_transliterate_jump_table[86]; expand_map = han_transliterate_expand_table[86]; break;
+			case 89: jump_map = han_transliterate_jump_table[87]; expand_map = han_transliterate_expand_table[87]; break;
+			case 78: jump_map = han_transliterate_jump_table[88]; expand_map = han_transliterate_expand_table[88]; break;
+			case 124: jump_map = han_transliterate_jump_table[89]; expand_map = han_transliterate_expand_table[89]; break;
+			case 76: jump_map = han_transliterate_jump_table[90]; expand_map = han_transliterate_expand_table[90]; break;
+			case 112: jump_map = han_transliterate_jump_table[91]; expand_map = han_transliterate_expand_table[91]; break;
+			case 141: jump_map = han_transliterate_jump_table[92]; expand_map = han_transliterate_expand_table[92]; break;
+			case 152: jump_map = han_transliterate_jump_table[93]; expand_map = han_transliterate_expand_table[93]; break;
+			case 61: jump_map = han_transliterate_jump_table[94]; expand_map = han_transliterate_expand_table[94]; break;
+			case 95: jump_map = han_transliterate_jump_table[95]; expand_map = han_transliterate_expand_table[95]; break;
+			case 123: jump_map = han_transliterate_jump_table[96]; expand_map = han_transliterate_expand_table[96]; break;
+			case 125: jump_map = han_transliterate_jump_table[97]; expand_map = han_transliterate_expand_table[97]; break;
+			case 122: jump_map = han_transliterate_jump_table[98]; expand_map = han_transliterate_expand_table[98]; break;
+			case 134: jump_map = han_transliterate_jump_table[99]; expand_map = han_transliterate_expand_table[99]; break;
+			case 143: jump_map = han_transliterate_jump_table[100]; expand_map = han_transliterate_expand_table[100]; break;
+			case 58: jump_map = han_transliterate_jump_table[101]; expand_map = han_transliterate_expand_table[101]; break;
+			case 66: jump_map = han_transliterate_jump_table[102]; expand_map = han_transliterate_expand_table[102]; break;
+			case 82: jump_map = han_transliterate_jump_table[103]; expand_map = han_transliterate_expand_table[103]; break;
+			case 96: jump_map = han_transliterate_jump_table[104]; expand_map = han_transliterate_expand_table[104]; break;
+			case 126: jump_map = han_transliterate_jump_table[105]; expand_map = han_transliterate_expand_table[105]; break;
+			case 105: jump_map = han_transliterate_jump_table[106]; expand_map = han_transliterate_expand_table[106]; break;
+			case 106: jump_map = han_transliterate_jump_table[107]; expand_map = han_transliterate_expand_table[107]; break;
+			case 250: jump_map = han_transliterate_jump_table[108]; expand_map = han_transliterate_expand_table[108]; break;
+			case 249: jump_map = han_transliterate_jump_table[109]; expand_map = han_transliterate_expand_table[109]; break;
 			default: no_jump = 1;
 		}
 		if (no_jump) {
@@ -6351,24 +6351,3 @@ int han_transliterate_convert(unsigned short *in, unsigned int in_length, unsign
 	*out = tmp_out;
 	return 0;
 }
-
-#if DEBUG_FILTER
-int main(void)
-{
-	unsigned char *str, *outs;
-	unsigned short *in, *out;
-	unsigned int inl, outl, i, c;
-
-	str = (char*) malloc(2049);
-	in = (unsigned short*) str;
-
-	while ((c = read(0, str, 2048)) > 0) {
-		han_transliterate_convert(in, c/2, &out, &outl);
-		outs = (unsigned char*) out;
-
-		for (i = 0; i < (outl * sizeof(unsigned short)); i++) {
-			printf("%c", outs[i]);
-		}
-	}
-}
-#endif

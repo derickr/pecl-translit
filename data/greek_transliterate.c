@@ -78,16 +78,16 @@ static us3 greek_transliterate_expand_map_3[256] = {
 	{ 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}
 };
 
-static unsigned char *jump_table[1] = {
+static unsigned char *greek_transliterate_jump_table[1] = {
 	greek_transliterate_jump_map_3,
 };
-static unsigned short *map_table[1] = {
+static unsigned short *greek_transliterate_map_table[1] = {
 	greek_transliterate_replace_map_3,
 };
-static us3 *expand_table[1] = {
+static us3 *greek_transliterate_expand_table[1] = {
 	greek_transliterate_expand_map_3,
 };
-static unsigned short *transpose_table[0] = {
+static unsigned short *greek_transliterate_transpose_table[0] = {
 };
 
 
@@ -118,7 +118,7 @@ int greek_transliterate_convert(unsigned short *in, unsigned int in_length, unsi
 
 		no_jump = 0;
 		switch (block) {
-			case 3: jump_map = jump_table[0]; replace_map = map_table[0]; expand_map = expand_table[0]; break;
+			case 3: jump_map = greek_transliterate_jump_table[0]; replace_map = greek_transliterate_map_table[0]; expand_map = greek_transliterate_expand_table[0]; break;
 			default: no_jump = 1;
 		}
 		if (no_jump) {
@@ -158,24 +158,3 @@ int greek_transliterate_convert(unsigned short *in, unsigned int in_length, unsi
 	*out = tmp_out;
 	return 0;
 }
-
-#if DEBUG_FILTER
-int main(void)
-{
-	unsigned char *str, *outs;
-	unsigned short *in, *out;
-	unsigned int inl, outl, i, c;
-
-	str = (char*) malloc(2049);
-	in = (unsigned short*) str;
-
-	while ((c = read(0, str, 2048)) > 0) {
-		greek_transliterate_convert(in, c/2, &out, &outl);
-		outs = (unsigned char*) out;
-
-		for (i = 0; i < (outl * sizeof(unsigned short)); i++) {
-			printf("%c", outs[i]);
-		}
-	}
-}
-#endif

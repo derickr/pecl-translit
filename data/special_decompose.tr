@@ -1,0 +1,32 @@
+
+decompose_special:
+U+00A7 = "para."
+U+00A9 = "(c)"
+U+00AB = "<<"
+U+00AE = "(r)"
+U+00B1 = "+-"
+U+00BB = ">>"
+
+decompose_currency_signs:
+U+00A2 = "c"
+U+00A3 = "L"
+U+00A5 = "Y"
+
+U+20A0 = "ecu"
+U+20A1 = "C"
+U+20A2 = "Cr"
+U+20A3 = "Fr"
+U+20A4 = "L"
+U+20A5 = "m"
+U+20A6 = "N"
+U+20A7 = "Pts"
+U+20A8 = "Rs"
+U+20A9 = "W"
+U+20AA = "NS"
+U+20AB = "d"
+U+20AC = "eur"
+U+20AE = "T"
+
+decompose:
+#pragma INCLUDE decompose_special
+#pragma INCLUDE decompose_currency_signs

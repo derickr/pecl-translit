@@ -19,9 +19,9 @@ static unsigned char normalize_ligature_jump_map_0[256] = {
 	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
 	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
 	0, 0, 0, 0, 2, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
-	0, 0, 0, 0, 0, 0, 2, 0, 2, 0, 0, 0, 2, 0, 0, 2, 
+	0, 0, 0, 0, 0, 0, 2, 0, 2, 0, 0, 0, 2, 0, 2, 2, 
 	0, 0, 0, 0, 2, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
-	0, 0, 0, 0, 0, 0, 2, 0, 2, 0, 0, 0, 2, 0, 0, 0
+	0, 0, 0, 0, 0, 0, 2, 0, 2, 0, 0, 0, 2, 0, 2, 0
 };
 
 static unsigned char normalize_ligature_jump_map_1[256] = {
@@ -71,11 +71,11 @@ static us2 normalize_ligature_expand_map_0[256] = {
 	{ 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 2, 65, 69}, { 2, 65, 65}, { 2, 65, 69}, { 0, 0}, 
 	{ 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, 
 	{ 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 2, 79, 69}, { 0, 0}, 
-	{ 2, 79, 69}, { 0, 0}, { 0, 0}, { 0, 0}, { 2, 85, 69}, { 0, 0}, { 0, 0}, { 2, 115, 115}, 
+	{ 2, 79, 69}, { 0, 0}, { 0, 0}, { 0, 0}, { 2, 85, 69}, { 0, 0}, { 2, 84, 72}, { 2, 115, 115}, 
 	{ 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 2, 97, 101}, { 2, 97, 97}, { 2, 97, 101}, { 0, 0}, 
 	{ 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, 
 	{ 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 2, 111, 101}, { 0, 0}, 
-	{ 2, 111, 101}, { 0, 0}, { 0, 0}, { 0, 0}, { 2, 117, 101}, { 0, 0}, { 0, 0}, { 0, 0}
+	{ 2, 111, 101}, { 0, 0}, { 0, 0}, { 0, 0}, { 2, 117, 101}, { 0, 0}, { 2, 116, 104}, { 0, 0}
 };
 
 static us2 normalize_ligature_expand_map_1[256] = {
@@ -113,17 +113,17 @@ static us2 normalize_ligature_expand_map_1[256] = {
 	{ 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 2, 65, 69}, { 2, 97, 101}, { 2, 79, 69}, { 2, 111, 101}
 };
 
-static unsigned char *jump_table[2] = {
+static unsigned char *normalize_ligature_jump_table[2] = {
 	normalize_ligature_jump_map_0,
 	normalize_ligature_jump_map_1,
 };
-static unsigned short *map_table[0] = {
+static unsigned short *normalize_ligature_map_table[0] = {
 };
-static us2 *expand_table[2] = {
+static us2 *normalize_ligature_expand_table[2] = {
 	normalize_ligature_expand_map_0,
 	normalize_ligature_expand_map_1,
 };
-static unsigned short *transpose_table[0] = {
+static unsigned short *normalize_ligature_transpose_table[0] = {
 };
 
 
@@ -154,8 +154,8 @@ int normalize_ligature_convert(unsigned short *in, unsigned int in_length, unsig
 
 		no_jump = 0;
 		switch (block) {
-			case 0: jump_map = jump_table[0]; expand_map = expand_table[0]; break;
-			case 1: jump_map = jump_table[1]; expand_map = expand_table[1]; break;
+			case 0: jump_map = normalize_ligature_jump_table[0]; expand_map = normalize_ligature_expand_table[0]; break;
+			case 1: jump_map = normalize_ligature_jump_table[1]; expand_map = normalize_ligature_expand_table[1]; break;
 			default: no_jump = 1;
 		}
 		if (no_jump) {
@@ -195,24 +195,3 @@ int normalize_ligature_convert(unsigned short *in, unsigned int in_length, unsig
 	*out = tmp_out;
 	return 0;
 }
-
-#if DEBUG_FILTER
-int main(void)
-{
-	unsigned char *str, *outs;
-	unsigned short *in, *out;
-	unsigned int inl, outl, i, c;
-
-	str = (char*) malloc(2049);
-	in = (unsigned short*) str;
-
-	while ((c = read(0, str, 2048)) > 0) {
-		normalize_ligature_convert(in, c/2, &out, &outl);
-		outs = (unsigned char*) out;
-
-		for (i = 0; i < (outl * sizeof(unsigned short)); i++) {
-			printf("%c", outs[i]);
-		}
-	}
-}
-#endif

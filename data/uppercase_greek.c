@@ -62,15 +62,15 @@ static unsigned short uppercase_greek_transpose_map_3[256] = {
 	 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0
 };
 
-static unsigned char *jump_table[1] = {
+static unsigned char *uppercase_greek_jump_table[1] = {
 	uppercase_greek_jump_map_3,
 };
-static unsigned short *map_table[1] = {
+static unsigned short *uppercase_greek_map_table[1] = {
 	uppercase_greek_replace_map_3,
 };
-static us0 *expand_table[0] = {
+static us0 *uppercase_greek_expand_table[0] = {
 };
-static unsigned short *transpose_table[1] = {
+static unsigned short *uppercase_greek_transpose_table[1] = {
 	uppercase_greek_transpose_map_3,
 };
 
@@ -102,7 +102,7 @@ int uppercase_greek_convert(unsigned short *in, unsigned int in_length, unsigned
 
 		no_jump = 0;
 		switch (block) {
-			case 3: jump_map = jump_table[0]; replace_map = map_table[0]; transpose_map = transpose_table[0]; break;
+			case 3: jump_map = uppercase_greek_jump_table[0]; replace_map = uppercase_greek_map_table[0]; transpose_map = uppercase_greek_transpose_table[0]; break;
 			default: no_jump = 1;
 		}
 		if (no_jump) {
@@ -142,24 +142,3 @@ int uppercase_greek_convert(unsigned short *in, unsigned int in_length, unsigned
 	*out = tmp_out;
 	return 0;
 }
-
-#if DEBUG_FILTER
-int main(void)
-{
-	unsigned char *str, *outs;
-	unsigned short *in, *out;
-	unsigned int inl, outl, i, c;
-
-	str = (char*) malloc(2049);
-	in = (unsigned short*) str;
-
-	while ((c = read(0, str, 2048)) > 0) {
-		uppercase_greek_convert(in, c/2, &out, &outl);
-		outs = (unsigned char*) out;
-
-		for (i = 0; i < (outl * sizeof(unsigned short)); i++) {
-			printf("%c", outs[i]);
-		}
-	}
-}
-#endif

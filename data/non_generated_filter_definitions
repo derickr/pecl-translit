@@ -1,0 +1,1 @@
+int hangul_to_jamo_transliterate_convert(unsigned short *in, unsigned int in_length, unsigned short **out, unsigned int *out_length);

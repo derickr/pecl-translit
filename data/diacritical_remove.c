@@ -157,21 +157,21 @@ static unsigned short diacritical_remove_replace_map_30[256] = {
 	 85, 117,  89, 121,  89, 121,  89, 121,  89, 121,   0,   0,   0,   0,   0,   0
 };
 
-static unsigned char *jump_table[4] = {
+static unsigned char *diacritical_remove_jump_table[4] = {
 	diacritical_remove_jump_map_0,
 	diacritical_remove_jump_map_1,
 	diacritical_remove_jump_map_2,
 	diacritical_remove_jump_map_30,
 };
-static unsigned short *map_table[4] = {
+static unsigned short *diacritical_remove_map_table[4] = {
 	diacritical_remove_replace_map_0,
 	diacritical_remove_replace_map_1,
 	diacritical_remove_replace_map_2,
 	diacritical_remove_replace_map_30,
 };
-static us0 *expand_table[0] = {
+static us0 *diacritical_remove_expand_table[0] = {
 };
-static unsigned short *transpose_table[0] = {
+static unsigned short *diacritical_remove_transpose_table[0] = {
 };
 
 
@@ -202,10 +202,10 @@ int diacritical_remove_convert(unsigned short *in, unsigned int in_length, unsig
 
 		no_jump = 0;
 		switch (block) {
-			case 0: jump_map = jump_table[0]; replace_map = map_table[0]; break;
-			case 1: jump_map = jump_table[1]; replace_map = map_table[1]; break;
-			case 2: jump_map = jump_table[2]; replace_map = map_table[2]; break;
-			case 30: jump_map = jump_table[3]; replace_map = map_table[3]; break;
+			case 0: jump_map = diacritical_remove_jump_table[0]; replace_map = diacritical_remove_map_table[0]; break;
+			case 1: jump_map = diacritical_remove_jump_table[1]; replace_map = diacritical_remove_map_table[1]; break;
+			case 2: jump_map = diacritical_remove_jump_table[2]; replace_map = diacritical_remove_map_table[2]; break;
+			case 30: jump_map = diacritical_remove_jump_table[3]; replace_map = diacritical_remove_map_table[3]; break;
 			default: no_jump = 1;
 		}
 		if (no_jump) {
@@ -245,24 +245,3 @@ int diacritical_remove_convert(unsigned short *in, unsigned int in_length, unsig
 	*out = tmp_out;
 	return 0;
 }
-
-#if DEBUG_FILTER
-int main(void)
-{
-	unsigned char *str, *outs;
-	unsigned short *in, *out;
-	unsigned int inl, outl, i, c;
-
-	str = (char*) malloc(2049);
-	in = (unsigned short*) str;
-
-	while ((c = read(0, str, 2048)) > 0) {
-		diacritical_remove_convert(in, c/2, &out, &outl);
-		outs = (unsigned char*) out;
-
-		for (i = 0; i < (outl * sizeof(unsigned short)); i++) {
-			printf("%c", outs[i]);
-		}
-	}
-}
-#endif

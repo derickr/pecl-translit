@@ -2,13 +2,13 @@
 	$filename = $argv[1];
 	$lines = file($filename);
 	$function_name = NULL;
+	$allow_override = false;
 
 	$jumptbl = array();
 	$map = array();
 	$expand = array();
 	$expand_max_length = 0;
 	$transpose = array();
-
 	$use_map = true;
 
 	define('JUMP_MAP', 1);
@@ -24,7 +24,7 @@
 			$GLOBALS['jumptbl'][$block] = array_fill(0, 256, 0);
 		}
 
-		if ($GLOBALS['jumptbl'][$block][$cp % 256]) {
+		if (isset($GLOBALS['jumptpl'][$block][$cp % 256]) && $GLOBALS['jumptbl'][$block][$cp % 256] && !$GLOBALS['allow_override']) {
 			return false;
 		}
 
@@ -109,6 +109,9 @@
 			if ($i % 16 == 0) {
 				$txt .= "\t";
 			}
+			if (!isset($table[$i])) {
+				$table[$i] = 0;
+			}
 			$txt .= sprintf("%{$width}d", $table[$i]);
 			if ($i != 255) {
 				$txt .= ", ";
@@ -131,7 +134,7 @@
 			if ($i % 8 == 0) {
 				$txt .= "\t";
 			}
-			if (!is_array($table[$i])) {
+			if (!isset($table[$i]) || !is_array($table[$i])) {
 				$table[$i] = array(0, array(0));
 			}
 			$txt .= "{ ". $table[$i][0]. ", ". join(", ", $table[$i][1]). "}";
@@ -146,8 +149,7 @@
 		return $txt;
 	}
 
-	function generate_code($function_name, $jumps, $map, $expand, $expand_max_length, $transpose)
-	{
+	function generate_code_header() {
 		$txt = <<<ENDHEADER
 /*
  * Warning: Do not edit!
@@ -157,7 +159,12 @@
 
 ENDHEADER;
 		$txt .= "#include \"translit_types.h\"\n\n";
+		return $txt;
+	}
 
+	function generate_code($function_name, $jumps, $map, $expand, $expand_max_length, $transpose)
+	{
+		$txt = '';
 		foreach ($jumps as $block => $data) {
 			$function = "{$function_name}_jump_map_{$block}";
 			$txt .= generate_map($function, $data, 'unsigned char');
@@ -178,7 +185,7 @@ ENDHEADER;
 		$rev_jump = array();
 		/* Generate jump table */
 		$c = 0;
-		$table_definition = "static unsigned char *jump_table[". (count($jumps)). "] = {\n";
+		$table_definition = "static unsigned char *{$function_name}_jump_table[". (count($jumps)). "] = {\n";
 		foreach ($jumps as $block => $dummy)
 		{
 			$table_definition .= "\t{$function_name}_jump_map_{$block},\n";
@@ -191,7 +198,7 @@ ENDHEADER;
 		$rev_map = array();
 		/* Generate map table */
 		$c = 0;
-		$table_definition .= "static unsigned short *map_table[". (count($map)). "] = {\n";
+		$table_definition .= "static unsigned short *{$function_name}_map_table[". (count($map)). "] = {\n";
 		foreach ($map as $block => $dummy)
 		{
 			$table_definition .= "\t{$function_name}_replace_map_{$block},\n";
@@ -204,7 +211,7 @@ ENDHEADER;
 		$rev_expand = array();
 		/* Generate expand table */
 		$c = 0;
-		$table_definition .= "static us$expand_max_length *expand_table[". (count($expand)). "] = {\n";
+		$table_definition .= "static us$expand_max_length *{$function_name}_expand_table[". (count($expand)). "] = {\n";
 		foreach ($expand as $block => $dummy)
 		{
 			$table_definition .= "\t{$function_name}_expand_map_{$block},\n";
@@ -216,7 +223,7 @@ ENDHEADER;
 		$rev_transpose = array();
 		/* Generate transpose table */
 		$c = 0;
-		$table_definition .= "static unsigned short *transpose_table[". (count($transpose)). "] = {\n";
+		$table_definition .= "static unsigned short *{$function_name}_transpose_table[". (count($transpose)). "] = {\n";
 		foreach ($transpose as $block => $dummy)
 		{
 			$table_definition .= "\t{$function_name}_transpose_map_{$block},\n";
@@ -224,7 +231,6 @@ ENDHEADER;
 			$c++;
 		}
 		$table_definition .= "};\n";
-
 
 		$txt .= <<<ENDCODE
 $table_definition
@@ -258,18 +264,18 @@ int {$function_name}_convert(unsigned short *in, unsigned int in_length, unsigne
 		switch (block) {
 ENDCODE;
 		foreach ($rev_jump as $map_id => $block) {
-			$txt .= "\n\t\t\tcase $block: jump_map = jump_table[$map_id]; ";
+			$txt .= "\n\t\t\tcase $block: jump_map = {$function_name}_jump_table[$map_id]; ";
 			if (isset($map[$block])) {
 				$id = $rev_map[$block];
-				$txt .= "replace_map = map_table[$id]; ";
+				$txt .= "replace_map = {$function_name}_map_table[$id]; ";
 			}
 			if (isset($expand[$block])) {
 				$id = $rev_expand[$block];
-				$txt .= "expand_map = expand_table[$id]; ";
+				$txt .= "expand_map = {$function_name}_expand_table[$id]; ";
 			}
 			if (isset($transpose[$block])) {
 				$id = $rev_transpose[$block];
-				$txt .= "transpose_map = transpose_table[$id]; ";
+				$txt .= "transpose_map = {$function_name}_transpose_table[$id]; ";
 			}
 			$txt .= "break;";
 		}
@@ -316,40 +322,79 @@ ENDCODE;
 	return 0;
 }
 
-#if DEBUG_FILTER
-int main(void)
-{
-	unsigned char *str, *outs;
-	unsigned short *in, *out;
-	unsigned int inl, outl, i, c;
-
-	str = (char*) malloc(2049);
-	in = (unsigned short*) str;
-
-	while ((c = read(0, str, 2048)) > 0) {
-		{$function_name}_convert(in, c/2, &out, &outl);
-		outs = (unsigned char*) out;
-
-		for (i = 0; i < (outl * sizeof(unsigned short)); i++) {
-			printf("%c", outs[i]);
-		}
-	}
-}
-#endif
-
 ENDCODE;
-		return $txt;
+		$fp = fopen(basename($GLOBALS['filename'], '.tr').'.c', 'a');
+		fwrite($fp, $txt);
+		fclose($fp);
+	
+		$include = fopen("filter_table.h", "a");
+		fputs($include, "\t{ \"$function_name\", {$function_name}_convert },\n");
+		fclose($include);
+	
+		$include = fopen("translit_filters.h", "a");
+		fputs($include, "int {$function_name}_convert(unsigned short *in, unsigned int in_length, unsigned short **out, unsigned int *out_length);\n");
+		fclose($include);
 	}
 	
-
+	/* Create file and fileheader */
+	$fp = fopen(basename($GLOBALS['filename'], '.tr').'.c', 'w');
+	fwrite($fp, generate_code_header());
+	fclose($fp);
+	
 	foreach ($lines as $line) {
 		if (preg_match("/^#pragma\s+(.*)$/", $line, $match)) {
-			if ($match[1] == 'NOMAP') {
+			$setting = trim($match[1]);
+			if ($setting == 'NOMAP') {
 				$use_map = false;
+			} else {
+				list($setting, $value) = preg_split("/\s+/", $setting);
+				switch ($setting) {
+					case 'OVERRIDE_ALLOWED':
+						$allow_override = ($value == '1');
+						break;
+					case 'INCLUDE':
+						if (isset($filters[$value])) {
+							list($o_jumptbl, $o_map, $o_expand, $o_transpose, $o_expand_max_length) = $filters[$value];
+							if ($o_expand_max_length > $expand_max_length) {
+								$expand_max_length = $o_expand_max_length;
+							}
+							foreach ($o_jumptbl as $block => $values)
+								foreach ($values as $id => $cp)
+									if ($cp != 0)
+										$jumptbl[$block][$id] = $cp;
+							foreach ($o_map as $block => $values)
+								foreach ($values as $id => $cp)
+									if ($cp != 0)
+										$map[$block][$id] = $cp;
+							foreach ($o_expand as $block => $values)
+								foreach ($values as $id => $cp)
+									if ($cp != 0)
+										$expand[$block][$id] = $cp;
+							foreach ($o_transpose as $block => $values)
+								foreach ($values as $id => $cp)
+									if ($cp != 0)
+										$transpose[$block][$id] = $cp;
+								
+						} else {
+							echo "Can not include filter '$value' as it does not exist (yet)\n";
+						}
+						break;
+				}
 			}
+
 		} else
 		if (preg_match("/^([a-z_]+):$/", $line, $match)) {
+			if ($function_name) {
+				echo "Writing code for $function_name\n";
+				$code = generate_code($function_name, $jumptbl, $map, $expand, $expand_max_length, $transpose);
+				$filters[$function_name] = array($jumptbl, $map, $expand, $transpose, $expand_max_length);
+				$jumptbl = $map = $expand = $transpose = array();
+				$expand_max_length = 0;
+				$use_map = true;
+				$override_allowed = false;
+			}
 			$function_name = $match[1];
+			echo "New function: $function_name\n";
 		} else
 		if (preg_match('/^(.*?)([+-]?[>=])([^#]*)/', $line, $match)) {
 			$def = str_replace(' ', '', $match[1]);
@@ -420,13 +465,4 @@ ENDCODE;
 	}
 
 	$code = generate_code($function_name, $jumptbl, $map, $expand, $expand_max_length, $transpose);
-	file_put_contents("{$function_name}.c", $code);
-	
-	$include = fopen("filter_table.h", "a");
-	fputs($include, "\t{ \"$function_name\", {$function_name}_convert },\n");
-	fclose($include);
-	
-	$include = fopen("translit_filters.h", "a");
-	fputs($include, "int {$function_name}_convert(unsigned short *in, unsigned int in_length, unsigned short **out, unsigned int *out_length);\n");
-	fclose($include);
 ?>

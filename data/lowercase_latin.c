@@ -157,17 +157,17 @@ static unsigned short lowercase_latin_transpose_map_30[256] = {
 	1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0
 };
 
-static unsigned char *jump_table[4] = {
+static unsigned char *lowercase_latin_jump_table[4] = {
 	lowercase_latin_jump_map_0,
 	lowercase_latin_jump_map_1,
 	lowercase_latin_jump_map_2,
 	lowercase_latin_jump_map_30,
 };
-static unsigned short *map_table[0] = {
+static unsigned short *lowercase_latin_map_table[0] = {
 };
-static us0 *expand_table[0] = {
+static us0 *lowercase_latin_expand_table[0] = {
 };
-static unsigned short *transpose_table[4] = {
+static unsigned short *lowercase_latin_transpose_table[4] = {
 	lowercase_latin_transpose_map_0,
 	lowercase_latin_transpose_map_1,
 	lowercase_latin_transpose_map_2,
@@ -202,10 +202,10 @@ int lowercase_latin_convert(unsigned short *in, unsigned int in_length, unsigned
 
 		no_jump = 0;
 		switch (block) {
-			case 0: jump_map = jump_table[0]; transpose_map = transpose_table[0]; break;
-			case 1: jump_map = jump_table[1]; transpose_map = transpose_table[1]; break;
-			case 2: jump_map = jump_table[2]; transpose_map = transpose_table[2]; break;
-			case 30: jump_map = jump_table[3]; transpose_map = transpose_table[3]; break;
+			case 0: jump_map = lowercase_latin_jump_table[0]; transpose_map = lowercase_latin_transpose_table[0]; break;
+			case 1: jump_map = lowercase_latin_jump_table[1]; transpose_map = lowercase_latin_transpose_table[1]; break;
+			case 2: jump_map = lowercase_latin_jump_table[2]; transpose_map = lowercase_latin_transpose_table[2]; break;
+			case 30: jump_map = lowercase_latin_jump_table[3]; transpose_map = lowercase_latin_transpose_table[3]; break;
 			default: no_jump = 1;
 		}
 		if (no_jump) {
@@ -245,24 +245,3 @@ int lowercase_latin_convert(unsigned short *in, unsigned int in_length, unsigned
 	*out = tmp_out;
 	return 0;
 }
-
-#if DEBUG_FILTER
-int main(void)
-{
-	unsigned char *str, *outs;
-	unsigned short *in, *out;
-	unsigned int inl, outl, i, c;
-
-	str = (char*) malloc(2049);
-	in = (unsigned short*) str;
-
-	while ((c = read(0, str, 2048)) > 0) {
-		lowercase_latin_convert(in, c/2, &out, &outl);
-		outs = (unsigned char*) out;
-
-		for (i = 0; i < (outl * sizeof(unsigned short)); i++) {
-			printf("%c", outs[i]);
-		}
-	}
-}
-#endif

@@ -1,9 +1,9 @@
 # WARNINGS, THIS IS A GENERATED FILE.
 # Generated from han.tr.in by ibm4-2-utf8
 
+han_transliterate:
 #pragma NOMAP
 
-han_transliterate:
 U+5416,U+5475,U+9312,U+9515,U+963F                       > U+0101
 U+55C4                                                   > U+00E1
 U+554A                                                   > U+0061

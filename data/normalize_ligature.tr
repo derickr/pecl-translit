@@ -8,6 +8,7 @@ U+00C6    > "AE"
 U+00D6    > "OE"
 U+00D8    > "OE"
 U+00DC    > "UE"
+U+00DE    > "TH"
 U+00DF    > "ss"
 
 U+00E4    > "ae"
@@ -16,6 +17,7 @@ U+00E6    > "ae"
 U+00F6    > "oe"
 U+00F8    > "oe"
 U+00FC    > "ue"
+U+00FE    > "th"
 
 # Latin Extended-A
 U+0132    > "IJ"

@@ -1,0 +1,59 @@
+normalize_superscript_numbers:
+U+00B2 = "2"
+U+00B3 = "3"
+U+00B9 = "1"
+U+2070 = "0"
+U+2074-U+2079 -= U+2040
+
+normalize_subscript_numbers:
+U+2080-U+2089 -= U+2050
+
+normalize_numbers:
+#pragma INCLUDE normalize_superscript_numbers
+#pragma INCLUDE normalize_subscript_numbers
+
+U+0660-U+0669 -= U+0630 # Arabic-Indic
+U+06F0-U+06F9 -= U+06C0 # Arabic-Indic
+U+0966-U+096F -= U+0936 # Devanagari
+U+09E6-U+09EF -= U+09B6 # Bengali
+
+U+0A66-U+0A6F -= U+0A36 # Gurmukhi
+U+0AE6-U+0AEF -= U+0AB6 # Gujarati
+U+0B66-U+0B6F -= U+0B36 # Oriya
+U+0BE6-U+0BEF -= U+0BB6 # Tamil
+
+U+0C66-U+0C6F -= U+0C36 # Telugu
+U+0CE6-U+0CEF -= U+0CB6 # Kannada
+U+0D66-U+0D6F -= U+0D36 # Malayalam
+U+0E50-U+0E59 -= U+0E20 # Thai
+
+U+0ED0-U+0ED9 -= U+0EA0 # Lao
+U+0F20-U+0F29 -= U+0EF0 # Tibetan
+U+1040-U+1049 -= U+1010 # Myanmar
+U+1368-U+1371 -= U+1338 # Ethiopic
+
+U+17E0-U+17E9 -= U+17B0 # Khmer
+U+1810-U+1819 -= U+17E0 # Mongolian
+U+1946-U+194F -= U+1916 # Limbu
+U+3220-U+3229 -= U+31EF # Parentized Ideograph (Enclosed CJK Letters and Modifiers)
+
+U+3280-U+3289 -= U+324F # Circled Ideograph (Enclosed CJK Letters and Modifiers)
+U+FF10-U+FF19 -= U+FEE0 # Fullwidth
+
+normalize_superscript:
+#pragma INCLUDE normalize_superscript_numbers
+U+2071 = "i"
+U+207A = "+"
+U+207B = "-"
+U+207C = "="
+U+207D = "("
+U+207E = ")"
+U+207F = "n"
+
+normalize_subscript:
+#pragma INCLUDE normalize_subscript_numbers
+U+208A = "+"
+U+208B = "-"
+U+208C = "="
+U+208D = "("
+U+208E = ")"
