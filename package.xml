@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE package SYSTEM "../pear/package.dtd">
+<package>
+ <name>transliterate</name>
+ <summary>Transliterates non-latin character sets to latin</summary>
+ <maintainers>
+  <maintainer>
+   <user>derick</user>
+   <name>Derick Rethans</name>
+   <email>derick@php.net</email>
+   <role>lead</role>
+  </maintainer>
+ </maintainers>
+ <description>
+  This extension allows you to transliterate text in non-latin characters (such
+  as Chinese, Cyrillic, Greek etc) to latin characters.  Besides the
+  transliteration the extension also contains filters to upper- and lowercase
+  latin, cyrillic and greek, and perform special forms of transliteration such
+  as converting ligatures such as the Norwegian "æ" to "ae" and normalizing
+  punctuation and spacing.
+ </description>
+ <license>PHP</license>
+ <release>
+  <state>beta</state>
+  <version>0.1</version>
+  <date>2004-10-24</date>
+  <notes>
+Initial release, supported transliteration filters include: Cyrillic-to-Latin
+transliteration, Greek-to-Latin transliteration, Han-to-Latin transliteration,
+Hebrew-to-Latin transliteration; case converting filters for Greek, Latin and
+Cyrillic and filters to remove diacriticals from text, normalizing ligatures
+and normalizing punctuation.
+  </notes>
+ </release>
+ <filelist>
+  <file role="src" name="config.m4" />
+  <file role="src" name="translit.c" />
+  <file role="src" name="php_translit.h" />
+  <dir name="data">
+   <file role="src" name="filter_table.h" />
+   <file role="src" name="translit_filters.h" />
+   <file role="src" name="translit_types.h" />
+   <file role="src" name="cyrillic_transliterate.c" />
+   <file role="src" name="diacritical_remove.c" />
+   <file role="src" name="greek_transliterate.c" />
+   <file role="src" name="han_transliterate.c" />
+   <file role="src" name="hebrew_transliterate.c" />
+   <file role="src" name="lowercase_cyrillic.c" />
+   <file role="src" name="lowercase_greek.c" />
+   <file role="src" name="lowercase_latin.c" />
+   <file role="src" name="normalize_ligature.c" />
+   <file role="src" name="normalize_punctuation.c" />
+   <file role="src" name="uppercase_cyrillic.c" />
+   <file role="src" name="uppercase_greek.c" />
+   <file role="src" name="uppercase_latin.c" />
+  </dir>
+ </filelist>
+ <changelog>
+  <release>
+   <state>beta</state>
+   <version>0.1</version>
+   <date>2004-10-24</date>
+   <notes>
+Initial release, supported transliteration filters include: Cyrillic-to-Latin
+transliteration, Greek-to-Latin transliteration, Han-to-Latin transliteration,
+Hebrew-to-Latin transliteration; case converting filters for Greek, Latin and
+Cyrillic and filters to remove diacriticals from text, normalizing ligatures
+and normalizing punctuation.
+   </notes>
+  </release>
+ </changelog>
+</package>
+<!--
+vim:et:ts=1:sw=1
+-->
