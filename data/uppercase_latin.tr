@@ -16,8 +16,13 @@ Odd  U+014A-U+0177 -= U+0001
 Even U+0179-U+017E -= U+0001
 
 # Latin Extended-B (incomplete)
+Odd  U+0182-U+0185 -= U+0001
+U+0188,U+018C      -= U+0001
+U+0192,U+0199      -= U+0001
 Even U+01CD-U+01DC -= U+0001
-Odd  U+01F8-U+0233 -= U+0001
+Odd  U+01DE-U+01EF -= U+0001
+Odd  U+01F8-U+021F -= U+0001
+Odd  U+0222-U+0233 -= U+0001
 
 # Latin Extended Additional
 Odd  U+1E00-U+1E95 -= U+0001
