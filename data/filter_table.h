@@ -1,6 +1,7 @@
 #ifndef __FILTER_TABLE_H__
 #define __FILTER_TABLE_H__
 	{ "cyrillic_transliterate", cyrillic_transliterate_convert },
+	{ "cyrillic_transliterate_bulgarian", cyrillic_transliterate_bulgarian_convert },
 	{ "diacritical_remove", diacritical_remove_convert },
 	{ "greek_transliterate", greek_transliterate_convert },
 	{ "han_transliterate", han_transliterate_convert },

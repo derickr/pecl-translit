@@ -101,3 +101,18 @@ U+045C > "kj"
 U+045D > "i"
 U+045E > "v"
 U+045F > "dz"
+
+cyrillic_transliterate_bulgarian:
+#pragma INCLUDE cyrillic_transliterate
+#pragma OVERRIDE 1
+U+0416 > "J"
+U+0429 > "SHT"
+U+042E > "IU"
+U+042F > "IA"
+U+0436 > "j"
+U+0449 > "sht"
+U+044A > "a"
+U+044C > "i"
+U+044E > "iu"
+U+044F > "ia"
+#pragma OVERRIDE 0
