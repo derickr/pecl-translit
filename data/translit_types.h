@@ -1,3 +1,7 @@
+#ifdef PHP_WIN32
+#include <malloc.h>
+#endif
+
 typedef unsigned short us0[1];
 typedef unsigned short us1[2];
 typedef unsigned short us2[3];
