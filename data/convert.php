@@ -1,5 +1,6 @@
 <?php
-	$lines = file($argv[1]);
+	$filename = $argv[1];
+	$lines = file($filename);
 	$function_name = NULL;
 
 	$jumptbl = array();
@@ -147,7 +148,14 @@
 
 	function generate_code($function_name, $jumps, $map, $expand, $expand_max_length, $transpose)
 	{
-		$txt = '';
+		$txt = <<<ENDHEADER
+/*
+ * Warning: Do not edit!
+ * This file is generated from a transliteration definition table with the name
+ * "{$GLOBALS['filename']}".
+ */
+
+ENDHEADER;
 		$txt .= "typedef unsigned short us{$expand_max_length}[". ($expand_max_length + 1) ."];\n";
 
 		foreach ($jumps as $block => $data) {
