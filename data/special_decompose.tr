@@ -1,6 +1,5 @@
 
 decompose_special:
-U+00A7 = "para."
 U+00A9 = "(c)"
 U+00AB = "<<"
 U+00AE = "(r)"
