@@ -117,8 +117,8 @@ PHP_FUNCTION(transliterate)
 	}
 	target_hash = HASH_OF(filter_list);
 	zend_hash_internal_pointer_reset_ex(target_hash, &pos);
-	in = (unsigned short*) string;
-	inl = str_len/2;
+	in = out = (unsigned short*) string;
+	inl = outl = str_len/2;
 
 	while (zend_hash_get_current_data_ex(target_hash, (void **)&entry, &pos) == SUCCESS) {
 		if (Z_TYPE_PP(entry) == IS_STRING) {
