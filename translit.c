@@ -27,8 +27,6 @@
 #include "ext/standard/info.h"
 #include "php_translit.h"
 
-//ZEND_DECLARE_MODULE_GLOBALS(translit)
-
 /* {{{ translit_functions[] */
 function_entry translit_functions[] = {
 	PHP_FE(transliterate, NULL)
@@ -49,7 +47,7 @@ zend_module_entry translit_module_entry = {
 	NULL,
 	PHP_MINFO(translit),
 #if ZEND_MODULE_API_NO >= 20010901
-	"0.2", /* Replace with version number for your extension */
+	"0.3",
 #endif
 	STANDARD_MODULE_PROPERTIES
 };

@@ -22,12 +22,10 @@
  <license>PHP</license>
  <release>
   <state>beta</state>
-  <version>0.2</version>
-  <date>2004-11-10</date>
+  <version>0.3</version>
+  <date>2004-11-14</date>
   <notes>
-Added more filters: hangul to jamo, jamo to latin, normalize numbers and digits,
-special decompositions (© -> (c)). And fixed some small bugs in filters and
-the extension.
+Generate better (and less) code, make Windows compiles happy too.
   </notes>
  </release>
  <filelist>
@@ -58,6 +56,14 @@ the extension.
   </dir>
  </filelist>
  <changelog>
+  <release>
+   <state>beta</state>
+   <version>0.3</version>
+   <date>2004-11-14</date>
+   <notes>
+Generate better (and less) code, make Windows compiles happy too.
+   </notes>
+  </release>
   <release>
    <state>beta</state>
    <version>0.2</version>

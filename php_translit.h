@@ -48,11 +48,6 @@ PHP_RINIT_FUNCTION(translit);
 PHP_RSHUTDOWN_FUNCTION(translit);
 PHP_MINFO_FUNCTION(translit);
 
-/*
-ZEND_BEGIN_MODULE_GLOBALS(translit)
-ZEND_END_MODULE_GLOBALS(translit)
-*/
-
 PHP_FUNCTION(transliterate);
 
 #ifdef ZTS
