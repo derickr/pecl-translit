@@ -1,0 +1,14 @@
+# Lower cases greek characters
+
+lowercase_greek:
+U+0386               += U+0026
+U+0388 - U+038A      += U+0025
+
+U+0391 - U+03A1      += U+0020
+U+03A3 - U+03AB      += U+0020
+
+U+038C               += U+0040
+U+038E - U+038F      += U+003F
+
+Even U+03DA - U+03EF += U+0001
+
