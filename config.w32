@@ -6,7 +6,7 @@ ARG_ENABLE("translit", "for transliteration support", "no");
 if (PHP_TRANSLIT != "no") {
 	EXTENSION("translit", "translit.c");
 
-	ADD_SOURCES(configure_module_dirname + "/data/", "cyrillic_transliterate.c \
+	ADD_SOURCES(configure_module_dirname + "/data", "cyrillic_transliterate.c \
 		diacritical_remove.c greek_transliterate.c han_transliterate.c \
 		hangul_to_jamo_transliterate.c jamo_transliterate.c hebrew_transliterate.c \
 		lowercase_cyrillic.c lowercase_greek.c lowercase_latin.c \
