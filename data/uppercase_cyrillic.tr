@@ -1,6 +1,8 @@
 # Upper cases cyrillic characters
 
 uppercase_cyrillic:
+#pragma ALIAS cyrillic_uppercase
+
 # Cyrillic
 U+0450 - U+045F  -= U+0050
 U+0430 - U+044F  -= U+0020

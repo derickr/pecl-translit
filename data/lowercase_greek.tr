@@ -1,6 +1,7 @@
 # Lower cases greek characters
 
 lowercase_greek:
+#pragma ALIAS greek_lowercase
 U+0386               += U+0026
 U+0388 - U+038A      += U+0025
 

@@ -1,6 +1,8 @@
 # Lower cases cyrillic characters
 
 lowercase_cyrillic:
+#pragma ALIAS cyrillic_lowercase
+
 # Cyrillic
 U+0400 - U+040F  += U+0050
 U+0410 - U+042F  += U+0020

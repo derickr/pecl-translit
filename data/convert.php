@@ -4,6 +4,7 @@
 	$function_name = NULL;
 	$allow_override = false;
 
+	$aliases = array();
 	$jumptbl = array();
 	$map = array();
 	$expand = array();
@@ -165,7 +166,7 @@ ENDHEADER;
 		return $txt;
 	}
 
-	function generate_code($function_name, $jumps, $map, $expand, $expand_max_length, $transpose)
+	function generate_code($function_name, $aliases, $jumps, $map, $expand, $expand_max_length, $transpose)
 	{
 		$txt = '';
 		foreach ($jumps as $block => $data) {
@@ -371,6 +372,9 @@ ENDCODE;
 	
 		$include = fopen("filter_table.h", "a");
 		fputs($include, "\t{ \"$function_name\", {$function_name}_convert },\n");
+		foreach ($aliases as $alias) {
+			fputs($include, "\t{ \"$alias\", {$function_name}_convert },\n");
+		}
 		fclose($include);
 	
 		$include = fopen("translit_filters.h", "a");
@@ -393,6 +397,9 @@ ENDCODE;
 				switch ($setting) {
 					case 'OVERRIDE_ALLOWED':
 						$allow_override = ($value == '1');
+						break;
+					case 'ALIAS':
+						$aliases[] = $value;
 						break;
 					case 'INCLUDE':
 						if (isset($filters[$value])) {
@@ -428,9 +435,9 @@ ENDCODE;
 		if (preg_match("/^([a-z_]+):$/", $line, $match)) {
 			if ($function_name) {
 				echo "Writing code for $function_name\n";
-				$code = generate_code($function_name, $jumptbl, $map, $expand, $expand_max_length, $transpose);
+				$code = generate_code($function_name, $aliases, $jumptbl, $map, $expand, $expand_max_length, $transpose);
 				$filters[$function_name] = array($jumptbl, $map, $expand, $transpose, $expand_max_length);
-				$jumptbl = $map = $expand = $transpose = array();
+				$jumptbl = $map = $expand = $transpose = $aliases = array();
 				$expand_max_length = 0;
 				$use_map = true;
 				$override_allowed = false;
@@ -506,5 +513,5 @@ ENDCODE;
 		}
 	}
 
-	$code = generate_code($function_name, $jumptbl, $map, $expand, $expand_max_length, $transpose);
+	$code = generate_code($function_name, $aliases, $jumptbl, $map, $expand, $expand_max_length, $transpose);
 ?>

@@ -1,6 +1,8 @@
 # Upper cases latin characters
 
 uppercase_latin:
+#pragma ALIAS latin_uppercase
+
 # Basic Latin
 U+0061-U+007A  -=   U+0020 
 

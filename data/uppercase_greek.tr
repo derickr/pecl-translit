@@ -1,6 +1,8 @@
 # Upper cases greek characters
 
 uppercase_greek:
+#pragma ALIAS greek_uppercase
+
 U+03AC              -= U+0026
 U+03AD - U+03AF     -= U+0025
 

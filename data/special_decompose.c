@@ -16,7 +16,7 @@ static unsigned char decompose_special_jump_map_0[256] = {
 	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
 	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
 	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
-	0, 0, 0, 0, 0, 0, 0, 2, 0, 2, 0, 2, 0, 0, 2, 0, 
+	0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 2, 0, 0, 2, 0, 
 	0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 
 	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
 	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
@@ -24,7 +24,7 @@ static unsigned char decompose_special_jump_map_0[256] = {
 	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 };
 
-static us5 decompose_special_expand_map_0[256] = {
+static us3 decompose_special_expand_map_0[256] = {
 	{ 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, 
 	{ 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, 
 	{ 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, 
@@ -45,7 +45,7 @@ static us5 decompose_special_expand_map_0[256] = {
 	{ 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, 
 	{ 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, 
 	{ 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, 
-	{ 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 5, 112, 97, 114, 97, 46}, 
+	{ 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, 
 	{ 0, 0}, { 3, 40, 99, 41}, { 0, 0}, { 2, 60, 60}, { 0, 0}, { 0, 0}, { 3, 40, 114, 41}, { 0, 0}, 
 	{ 0, 0}, { 2, 43, 45}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, 
 	{ 0, 0}, { 0, 0}, { 0, 0}, { 2, 62, 62}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, 
@@ -62,7 +62,7 @@ static us5 decompose_special_expand_map_0[256] = {
 static unsigned char *decompose_special_jump_table[1] = {
 	decompose_special_jump_map_0,
 };
-static us5 *decompose_special_expand_table[1] = {
+static us3 *decompose_special_expand_table[1] = {
 	decompose_special_expand_map_0,
 };
 
@@ -73,7 +73,7 @@ int decompose_special_convert(unsigned short *in, unsigned int in_length, unsign
 	unsigned char block, cp;
 	unsigned char *jump_map;
 	unsigned short *replace_map, *transpose_map;
-	us5 *expand_map;
+	us3 *expand_map;
 	unsigned short *tmp_out = NULL;
 	unsigned int    str_length;
 
@@ -327,7 +327,7 @@ static unsigned char decompose_jump_map_0[256] = {
 	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
 	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
 	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
-	0, 0, 1, 1, 0, 1, 0, 2, 0, 2, 0, 2, 0, 0, 2, 0, 
+	0, 0, 1, 1, 0, 1, 0, 0, 0, 2, 0, 2, 0, 0, 2, 0, 
 	0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 
 	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
 	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
@@ -392,7 +392,7 @@ static unsigned short decompose_replace_map_32[256] = {
 	  0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0
 };
 
-static us5 decompose_expand_map_0[256] = {
+static us3 decompose_expand_map_0[256] = {
 	{ 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, 
 	{ 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, 
 	{ 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, 
@@ -413,7 +413,7 @@ static us5 decompose_expand_map_0[256] = {
 	{ 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, 
 	{ 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, 
 	{ 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, 
-	{ 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 5, 112, 97, 114, 97, 46}, 
+	{ 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, 
 	{ 0, 0}, { 3, 40, 99, 41}, { 0, 0}, { 2, 60, 60}, { 0, 0}, { 0, 0}, { 3, 40, 114, 41}, { 0, 0}, 
 	{ 0, 0}, { 2, 43, 45}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, 
 	{ 0, 0}, { 0, 0}, { 0, 0}, { 2, 62, 62}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, 
@@ -427,7 +427,7 @@ static us5 decompose_expand_map_0[256] = {
 	{ 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}
 };
 
-static us5 decompose_expand_map_32[256] = {
+static us3 decompose_expand_map_32[256] = {
 	{ 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, 
 	{ 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, 
 	{ 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, 
@@ -470,7 +470,7 @@ static unsigned short *decompose_map_table[2] = {
 	decompose_replace_map_0,
 	decompose_replace_map_32,
 };
-static us5 *decompose_expand_table[2] = {
+static us3 *decompose_expand_table[2] = {
 	decompose_expand_map_0,
 	decompose_expand_map_32,
 };
@@ -482,7 +482,7 @@ int decompose_convert(unsigned short *in, unsigned int in_length, unsigned short
 	unsigned char block, cp;
 	unsigned char *jump_map;
 	unsigned short *replace_map, *transpose_map;
-	us5 *expand_map;
+	us3 *expand_map;
 	unsigned short *tmp_out = NULL;
 	unsigned int    str_length;
 
