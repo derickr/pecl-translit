@@ -104,7 +104,7 @@
 	{
 		$txt = '';
 		$width = ceil(log(max($table), 10));
-		$txt .= "$type {$name}[256] = {\n";
+		$txt .= "static $type {$name}[256] = {\n";
 		for ($i = 0; $i < 256; $i++) {
 			if ($i % 16 == 0) {
 				$txt .= "\t";
@@ -125,7 +125,7 @@
 	{
 		$txt = '';
 		$width = ceil(log(max($table), 10));
-		$type = "us{$max_length}";
+		$type = "static us{$max_length}";
 		$txt .= "$type {$name}[256] = {\n";
 		for ($i = 0; $i < 256; $i++) {
 			if ($i % 8 == 0) {
@@ -156,7 +156,7 @@
  */
 
 ENDHEADER;
-		$txt .= "typedef unsigned short us{$expand_max_length}[". ($expand_max_length + 1) ."];\n";
+		$txt .= "#include \"translit_types.h\"\n\n";
 
 		foreach ($jumps as $block => $data) {
 			$function = "{$function_name}_jump_map_{$block}";
@@ -178,7 +178,7 @@ ENDHEADER;
 		$rev_jump = array();
 		/* Generate jump table */
 		$c = 0;
-		$table_definition = "unsigned char *jump_table[". (count($jumps)). "] = {\n";
+		$table_definition = "static unsigned char *jump_table[". (count($jumps)). "] = {\n";
 		foreach ($jumps as $block => $dummy)
 		{
 			$table_definition .= "\t{$function_name}_jump_map_{$block},\n";
@@ -191,7 +191,7 @@ ENDHEADER;
 		$rev_map = array();
 		/* Generate map table */
 		$c = 0;
-		$table_definition .= "unsigned short *map_table[". (count($map)). "] = {\n";
+		$table_definition .= "static unsigned short *map_table[". (count($map)). "] = {\n";
 		foreach ($map as $block => $dummy)
 		{
 			$table_definition .= "\t{$function_name}_replace_map_{$block},\n";
@@ -204,7 +204,7 @@ ENDHEADER;
 		$rev_expand = array();
 		/* Generate expand table */
 		$c = 0;
-		$table_definition .= "us$expand_max_length *expand_table[". (count($expand)). "] = {\n";
+		$table_definition .= "static us$expand_max_length *expand_table[". (count($expand)). "] = {\n";
 		foreach ($expand as $block => $dummy)
 		{
 			$table_definition .= "\t{$function_name}_expand_map_{$block},\n";
@@ -216,7 +216,7 @@ ENDHEADER;
 		$rev_transpose = array();
 		/* Generate transpose table */
 		$c = 0;
-		$table_definition .= "unsigned short *transpose_table[". (count($transpose)). "] = {\n";
+		$table_definition .= "static unsigned short *transpose_table[". (count($transpose)). "] = {\n";
 		foreach ($transpose as $block => $dummy)
 		{
 			$table_definition .= "\t{$function_name}_transpose_map_{$block},\n";
@@ -313,6 +313,7 @@ ENDCODE;
 	}
 	*out_length = out_idx;
 	*out = tmp_out;
+	return 0;
 }
 
 #if DEBUG_FILTER
@@ -420,4 +421,12 @@ ENDCODE;
 
 	$code = generate_code($function_name, $jumptbl, $map, $expand, $expand_max_length, $transpose);
 	file_put_contents("{$function_name}.c", $code);
+	
+	$include = fopen("filter_table.h", "a");
+	fputs($include, "\t{ \"$function_name\", {$function_name}_convert },\n");
+	fclose($include);
+	
+	$include = fopen("translit_filters.h", "a");
+	fputs($include, "int {$function_name}_convert(unsigned short *in, unsigned int in_length, unsigned short **out, unsigned int *out_length);\n");
+	fclose($include);
 ?>

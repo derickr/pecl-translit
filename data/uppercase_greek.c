@@ -3,8 +3,9 @@
  * This file is generated from a transliteration definition table with the name
  * "uppercase_greek.tr".
  */
-typedef unsigned short us0[1];
-unsigned char uppercase_greek_jump_map_3[256] = {
+#include "translit_types.h"
+
+static unsigned char uppercase_greek_jump_map_3[256] = {
 	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
 	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
 	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
@@ -23,7 +24,7 @@ unsigned char uppercase_greek_jump_map_3[256] = {
 	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 };
 
-unsigned short uppercase_greek_replace_map_3[256] = {
+static unsigned short uppercase_greek_replace_map_3[256] = {
 	  0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0, 
 	  0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0, 
 	  0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0, 
@@ -42,7 +43,7 @@ unsigned short uppercase_greek_replace_map_3[256] = {
 	  0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0
 };
 
-unsigned short uppercase_greek_transpose_map_3[256] = {
+static unsigned short uppercase_greek_transpose_map_3[256] = {
 	 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 
 	 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 
 	 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 
@@ -61,15 +62,15 @@ unsigned short uppercase_greek_transpose_map_3[256] = {
 	 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0
 };
 
-unsigned char *jump_table[1] = {
+static unsigned char *jump_table[1] = {
 	uppercase_greek_jump_map_3,
 };
-unsigned short *map_table[1] = {
+static unsigned short *map_table[1] = {
 	uppercase_greek_replace_map_3,
 };
-us0 *expand_table[0] = {
+static us0 *expand_table[0] = {
 };
-unsigned short *transpose_table[1] = {
+static unsigned short *transpose_table[1] = {
 	uppercase_greek_transpose_map_3,
 };
 
@@ -139,6 +140,7 @@ int uppercase_greek_convert(unsigned short *in, unsigned int in_length, unsigned
 	}
 	*out_length = out_idx;
 	*out = tmp_out;
+	return 0;
 }
 
 #if DEBUG_FILTER

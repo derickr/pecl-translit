@@ -21,6 +21,14 @@
 #ifndef PHP_TRANSLIT_H
 #define PHP_TRANSLIT_H
 
+#include "data/translit_types.h"
+#include "data/translit_filters.h"
+
+typedef struct translit_filter_entry {
+	char *name;
+	translit_func_t function;
+} translit_filter_entry;
+
 extern zend_module_entry translit_module_entry;
 #define phpext_translit_ptr &translit_module_entry
 
@@ -40,13 +48,10 @@ PHP_RINIT_FUNCTION(translit);
 PHP_RSHUTDOWN_FUNCTION(translit);
 PHP_MINFO_FUNCTION(translit);
 
-/* 
-  	Declare any global variables you may need between the BEGIN
-	and END macros here:     
-
 ZEND_BEGIN_MODULE_GLOBALS(translit)
 ZEND_END_MODULE_GLOBALS(translit)
-*/
+
+PHP_FUNCTION(transliterate);
 
 #ifdef ZTS
 #define TRANSLIT_G(v) TSRMG(translit_globals_id, zend_translit_globals *, v)

@@ -3,8 +3,9 @@
  * This file is generated from a transliteration definition table with the name
  * "hebrew_transliterate.tr".
  */
-typedef unsigned short us2[3];
-unsigned char hebrew_transliterate_jump_map_5[256] = {
+#include "translit_types.h"
+
+static unsigned char hebrew_transliterate_jump_map_5[256] = {
 	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
 	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
 	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
@@ -23,7 +24,7 @@ unsigned char hebrew_transliterate_jump_map_5[256] = {
 	2, 2, 2, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 };
 
-unsigned short hebrew_transliterate_replace_map_5[256] = {
+static unsigned short hebrew_transliterate_replace_map_5[256] = {
 	  0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0, 
 	  0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0, 
 	  0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0, 
@@ -42,7 +43,7 @@ unsigned short hebrew_transliterate_replace_map_5[256] = {
 	  0,   0,   0,  39,  34,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0
 };
 
-us2 hebrew_transliterate_expand_map_5[256] = {
+static us2 hebrew_transliterate_expand_map_5[256] = {
 	{ 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, 
 	{ 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, 
 	{ 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, 
@@ -77,16 +78,16 @@ us2 hebrew_transliterate_expand_map_5[256] = {
 	{ 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}
 };
 
-unsigned char *jump_table[1] = {
+static unsigned char *jump_table[1] = {
 	hebrew_transliterate_jump_map_5,
 };
-unsigned short *map_table[1] = {
+static unsigned short *map_table[1] = {
 	hebrew_transliterate_replace_map_5,
 };
-us2 *expand_table[1] = {
+static us2 *expand_table[1] = {
 	hebrew_transliterate_expand_map_5,
 };
-unsigned short *transpose_table[0] = {
+static unsigned short *transpose_table[0] = {
 };
 
 
@@ -155,6 +156,7 @@ int hebrew_transliterate_convert(unsigned short *in, unsigned int in_length, uns
 	}
 	*out_length = out_idx;
 	*out = tmp_out;
+	return 0;
 }
 
 #if DEBUG_FILTER

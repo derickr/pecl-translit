@@ -3,8 +3,9 @@
  * This file is generated from a transliteration definition table with the name
  * "uppercase_latin.tr".
  */
-typedef unsigned short us0[1];
-unsigned char uppercase_latin_jump_map_0[256] = {
+#include "translit_types.h"
+
+static unsigned char uppercase_latin_jump_map_0[256] = {
 	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
 	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
 	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
@@ -23,7 +24,7 @@ unsigned char uppercase_latin_jump_map_0[256] = {
 	5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 0
 };
 
-unsigned char uppercase_latin_jump_map_1[256] = {
+static unsigned char uppercase_latin_jump_map_1[256] = {
 	0, 5, 0, 5, 0, 5, 0, 5, 0, 5, 0, 5, 0, 5, 0, 5, 
 	0, 5, 0, 5, 0, 5, 0, 5, 0, 5, 0, 5, 0, 5, 0, 5, 
 	0, 5, 0, 5, 0, 5, 0, 5, 0, 5, 0, 5, 0, 5, 0, 5, 
@@ -42,7 +43,7 @@ unsigned char uppercase_latin_jump_map_1[256] = {
 	0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 0, 5, 0, 5, 0, 5
 };
 
-unsigned char uppercase_latin_jump_map_2[256] = {
+static unsigned char uppercase_latin_jump_map_2[256] = {
 	0, 5, 0, 5, 0, 5, 0, 5, 0, 5, 0, 5, 0, 5, 0, 5, 
 	0, 5, 0, 5, 0, 5, 0, 5, 0, 5, 0, 5, 0, 5, 0, 5, 
 	0, 5, 0, 5, 0, 5, 0, 5, 0, 5, 0, 5, 0, 5, 0, 5, 
@@ -61,7 +62,7 @@ unsigned char uppercase_latin_jump_map_2[256] = {
 	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 };
 
-unsigned char uppercase_latin_jump_map_30[256] = {
+static unsigned char uppercase_latin_jump_map_30[256] = {
 	0, 5, 0, 5, 0, 5, 0, 5, 0, 5, 0, 5, 0, 5, 0, 5, 
 	0, 5, 0, 5, 0, 5, 0, 5, 0, 5, 0, 5, 0, 5, 0, 5, 
 	0, 5, 0, 5, 0, 5, 0, 5, 0, 5, 0, 5, 0, 5, 0, 5, 
@@ -80,7 +81,7 @@ unsigned char uppercase_latin_jump_map_30[256] = {
 	0, 5, 0, 5, 0, 5, 0, 5, 0, 5, 0, 0, 0, 0, 0, 0
 };
 
-unsigned short uppercase_latin_transpose_map_0[256] = {
+static unsigned short uppercase_latin_transpose_map_0[256] = {
 	 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 
 	 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 
 	 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 
@@ -99,7 +100,7 @@ unsigned short uppercase_latin_transpose_map_0[256] = {
 	32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32,  0
 };
 
-unsigned short uppercase_latin_transpose_map_1[256] = {
+static unsigned short uppercase_latin_transpose_map_1[256] = {
 	0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 
 	0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 
 	0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 
@@ -118,7 +119,7 @@ unsigned short uppercase_latin_transpose_map_1[256] = {
 	0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1
 };
 
-unsigned short uppercase_latin_transpose_map_2[256] = {
+static unsigned short uppercase_latin_transpose_map_2[256] = {
 	0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 
 	0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 
 	0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 
@@ -137,7 +138,7 @@ unsigned short uppercase_latin_transpose_map_2[256] = {
 	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 };
 
-unsigned short uppercase_latin_transpose_map_30[256] = {
+static unsigned short uppercase_latin_transpose_map_30[256] = {
 	0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 
 	0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 
 	0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 
@@ -156,17 +157,17 @@ unsigned short uppercase_latin_transpose_map_30[256] = {
 	0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0
 };
 
-unsigned char *jump_table[4] = {
+static unsigned char *jump_table[4] = {
 	uppercase_latin_jump_map_0,
 	uppercase_latin_jump_map_1,
 	uppercase_latin_jump_map_2,
 	uppercase_latin_jump_map_30,
 };
-unsigned short *map_table[0] = {
+static unsigned short *map_table[0] = {
 };
-us0 *expand_table[0] = {
+static us0 *expand_table[0] = {
 };
-unsigned short *transpose_table[4] = {
+static unsigned short *transpose_table[4] = {
 	uppercase_latin_transpose_map_0,
 	uppercase_latin_transpose_map_1,
 	uppercase_latin_transpose_map_2,
@@ -242,6 +243,7 @@ int uppercase_latin_convert(unsigned short *in, unsigned int in_length, unsigned
 	}
 	*out_length = out_idx;
 	*out = tmp_out;
+	return 0;
 }
 
 #if DEBUG_FILTER

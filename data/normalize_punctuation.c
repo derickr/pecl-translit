@@ -3,8 +3,9 @@
  * This file is generated from a transliteration definition table with the name
  * "normalize_punctuation.tr".
  */
-typedef unsigned short us2[3];
-unsigned char normalize_punctuation_jump_map_0[256] = {
+#include "translit_types.h"
+
+static unsigned char normalize_punctuation_jump_map_0[256] = {
 	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
 	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
 	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
@@ -23,7 +24,7 @@ unsigned char normalize_punctuation_jump_map_0[256] = {
 	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 };
 
-unsigned char normalize_punctuation_jump_map_32[256] = {
+static unsigned char normalize_punctuation_jump_map_32[256] = {
 	3, 1, 3, 1, 1, 1, 1, 1, 1, 3, 3, 3, 0, 0, 0, 0, 
 	1, 1, 1, 2, 2, 2, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 
 	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 
@@ -42,7 +43,7 @@ unsigned char normalize_punctuation_jump_map_32[256] = {
 	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 };
 
-unsigned char normalize_punctuation_jump_map_2[256] = {
+static unsigned char normalize_punctuation_jump_map_2[256] = {
 	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
 	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
 	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
@@ -61,7 +62,7 @@ unsigned char normalize_punctuation_jump_map_2[256] = {
 	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 };
 
-unsigned short normalize_punctuation_replace_map_0[256] = {
+static unsigned short normalize_punctuation_replace_map_0[256] = {
 	 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 
 	 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 
 	 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 
@@ -80,7 +81,7 @@ unsigned short normalize_punctuation_replace_map_0[256] = {
 	 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0
 };
 
-unsigned short normalize_punctuation_replace_map_32[256] = {
+static unsigned short normalize_punctuation_replace_map_32[256] = {
 	 0, 32,  0, 32, 32, 32, 32, 32, 32,  0,  0,  0,  0,  0,  0,  0, 
 	45, 45, 45,  0,  0,  0,  0, 32, 39, 39, 39, 39, 34, 34, 34, 34, 
 	 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 
@@ -99,7 +100,7 @@ unsigned short normalize_punctuation_replace_map_32[256] = {
 	 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0
 };
 
-unsigned short normalize_punctuation_replace_map_2[256] = {
+static unsigned short normalize_punctuation_replace_map_2[256] = {
 	 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 
 	 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 
 	 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 
@@ -118,7 +119,7 @@ unsigned short normalize_punctuation_replace_map_2[256] = {
 	 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0
 };
 
-us2 normalize_punctuation_expand_map_32[256] = {
+static us2 normalize_punctuation_expand_map_32[256] = {
 	{ 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, 
 	{ 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, 
 	{ 0, 0}, { 0, 0}, { 0, 0}, { 2, 45, 45}, { 2, 45, 45}, { 2, 45, 45}, { 0, 0}, { 0, 0}, 
@@ -153,20 +154,20 @@ us2 normalize_punctuation_expand_map_32[256] = {
 	{ 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}
 };
 
-unsigned char *jump_table[3] = {
+static unsigned char *jump_table[3] = {
 	normalize_punctuation_jump_map_0,
 	normalize_punctuation_jump_map_32,
 	normalize_punctuation_jump_map_2,
 };
-unsigned short *map_table[3] = {
+static unsigned short *map_table[3] = {
 	normalize_punctuation_replace_map_0,
 	normalize_punctuation_replace_map_32,
 	normalize_punctuation_replace_map_2,
 };
-us2 *expand_table[1] = {
+static us2 *expand_table[1] = {
 	normalize_punctuation_expand_map_32,
 };
-unsigned short *transpose_table[0] = {
+static unsigned short *transpose_table[0] = {
 };
 
 
@@ -237,6 +238,7 @@ int normalize_punctuation_convert(unsigned short *in, unsigned int in_length, un
 	}
 	*out_length = out_idx;
 	*out = tmp_out;
+	return 0;
 }
 
 #if DEBUG_FILTER

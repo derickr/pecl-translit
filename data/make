@@ -1,3 +1,14 @@
 #!/bin/sh
+
+echo "#ifndef __TRANSLIT_FILTERS_H__" > translit_filters.h
+echo "#define __TRANSLIT_FILTERS_H__" >> translit_filters.h
+
+echo "#ifndef __FILTER_TABLE_H__" > filter_table.h
+echo "#define __FILTER_TABLE_H__" >> filter_table.h
+
 for i in *.tr; do php convert.php $i; done
 for i in *.c; do j=`echo $i | sed 's/\.c//'`; gcc -o $j -ggdb3 -DDEBUG_FILTER=1 $i; done 
+
+echo "#endif" >> translit_filters.h
+
+echo "#endif" >> filter_table.h

@@ -3,8 +3,9 @@
  * This file is generated from a transliteration definition table with the name
  * "normalize_ligature.tr".
  */
-typedef unsigned short us2[3];
-unsigned char normalize_ligature_jump_map_0[256] = {
+#include "translit_types.h"
+
+static unsigned char normalize_ligature_jump_map_0[256] = {
 	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
 	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
 	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
@@ -23,7 +24,7 @@ unsigned char normalize_ligature_jump_map_0[256] = {
 	0, 0, 0, 0, 0, 0, 2, 0, 2, 0, 0, 0, 2, 0, 0, 0
 };
 
-unsigned char normalize_ligature_jump_map_1[256] = {
+static unsigned char normalize_ligature_jump_map_1[256] = {
 	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
 	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
 	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
@@ -42,7 +43,7 @@ unsigned char normalize_ligature_jump_map_1[256] = {
 	0, 2, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2
 };
 
-us2 normalize_ligature_expand_map_0[256] = {
+static us2 normalize_ligature_expand_map_0[256] = {
 	{ 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, 
 	{ 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, 
 	{ 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, 
@@ -77,7 +78,7 @@ us2 normalize_ligature_expand_map_0[256] = {
 	{ 2, 111, 101}, { 0, 0}, { 0, 0}, { 0, 0}, { 2, 117, 101}, { 0, 0}, { 0, 0}, { 0, 0}
 };
 
-us2 normalize_ligature_expand_map_1[256] = {
+static us2 normalize_ligature_expand_map_1[256] = {
 	{ 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, 
 	{ 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, 
 	{ 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, 
@@ -112,17 +113,17 @@ us2 normalize_ligature_expand_map_1[256] = {
 	{ 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 2, 65, 69}, { 2, 97, 101}, { 2, 79, 69}, { 2, 111, 101}
 };
 
-unsigned char *jump_table[2] = {
+static unsigned char *jump_table[2] = {
 	normalize_ligature_jump_map_0,
 	normalize_ligature_jump_map_1,
 };
-unsigned short *map_table[0] = {
+static unsigned short *map_table[0] = {
 };
-us2 *expand_table[2] = {
+static us2 *expand_table[2] = {
 	normalize_ligature_expand_map_0,
 	normalize_ligature_expand_map_1,
 };
-unsigned short *transpose_table[0] = {
+static unsigned short *transpose_table[0] = {
 };
 
 
@@ -192,6 +193,7 @@ int normalize_ligature_convert(unsigned short *in, unsigned int in_length, unsig
 	}
 	*out_length = out_idx;
 	*out = tmp_out;
+	return 0;
 }
 
 #if DEBUG_FILTER

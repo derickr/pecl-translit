@@ -3,8 +3,9 @@
  * This file is generated from a transliteration definition table with the name
  * "han_transliterate.tr".
  */
-typedef unsigned short us6[7];
-unsigned char han_transliterate_jump_map_84[256] = {
+#include "translit_types.h"
+
+static unsigned char han_transliterate_jump_map_84[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
@@ -23,7 +24,7 @@ unsigned char han_transliterate_jump_map_84[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
 };
 
-unsigned char han_transliterate_jump_map_147[256] = {
+static unsigned char han_transliterate_jump_map_147[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
@@ -42,7 +43,7 @@ unsigned char han_transliterate_jump_map_147[256] = {
 	2, 0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
 };
 
-unsigned char han_transliterate_jump_map_149[256] = {
+static unsigned char han_transliterate_jump_map_149[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
@@ -61,7 +62,7 @@ unsigned char han_transliterate_jump_map_149[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
 };
 
-unsigned char han_transliterate_jump_map_150[256] = {
+static unsigned char han_transliterate_jump_map_150[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
@@ -80,7 +81,7 @@ unsigned char han_transliterate_jump_map_150[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
 };
 
-unsigned char han_transliterate_jump_map_85[256] = {
+static unsigned char han_transliterate_jump_map_85[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 2, 2, 0, 
 	2, 2, 2, 2, 2, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
@@ -99,7 +100,7 @@ unsigned char han_transliterate_jump_map_85[256] = {
 	2, 2, 2, 2, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
 };
 
-unsigned char han_transliterate_jump_map_87[256] = {
+static unsigned char han_transliterate_jump_map_87[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
@@ -118,7 +119,7 @@ unsigned char han_transliterate_jump_map_87[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
 };
 
-unsigned char han_transliterate_jump_map_99[256] = {
+static unsigned char han_transliterate_jump_map_99[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 0, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 0, 2, 2, 2, 2, 2, 2, 2, 2, 
@@ -137,7 +138,7 @@ unsigned char han_transliterate_jump_map_99[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 0, 2, 2, 2
 };
 
-unsigned char han_transliterate_jump_map_146[256] = {
+static unsigned char han_transliterate_jump_map_146[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 0, 0, 0, 0, 2, 2, 2, 2, 
@@ -156,7 +157,7 @@ unsigned char han_transliterate_jump_map_146[256] = {
 	2, 2, 0, 2, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
 };
 
-unsigned char han_transliterate_jump_map_60[256] = {
+static unsigned char han_transliterate_jump_map_60[256] = {
 	2, 2, 2, 2, 2, 2, 2, 0, 2, 0, 2, 2, 2, 2, 2, 0, 
 	2, 0, 2, 0, 2, 0, 2, 2, 2, 2, 2, 2, 0, 2, 0, 2, 
 	2, 2, 0, 2, 2, 2, 2, 0, 0, 0, 2, 0, 2, 0, 2, 2, 
@@ -175,7 +176,7 @@ unsigned char han_transliterate_jump_map_60[256] = {
 	0, 0, 0, 0, 2, 2, 2, 2, 0, 2, 2, 2, 2, 2, 0, 2
 };
 
-unsigned char han_transliterate_jump_map_72[256] = {
+static unsigned char han_transliterate_jump_map_72[256] = {
 	2, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 2, 2, 2, 
 	2, 2, 2, 2, 2, 0, 0, 2, 2, 2, 2, 2, 2, 0, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
@@ -194,7 +195,7 @@ unsigned char han_transliterate_jump_map_72[256] = {
 	2, 2, 2, 0, 2, 2, 2, 0, 2, 2, 0, 0, 2, 2, 2, 0
 };
 
-unsigned char han_transliterate_jump_map_77[256] = {
+static unsigned char han_transliterate_jump_map_77[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 0, 0, 0, 2, 0, 0, 2, 2, 2, 2, 2, 2, 0, 
@@ -213,7 +214,7 @@ unsigned char han_transliterate_jump_map_77[256] = {
 	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 };
 
-unsigned char han_transliterate_jump_map_86[256] = {
+static unsigned char han_transliterate_jump_map_86[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
@@ -232,7 +233,7 @@ unsigned char han_transliterate_jump_map_86[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
 };
 
-unsigned char han_transliterate_jump_map_93[256] = {
+static unsigned char han_transliterate_jump_map_93[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
@@ -251,7 +252,7 @@ unsigned char han_transliterate_jump_map_93[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 2, 2, 2
 };
 
-unsigned char han_transliterate_jump_map_101[256] = {
+static unsigned char han_transliterate_jump_map_101[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
@@ -270,7 +271,7 @@ unsigned char han_transliterate_jump_map_101[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
 };
 
-unsigned char han_transliterate_jump_map_118[256] = {
+static unsigned char han_transliterate_jump_map_118[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
@@ -289,7 +290,7 @@ unsigned char han_transliterate_jump_map_118[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
 };
 
-unsigned char han_transliterate_jump_map_154[256] = {
+static unsigned char han_transliterate_jump_map_154[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
@@ -308,7 +309,7 @@ unsigned char han_transliterate_jump_map_154[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 0, 2, 2, 2, 2, 2, 2, 2
 };
 
-unsigned char han_transliterate_jump_map_52[256] = {
+static unsigned char han_transliterate_jump_map_52[256] = {
 	2, 2, 0, 0, 2, 2, 2, 0, 0, 0, 0, 0, 2, 0, 0, 0, 
 	0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 2, 0, 0, 0, 
 	0, 2, 0, 0, 2, 0, 0, 0, 2, 2, 0, 2, 2, 2, 2, 2, 
@@ -327,7 +328,7 @@ unsigned char han_transliterate_jump_map_52[256] = {
 	2, 2, 2, 0, 2, 2, 2, 2, 2, 2, 2, 0, 2, 2, 2, 0
 };
 
-unsigned char han_transliterate_jump_map_53[256] = {
+static unsigned char han_transliterate_jump_map_53[256] = {
 	2, 0, 2, 2, 2, 2, 2, 0, 0, 2, 2, 2, 2, 2, 2, 2, 
 	0, 2, 2, 2, 0, 2, 0, 2, 2, 2, 2, 0, 2, 2, 2, 0, 
 	2, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 0, 2, 2, 2, 
@@ -346,7 +347,7 @@ unsigned char han_transliterate_jump_map_53[256] = {
 	2, 2, 2, 2, 2, 2, 0, 2, 0, 0, 0, 0, 2, 2, 0, 2
 };
 
-unsigned char han_transliterate_jump_map_56[256] = {
+static unsigned char han_transliterate_jump_map_56[256] = {
 	2, 0, 2, 0, 2, 2, 0, 2, 2, 2, 2, 2, 0, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 2, 
 	2, 2, 2, 2, 0, 2, 0, 2, 2, 0, 2, 0, 0, 2, 0, 2, 
@@ -365,7 +366,7 @@ unsigned char han_transliterate_jump_map_56[256] = {
 	2, 2, 2, 0, 0, 2, 0, 2, 0, 0, 0, 2, 2, 2, 2, 2
 };
 
-unsigned char han_transliterate_jump_map_68[256] = {
+static unsigned char han_transliterate_jump_map_68[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 2, 2, 0, 2, 
 	0, 2, 0, 2, 2, 2, 2, 2, 2, 2, 2, 0, 0, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 0, 2, 2, 2, 2, 0, 2, 2, 2, 2, 
@@ -384,7 +385,7 @@ unsigned char han_transliterate_jump_map_68[256] = {
 	0, 2, 2, 2, 2, 0, 2, 2, 0, 2, 2, 0, 2, 2, 0, 2
 };
 
-unsigned char han_transliterate_jump_map_74[256] = {
+static unsigned char han_transliterate_jump_map_74[256] = {
 	2, 2, 0, 0, 2, 2, 2, 0, 0, 0, 0, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 0, 2, 2, 2, 2, 0, 2, 0, 0, 2, 0, 
 	2, 2, 2, 2, 2, 2, 2, 0, 0, 2, 2, 2, 2, 0, 2, 2, 
@@ -403,7 +404,7 @@ unsigned char han_transliterate_jump_map_74[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 2, 0
 };
 
-unsigned char han_transliterate_jump_map_79[256] = {
+static unsigned char han_transliterate_jump_map_79[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 2, 2, 2, 
@@ -422,7 +423,7 @@ unsigned char han_transliterate_jump_map_79[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
 };
 
-unsigned char han_transliterate_jump_map_90[256] = {
+static unsigned char han_transliterate_jump_map_90[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
@@ -441,7 +442,7 @@ unsigned char han_transliterate_jump_map_90[256] = {
 	2, 2, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
 };
 
-unsigned char han_transliterate_jump_map_102[256] = {
+static unsigned char han_transliterate_jump_map_102[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
@@ -460,7 +461,7 @@ unsigned char han_transliterate_jump_map_102[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 2, 2, 2, 2
 };
 
-unsigned char han_transliterate_jump_map_107[256] = {
+static unsigned char han_transliterate_jump_map_107[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 0, 2, 2, 
 	2, 2, 2, 2, 2, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
@@ -479,7 +480,7 @@ unsigned char han_transliterate_jump_map_107[256] = {
 	2, 2, 2, 2, 2, 2, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2
 };
 
-unsigned char han_transliterate_jump_map_119[256] = {
+static unsigned char han_transliterate_jump_map_119[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
@@ -498,7 +499,7 @@ unsigned char han_transliterate_jump_map_119[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
 };
 
-unsigned char han_transliterate_jump_map_133[256] = {
+static unsigned char han_transliterate_jump_map_133[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
@@ -517,7 +518,7 @@ unsigned char han_transliterate_jump_map_133[256] = {
 	2, 2, 0, 2, 2, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
 };
 
-unsigned char han_transliterate_jump_map_142[256] = {
+static unsigned char han_transliterate_jump_map_142[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
@@ -536,7 +537,7 @@ unsigned char han_transliterate_jump_map_142[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
 };
 
-unsigned char han_transliterate_jump_map_151[256] = {
+static unsigned char han_transliterate_jump_map_151[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 0, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
@@ -555,7 +556,7 @@ unsigned char han_transliterate_jump_map_151[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
 };
 
-unsigned char han_transliterate_jump_map_153[256] = {
+static unsigned char han_transliterate_jump_map_153[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
@@ -574,7 +575,7 @@ unsigned char han_transliterate_jump_map_153[256] = {
 	2, 2, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
 };
 
-unsigned char han_transliterate_jump_map_54[256] = {
+static unsigned char han_transliterate_jump_map_54[256] = {
 	2, 2, 2, 0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 
 	2, 2, 0, 2, 2, 2, 2, 0, 0, 2, 2, 0, 2, 2, 2, 0, 
 	2, 2, 2, 2, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 0, 
@@ -593,7 +594,7 @@ unsigned char han_transliterate_jump_map_54[256] = {
 	0, 2, 2, 2, 2, 0, 2, 0, 2, 2, 0, 2, 2, 0, 2, 2
 };
 
-unsigned char han_transliterate_jump_map_55[256] = {
+static unsigned char han_transliterate_jump_map_55[256] = {
 	0, 0, 0, 2, 2, 2, 2, 2, 2, 0, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 
 	0, 0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 0, 2, 0, 
@@ -612,7 +613,7 @@ unsigned char han_transliterate_jump_map_55[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 0, 2, 2, 2, 2, 2, 0, 2
 };
 
-unsigned char han_transliterate_jump_map_57[256] = {
+static unsigned char han_transliterate_jump_map_57[256] = {
 	0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 0, 2, 0, 2, 
 	0, 2, 0, 2, 2, 2, 2, 0, 2, 0, 2, 2, 2, 0, 2, 2, 
 	2, 2, 2, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 2, 2, 
@@ -631,7 +632,7 @@ unsigned char han_transliterate_jump_map_57[256] = {
 	2, 2, 2, 2, 2, 2, 0, 2, 0, 2, 2, 2, 2, 2, 0, 0
 };
 
-unsigned char han_transliterate_jump_map_63[256] = {
+static unsigned char han_transliterate_jump_map_63[256] = {
 	0, 0, 2, 0, 0, 0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 0, 0, 2, 2, 2, 2, 0, 2, 2, 2, 2, 2, 
 	2, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
@@ -650,7 +651,7 @@ unsigned char han_transliterate_jump_map_63[256] = {
 	2, 2, 0, 0, 0, 2, 0, 2, 2, 2, 2, 0, 2, 0, 2, 2
 };
 
-unsigned char han_transliterate_jump_map_64[256] = {
+static unsigned char han_transliterate_jump_map_64[256] = {
 	2, 2, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 2, 2, 2, 
 	2, 2, 0, 2, 2, 2, 0, 2, 2, 2, 2, 2, 2, 0, 0, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 2, 2, 
@@ -669,7 +670,7 @@ unsigned char han_transliterate_jump_map_64[256] = {
 	0, 2, 2, 2, 0, 2, 2, 2, 2, 2, 2, 2, 0, 2, 2, 0
 };
 
-unsigned char han_transliterate_jump_map_65[256] = {
+static unsigned char han_transliterate_jump_map_65[256] = {
 	2, 2, 2, 0, 0, 2, 2, 2, 2, 2, 0, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 0, 0, 2, 2, 2, 2, 2, 2, 0, 2, 
 	2, 0, 2, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 2, 
@@ -688,7 +689,7 @@ unsigned char han_transliterate_jump_map_65[256] = {
 	0, 2, 2, 0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0
 };
 
-unsigned char han_transliterate_jump_map_69[256] = {
+static unsigned char han_transliterate_jump_map_69[256] = {
 	0, 2, 2, 2, 2, 0, 2, 2, 2, 2, 0, 0, 0, 0, 2, 2, 
 	0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 2, 2, 
 	2, 2, 2, 2, 0, 0, 0, 2, 0, 0, 2, 0, 2, 2, 0, 2, 
@@ -707,7 +708,7 @@ unsigned char han_transliterate_jump_map_69[256] = {
 	2, 2, 2, 0, 2, 0, 2, 2, 0, 2, 2, 2, 0, 2, 2, 2
 };
 
-unsigned char han_transliterate_jump_map_71[256] = {
+static unsigned char han_transliterate_jump_map_71[256] = {
 	2, 2, 0, 0, 2, 2, 2, 2, 0, 0, 2, 2, 2, 2, 2, 0, 
 	0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 0, 0, 0, 2, 0, 2, 2, 2, 2, 2, 2, 2, 
@@ -726,7 +727,7 @@ unsigned char han_transliterate_jump_map_71[256] = {
 	2, 0, 0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 2, 2
 };
 
-unsigned char han_transliterate_jump_map_75[256] = {
+static unsigned char han_transliterate_jump_map_75[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 0, 2, 2, 
 	2, 2, 0, 2, 2, 2, 2, 2, 0, 2, 0, 2, 0, 2, 2, 2, 
 	0, 2, 0, 2, 2, 2, 2, 2, 2, 0, 2, 2, 2, 0, 2, 2, 
@@ -745,7 +746,7 @@ unsigned char han_transliterate_jump_map_75[256] = {
 	2, 2, 2, 0, 2, 2, 2, 0, 2, 0, 2, 0, 2, 2, 2, 2
 };
 
-unsigned char han_transliterate_jump_map_80[256] = {
+static unsigned char han_transliterate_jump_map_80[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
@@ -764,7 +765,7 @@ unsigned char han_transliterate_jump_map_80[256] = {
 	2, 2, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
 };
 
-unsigned char han_transliterate_jump_map_83[256] = {
+static unsigned char han_transliterate_jump_map_83[256] = {
 	2, 0, 0, 2, 2, 2, 2, 0, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
@@ -783,7 +784,7 @@ unsigned char han_transliterate_jump_map_83[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 2
 };
 
-unsigned char han_transliterate_jump_map_88[256] = {
+static unsigned char han_transliterate_jump_map_88[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 
 	2, 2, 0, 2, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
@@ -802,7 +803,7 @@ unsigned char han_transliterate_jump_map_88[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
 };
 
-unsigned char han_transliterate_jump_map_91[256] = {
+static unsigned char han_transliterate_jump_map_91[256] = {
 	2, 2, 2, 2, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 2, 2, 2, 2, 
@@ -821,7 +822,7 @@ unsigned char han_transliterate_jump_map_91[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
 };
 
-unsigned char han_transliterate_jump_map_97[256] = {
+static unsigned char han_transliterate_jump_map_97[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
@@ -840,7 +841,7 @@ unsigned char han_transliterate_jump_map_97[256] = {
 	2, 2, 2, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
 };
 
-unsigned char han_transliterate_jump_map_111[256] = {
+static unsigned char han_transliterate_jump_map_111[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
@@ -859,7 +860,7 @@ unsigned char han_transliterate_jump_map_111[256] = {
 	2, 2, 2, 2, 2, 0, 2, 2, 0, 0, 2, 2, 2, 2, 2, 2
 };
 
-unsigned char han_transliterate_jump_map_114[256] = {
+static unsigned char han_transliterate_jump_map_114[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 0, 2, 2, 2, 2, 2, 2, 2, 
 	0, 2, 2, 2, 2, 2, 0, 2, 2, 2, 2, 0, 2, 2, 2, 2, 
@@ -878,7 +879,7 @@ unsigned char han_transliterate_jump_map_114[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
 };
 
-unsigned char han_transliterate_jump_map_116[256] = {
+static unsigned char han_transliterate_jump_map_116[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
@@ -897,7 +898,7 @@ unsigned char han_transliterate_jump_map_116[256] = {
 	0, 0, 0, 2, 2, 2, 2, 2, 0, 2, 2, 2, 0, 2, 2, 2
 };
 
-unsigned char han_transliterate_jump_map_120[256] = {
+static unsigned char han_transliterate_jump_map_120[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
@@ -916,7 +917,7 @@ unsigned char han_transliterate_jump_map_120[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
 };
 
-unsigned char han_transliterate_jump_map_121[256] = {
+static unsigned char han_transliterate_jump_map_121[256] = {
 	0, 2, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
@@ -935,7 +936,7 @@ unsigned char han_transliterate_jump_map_121[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
 };
 
-unsigned char han_transliterate_jump_map_130[256] = {
+static unsigned char han_transliterate_jump_map_130[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 2, 
@@ -954,7 +955,7 @@ unsigned char han_transliterate_jump_map_130[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
 };
 
-unsigned char han_transliterate_jump_map_139[256] = {
+static unsigned char han_transliterate_jump_map_139[256] = {
 	2, 2, 2, 0, 2, 2, 2, 2, 2, 0, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
@@ -973,7 +974,7 @@ unsigned char han_transliterate_jump_map_139[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
 };
 
-unsigned char han_transliterate_jump_map_140[256] = {
+static unsigned char han_transliterate_jump_map_140[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
@@ -992,7 +993,7 @@ unsigned char han_transliterate_jump_map_140[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
 };
 
-unsigned char han_transliterate_jump_map_148[256] = {
+static unsigned char han_transliterate_jump_map_148[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
@@ -1011,7 +1012,7 @@ unsigned char han_transliterate_jump_map_148[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
 };
 
-unsigned char han_transliterate_jump_map_157[256] = {
+static unsigned char han_transliterate_jump_map_157[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 2, 2, 2, 2, 
@@ -1030,7 +1031,7 @@ unsigned char han_transliterate_jump_map_157[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
 };
 
-unsigned char han_transliterate_jump_map_92[256] = {
+static unsigned char han_transliterate_jump_map_92[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 2, 2, 2, 2, 
 	2, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
@@ -1049,7 +1050,7 @@ unsigned char han_transliterate_jump_map_92[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
 };
 
-unsigned char han_transliterate_jump_map_94[256] = {
+static unsigned char han_transliterate_jump_map_94[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
@@ -1068,7 +1069,7 @@ unsigned char han_transliterate_jump_map_94[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
 };
 
-unsigned char han_transliterate_jump_map_108[256] = {
+static unsigned char han_transliterate_jump_map_108[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
@@ -1087,7 +1088,7 @@ unsigned char han_transliterate_jump_map_108[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 2, 2, 2, 2, 2, 2
 };
 
-unsigned char han_transliterate_jump_map_117[256] = {
+static unsigned char han_transliterate_jump_map_117[256] = {
 	2, 2, 2, 2, 2, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
@@ -1106,7 +1107,7 @@ unsigned char han_transliterate_jump_map_117[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
 };
 
-unsigned char han_transliterate_jump_map_129[256] = {
+static unsigned char han_transliterate_jump_map_129[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 0, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
@@ -1125,7 +1126,7 @@ unsigned char han_transliterate_jump_map_129[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
 };
 
-unsigned char han_transliterate_jump_map_131[256] = {
+static unsigned char han_transliterate_jump_map_131[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	0, 2, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
@@ -1144,7 +1145,7 @@ unsigned char han_transliterate_jump_map_131[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
 };
 
-unsigned char han_transliterate_jump_map_132[256] = {
+static unsigned char han_transliterate_jump_map_132[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 2, 2, 2, 2, 0, 0, 
 	2, 0, 0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
@@ -1163,7 +1164,7 @@ unsigned char han_transliterate_jump_map_132[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
 };
 
-unsigned char han_transliterate_jump_map_138[256] = {
+static unsigned char han_transliterate_jump_map_138[256] = {
 	2, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
@@ -1182,7 +1183,7 @@ unsigned char han_transliterate_jump_map_138[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
 };
 
-unsigned char han_transliterate_jump_map_158[256] = {
+static unsigned char han_transliterate_jump_map_158[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
@@ -1201,7 +1202,7 @@ unsigned char han_transliterate_jump_map_158[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
 };
 
-unsigned char han_transliterate_jump_map_115[256] = {
+static unsigned char han_transliterate_jump_map_115[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 
 	0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
@@ -1220,7 +1221,7 @@ unsigned char han_transliterate_jump_map_115[256] = {
 	2, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
 };
 
-unsigned char han_transliterate_jump_map_127[256] = {
+static unsigned char han_transliterate_jump_map_127[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
@@ -1239,7 +1240,7 @@ unsigned char han_transliterate_jump_map_127[256] = {
 	2, 2, 2, 2, 2, 2, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2
 };
 
-unsigned char han_transliterate_jump_map_62[256] = {
+static unsigned char han_transliterate_jump_map_62[256] = {
 	2, 2, 0, 2, 2, 2, 0, 0, 0, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 0, 2, 0, 2, 2, 0, 2, 2, 2, 2, 2, 0, 
 	2, 0, 2, 2, 2, 2, 2, 2, 0, 2, 2, 2, 2, 0, 2, 0, 
@@ -1258,7 +1259,7 @@ unsigned char han_transliterate_jump_map_62[256] = {
 	2, 0, 2, 0, 0, 2, 2, 2, 2, 0, 2, 0, 0, 2, 0, 2
 };
 
-unsigned char han_transliterate_jump_map_67[256] = {
+static unsigned char han_transliterate_jump_map_67[256] = {
 	0, 0, 2, 2, 2, 2, 2, 2, 2, 0, 2, 0, 2, 2, 2, 2, 
 	2, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 0, 2, 
@@ -1277,7 +1278,7 @@ unsigned char han_transliterate_jump_map_67[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 2, 2, 2, 0, 2
 };
 
-unsigned char han_transliterate_jump_map_81[256] = {
+static unsigned char han_transliterate_jump_map_81[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
@@ -1296,7 +1297,7 @@ unsigned char han_transliterate_jump_map_81[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
 };
 
-unsigned char han_transliterate_jump_map_104[256] = {
+static unsigned char han_transliterate_jump_map_104[256] = {
 	2, 2, 2, 0, 2, 2, 0, 2, 2, 2, 2, 2, 2, 0, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
@@ -1315,7 +1316,7 @@ unsigned char han_transliterate_jump_map_104[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
 };
 
-unsigned char han_transliterate_jump_map_109[256] = {
+static unsigned char han_transliterate_jump_map_109[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
@@ -1334,7 +1335,7 @@ unsigned char han_transliterate_jump_map_109[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
 };
 
-unsigned char han_transliterate_jump_map_155[256] = {
+static unsigned char han_transliterate_jump_map_155[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
@@ -1353,7 +1354,7 @@ unsigned char han_transliterate_jump_map_155[256] = {
 	2, 0, 0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
 };
 
-unsigned char han_transliterate_jump_map_59[256] = {
+static unsigned char han_transliterate_jump_map_59[256] = {
 	0, 0, 2, 2, 2, 2, 2, 2, 0, 2, 2, 2, 2, 2, 2, 2, 
 	2, 0, 2, 2, 2, 2, 0, 2, 2, 2, 2, 0, 2, 2, 2, 0, 
 	2, 2, 0, 2, 0, 2, 2, 2, 0, 2, 2, 2, 2, 2, 2, 2, 
@@ -1372,7 +1373,7 @@ unsigned char han_transliterate_jump_map_59[256] = {
 	2, 2, 2, 2, 0, 0, 0, 2, 2, 2, 2, 2, 0, 0, 0, 2
 };
 
-unsigned char han_transliterate_jump_map_103[256] = {
+static unsigned char han_transliterate_jump_map_103[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
@@ -1391,7 +1392,7 @@ unsigned char han_transliterate_jump_map_103[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
 };
 
-unsigned char han_transliterate_jump_map_145[256] = {
+static unsigned char han_transliterate_jump_map_145[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
@@ -1410,7 +1411,7 @@ unsigned char han_transliterate_jump_map_145[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 2, 2, 2, 2
 };
 
-unsigned char han_transliterate_jump_map_70[256] = {
+static unsigned char han_transliterate_jump_map_70[256] = {
 	2, 2, 0, 2, 2, 2, 2, 2, 2, 2, 2, 0, 2, 2, 0, 2, 
 	2, 2, 0, 2, 0, 2, 0, 0, 2, 2, 2, 0, 0, 2, 0, 0, 
 	2, 2, 2, 2, 2, 2, 2, 0, 2, 2, 0, 2, 2, 2, 2, 0, 
@@ -1429,7 +1430,7 @@ unsigned char han_transliterate_jump_map_70[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
 };
 
-unsigned char han_transliterate_jump_map_73[256] = {
+static unsigned char han_transliterate_jump_map_73[256] = {
 	0, 2, 2, 2, 2, 2, 2, 0, 0, 2, 2, 2, 0, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 0, 2, 0, 2, 2, 2, 2, 2, 2, 2, 0, 2, 2, 2, 
@@ -1448,7 +1449,7 @@ unsigned char han_transliterate_jump_map_73[256] = {
 	2, 0, 2, 2, 0, 2, 2, 2, 0, 0, 2, 0, 2, 2, 0, 2
 };
 
-unsigned char han_transliterate_jump_map_100[256] = {
+static unsigned char han_transliterate_jump_map_100[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
@@ -1467,7 +1468,7 @@ unsigned char han_transliterate_jump_map_100[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
 };
 
-unsigned char han_transliterate_jump_map_110[256] = {
+static unsigned char han_transliterate_jump_map_110[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 2, 2, 2, 0, 
 	2, 2, 2, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
@@ -1486,7 +1487,7 @@ unsigned char han_transliterate_jump_map_110[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
 };
 
-unsigned char han_transliterate_jump_map_113[256] = {
+static unsigned char han_transliterate_jump_map_113[256] = {
 	2, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
@@ -1505,7 +1506,7 @@ unsigned char han_transliterate_jump_map_113[256] = {
 	2, 2, 2, 2, 2, 0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2
 };
 
-unsigned char han_transliterate_jump_map_128[256] = {
+static unsigned char han_transliterate_jump_map_128[256] = {
 	2, 2, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
@@ -1524,7 +1525,7 @@ unsigned char han_transliterate_jump_map_128[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0
 };
 
-unsigned char han_transliterate_jump_map_135[256] = {
+static unsigned char han_transliterate_jump_map_135[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
@@ -1543,7 +1544,7 @@ unsigned char han_transliterate_jump_map_135[256] = {
 	2, 2, 2, 2, 2, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
 };
 
-unsigned char han_transliterate_jump_map_144[256] = {
+static unsigned char han_transliterate_jump_map_144[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 0, 2, 2, 2, 2, 2, 2, 2, 2, 
@@ -1562,7 +1563,7 @@ unsigned char han_transliterate_jump_map_144[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
 };
 
-unsigned char han_transliterate_jump_map_156[256] = {
+static unsigned char han_transliterate_jump_map_156[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 0, 2, 0, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
@@ -1581,7 +1582,7 @@ unsigned char han_transliterate_jump_map_156[256] = {
 	0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
 };
 
-unsigned char han_transliterate_jump_map_159[256] = {
+static unsigned char han_transliterate_jump_map_159[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
@@ -1600,7 +1601,7 @@ unsigned char han_transliterate_jump_map_159[256] = {
 	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 };
 
-unsigned char han_transliterate_jump_map_98[256] = {
+static unsigned char han_transliterate_jump_map_98[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
@@ -1619,7 +1620,7 @@ unsigned char han_transliterate_jump_map_98[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
 };
 
-unsigned char han_transliterate_jump_map_136[256] = {
+static unsigned char han_transliterate_jump_map_136[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
@@ -1638,7 +1639,7 @@ unsigned char han_transliterate_jump_map_136[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
 };
 
-unsigned char han_transliterate_jump_map_137[256] = {
+static unsigned char han_transliterate_jump_map_137[256] = {
 	2, 2, 2, 2, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 0, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
@@ -1657,7 +1658,7 @@ unsigned char han_transliterate_jump_map_137[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
 };
 
-unsigned char han_transliterate_jump_map_89[256] = {
+static unsigned char han_transliterate_jump_map_89[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 0, 2, 2, 2, 2, 2, 2, 2, 
 	2, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
@@ -1676,7 +1677,7 @@ unsigned char han_transliterate_jump_map_89[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
 };
 
-unsigned char han_transliterate_jump_map_78[256] = {
+static unsigned char han_transliterate_jump_map_78[256] = {
 	2, 2, 2, 2, 2, 2, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
@@ -1695,7 +1696,7 @@ unsigned char han_transliterate_jump_map_78[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
 };
 
-unsigned char han_transliterate_jump_map_124[256] = {
+static unsigned char han_transliterate_jump_map_124[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 0, 2, 2, 2, 0, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 
@@ -1714,7 +1715,7 @@ unsigned char han_transliterate_jump_map_124[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
 };
 
-unsigned char han_transliterate_jump_map_76[256] = {
+static unsigned char han_transliterate_jump_map_76[256] = {
 	2, 2, 2, 2, 2, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 0, 2, 2, 2, 2, 2, 0, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 0, 2, 2, 0, 2, 2, 2, 2, 2, 2, 0, 2, 
@@ -1733,7 +1734,7 @@ unsigned char han_transliterate_jump_map_76[256] = {
 	2, 2, 2, 2, 2, 2, 0, 2, 2, 2, 2, 2, 0, 2, 0, 2
 };
 
-unsigned char han_transliterate_jump_map_112[256] = {
+static unsigned char han_transliterate_jump_map_112[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 0, 2, 
@@ -1752,7 +1753,7 @@ unsigned char han_transliterate_jump_map_112[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
 };
 
-unsigned char han_transliterate_jump_map_141[256] = {
+static unsigned char han_transliterate_jump_map_141[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 0, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
@@ -1771,7 +1772,7 @@ unsigned char han_transliterate_jump_map_141[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
 };
 
-unsigned char han_transliterate_jump_map_152[256] = {
+static unsigned char han_transliterate_jump_map_152[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
@@ -1790,7 +1791,7 @@ unsigned char han_transliterate_jump_map_152[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
 };
 
-unsigned char han_transliterate_jump_map_61[256] = {
+static unsigned char han_transliterate_jump_map_61[256] = {
 	2, 2, 0, 2, 2, 0, 2, 2, 2, 2, 0, 2, 0, 0, 0, 2, 
 	2, 2, 2, 2, 2, 2, 2, 0, 2, 2, 2, 2, 2, 2, 0, 0, 
 	0, 0, 0, 0, 0, 2, 2, 0, 2, 0, 2, 2, 2, 2, 2, 0, 
@@ -1809,7 +1810,7 @@ unsigned char han_transliterate_jump_map_61[256] = {
 	2, 0, 0, 2, 2, 2, 2, 2, 2, 2, 0, 2, 2, 0, 2, 0
 };
 
-unsigned char han_transliterate_jump_map_95[256] = {
+static unsigned char han_transliterate_jump_map_95[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
@@ -1828,7 +1829,7 @@ unsigned char han_transliterate_jump_map_95[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
 };
 
-unsigned char han_transliterate_jump_map_123[256] = {
+static unsigned char han_transliterate_jump_map_123[256] = {
 	2, 2, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
@@ -1847,7 +1848,7 @@ unsigned char han_transliterate_jump_map_123[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
 };
 
-unsigned char han_transliterate_jump_map_125[256] = {
+static unsigned char han_transliterate_jump_map_125[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
@@ -1866,7 +1867,7 @@ unsigned char han_transliterate_jump_map_125[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
 };
 
-unsigned char han_transliterate_jump_map_122[256] = {
+static unsigned char han_transliterate_jump_map_122[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
@@ -1885,7 +1886,7 @@ unsigned char han_transliterate_jump_map_122[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
 };
 
-unsigned char han_transliterate_jump_map_134[256] = {
+static unsigned char han_transliterate_jump_map_134[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 0, 2, 2, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
@@ -1904,7 +1905,7 @@ unsigned char han_transliterate_jump_map_134[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
 };
 
-unsigned char han_transliterate_jump_map_143[256] = {
+static unsigned char han_transliterate_jump_map_143[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
@@ -1923,7 +1924,7 @@ unsigned char han_transliterate_jump_map_143[256] = {
 	2, 2, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
 };
 
-unsigned char han_transliterate_jump_map_58[256] = {
+static unsigned char han_transliterate_jump_map_58[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 2, 0, 
 	2, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 0, 2, 0, 2, 
@@ -1942,7 +1943,7 @@ unsigned char han_transliterate_jump_map_58[256] = {
 	2, 2, 2, 2, 0, 0, 2, 0, 2, 2, 0, 2, 2, 2, 0, 0
 };
 
-unsigned char han_transliterate_jump_map_66[256] = {
+static unsigned char han_transliterate_jump_map_66[256] = {
 	0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 2, 2, 2, 
 	2, 2, 2, 2, 0, 2, 0, 2, 2, 2, 2, 2, 2, 0, 2, 2, 
 	2, 0, 2, 2, 2, 0, 0, 2, 0, 0, 2, 2, 2, 2, 2, 0, 
@@ -1961,7 +1962,7 @@ unsigned char han_transliterate_jump_map_66[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 2, 2, 2, 2, 0
 };
 
-unsigned char han_transliterate_jump_map_82[256] = {
+static unsigned char han_transliterate_jump_map_82[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
@@ -1980,7 +1981,7 @@ unsigned char han_transliterate_jump_map_82[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
 };
 
-unsigned char han_transliterate_jump_map_96[256] = {
+static unsigned char han_transliterate_jump_map_96[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
@@ -1999,7 +2000,7 @@ unsigned char han_transliterate_jump_map_96[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
 };
 
-unsigned char han_transliterate_jump_map_126[256] = {
+static unsigned char han_transliterate_jump_map_126[256] = {
 	2, 2, 2, 2, 0, 0, 2, 0, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 0, 2, 2, 2, 2, 2, 2, 2, 
@@ -2018,7 +2019,7 @@ unsigned char han_transliterate_jump_map_126[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
 };
 
-unsigned char han_transliterate_jump_map_105[256] = {
+static unsigned char han_transliterate_jump_map_105[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 0, 0, 2, 2, 2, 2, 
 	2, 0, 0, 0, 2, 2, 0, 0, 0, 0, 2, 2, 0, 2, 2, 2, 
@@ -2037,7 +2038,7 @@ unsigned char han_transliterate_jump_map_105[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
 };
 
-unsigned char han_transliterate_jump_map_106[256] = {
+static unsigned char han_transliterate_jump_map_106[256] = {
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
 	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 0, 2, 
@@ -2056,7 +2057,7 @@ unsigned char han_transliterate_jump_map_106[256] = {
 	2, 2, 2, 2, 2, 0, 2, 0, 2, 2, 2, 2, 2, 2, 2, 2
 };
 
-unsigned char han_transliterate_jump_map_250[256] = {
+static unsigned char han_transliterate_jump_map_250[256] = {
 	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 0, 0, 
 	2, 0, 2, 0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 
 	0, 0, 2, 0, 0, 2, 2, 0, 0, 0, 2, 2, 2, 2, 0, 0, 
@@ -2075,7 +2076,7 @@ unsigned char han_transliterate_jump_map_250[256] = {
 	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 };
 
-unsigned char han_transliterate_jump_map_249[256] = {
+static unsigned char han_transliterate_jump_map_249[256] = {
 	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 
 	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
 	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
@@ -2094,7 +2095,7 @@ unsigned char han_transliterate_jump_map_249[256] = {
 	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 };
 
-us6 han_transliterate_expand_map_84[256] = {
+static us6 han_transliterate_expand_map_84[256] = {
 	{ 3, 109, 105, 275}, { 2, 120, 363}, { 4, 109, 225, 110, 103}, { 3, 99, 104, 299}, { 2, 103, 232}, { 4, 120, 117, 257, 110}, { 3, 121, 257, 111}, { 2, 122, 464}, 
 	{ 2, 104, 233}, { 2, 106, 237}, { 4, 100, 105, 224, 111}, { 3, 99, 249, 110}, { 4, 116, 243, 110, 103}, { 4, 109, 237, 110, 103}, { 3, 104, 242, 117}, { 2, 108, 236}, 
 	{ 2, 116, 468}, { 5, 120, 105, 224, 110, 103}, { 3, 122, 104, 224}, { 3, 120, 105, 224}, { 2, 121, 283}, { 2, 108, 474}, { 1, 257}, { 2, 109, 97}, 
@@ -2129,7 +2130,7 @@ us6 han_transliterate_expand_map_84[256] = {
 	{ 3, 115, 117, 299}, { 3, 102, 243, 117}, { 2, 98, 468}, { 3, 104, 224, 110}, { 4, 104, 275, 110, 103}, { 4, 103, 283, 110, 103}, { 4, 115, 104, 117, 333}, { 2, 103, 283}
 };
 
-us6 han_transliterate_expand_map_147[256] = {
+static us6 han_transliterate_expand_map_147[256] = {
 	{ 3, 108, 250, 110}, { 3, 107, 117, 462}, { 4, 108, 237, 110, 103}, { 3, 98, 275, 105}, { 2, 108, 249}, { 2, 108, 237}, { 5, 113, 105, 257, 110, 103}, { 3, 112, 243, 117}, 
 	{ 4, 106, 117, 224, 110}, { 3, 109, 237, 110}, { 3, 122, 117, 236}, { 4, 112, 233, 110, 103}, { 2, 224, 110}, { 2, 112, 237}, { 4, 120, 105, 224, 110}, { 2, 121, 224}, 
 	{ 4, 122, 104, 117, 299}, { 3, 108, 232, 105}, { 1, 257}, { 4, 107, 333, 110, 103}, { 2, 116, 224}, { 3, 107, 363, 110}, { 2, 100, 468}, { 3, 119, 232, 105}, 
@@ -2164,7 +2165,7 @@ us6 han_transliterate_expand_map_147[256] = {
 	{ 3, 104, 117, 236}, { 5, 113, 105, 257, 110, 103}, { 2, 112, 333}, { 3, 108, 237, 110}, { 3, 115, 117, 466}, { 3, 120, 105, 249}, { 3, 115, 462, 110}, { 5, 99, 104, 275, 110, 103}
 };
 
-us6 han_transliterate_expand_map_149[256] = {
+static us6 han_transliterate_expand_map_149[256] = {
 	{ 4, 120, 105, 257, 111}, { 3, 115, 117, 466}, { 2, 108, 464}, { 5, 122, 104, 232, 110, 103}, { 3, 99, 104, 250}, { 3, 103, 117, 333}, { 3, 103, 224, 111}, { 3, 116, 105, 283}, 
 	{ 3, 120, 105, 249}, { 3, 99, 117, 242}, { 3, 108, 252, 232}, { 4, 102, 275, 110, 103}, { 3, 120, 299, 110}, { 3, 108, 105, 468}, { 3, 107, 257, 105}, { 4, 106, 105, 462, 110}, 
 	{ 3, 114, 117, 236}, { 2, 116, 236}, { 4, 108, 225, 110, 103}, { 4, 113, 105, 257, 110}, { 2, 106, 250}, { 1, 257}, { 5, 113, 105, 257, 110, 103}, { 3, 100, 117, 466}, 
@@ -2199,7 +2200,7 @@ us6 han_transliterate_expand_map_149[256] = {
 	{ 3, 122, 104, 225}, { 3, 110, 224, 111}, { 3, 103, 117, 299}, { 3, 119, 233, 110}, { 2, 116, 224}, { 3, 109, 464, 110}, { 2, 108, 472}, { 3, 107, 462, 105}
 };
 
-us6 han_transliterate_expand_map_150[256] = {
+static us6 han_transliterate_expand_map_150[256] = {
 	{ 2, 102, 225}, { 2, 103, 233}, { 2, 104, 233}, { 3, 107, 468, 110}, { 3, 106, 105, 363}, { 3, 121, 117, 232}, { 4, 108, 462, 110, 103}, { 2, 100, 363}, 
 	{ 2, 121, 249}, { 3, 121, 257, 110}, { 5, 99, 104, 257, 110, 103}, { 2, 120, 236}, { 3, 119, 233, 110}, { 3, 104, 363, 110}, { 3, 121, 225, 110}, { 1, 232}, 
 	{ 4, 99, 104, 462, 110}, { 3, 108, 225, 110}, { 2, 113, 249}, { 3, 104, 117, 236}, { 3, 107, 117, 242}, { 3, 113, 117, 232}, { 2, 103, 233}, { 4, 116, 105, 225, 110}, 
@@ -2234,7 +2235,7 @@ us6 han_transliterate_expand_map_150[256] = {
 	{ 2, 225, 110}, { 3, 98, 225, 111}, { 4, 109, 233, 110, 103}, { 4, 100, 105, 224, 110}, { 4, 100, 224, 110, 103}, { 4, 120, 237, 110, 103}, { 2, 119, 249}, { 4, 122, 104, 224, 111}
 };
 
-us6 han_transliterate_expand_map_85[256] = {
+static us6 han_transliterate_expand_map_85[256] = {
 	{ 3, 121, 466, 117}, { 3, 121, 224, 110}, { 2, 103, 468}, { 2, 103, 468}, { 3, 98, 101, 105}, { 3, 104, 257, 110}, { 3, 115, 117, 333}, { 4, 99, 104, 250, 110}, 
 	{ 2, 121, 236}, { 2, 257, 105}, { 3, 106, 105, 225}, { 2, 116, 468}, { 4, 120, 105, 225, 110}, { 4, 104, 117, 462, 110}, { 2, 108, 299}, { 2, 120, 299}, 
 	{ 4, 116, 225, 110, 103}, { 3, 122, 117, 242}, { 3, 113, 105, 250}, { 3, 99, 104, 275}, { 2, 119, 250}, { 3, 122, 224, 111}, { 2, 121, 462}, { 3, 100, 333, 117}, 
@@ -2269,7 +2270,7 @@ us6 han_transliterate_expand_map_85[256] = {
 	{ 2, 225, 111}, { 4, 108, 105, 225, 110}, { 3, 99, 117, 299}, { 3, 122, 104, 275}, { 2, 109, 242}, { 3, 115, 111, 117}, { 3, 115, 466, 117}, { 3, 116, 462, 110}
 };
 
-us6 han_transliterate_expand_map_87[256] = {
+static us6 han_transliterate_expand_map_87[256] = {
 	{ 3, 103, 117, 243}, { 3, 121, 237, 110}, { 3, 104, 249, 110}, { 2, 112, 468}, { 2, 121, 468}, { 3, 104, 225, 110}, { 4, 121, 117, 225, 110}, { 3, 108, 250, 110}, 
 	{ 4, 113, 117, 257, 110}, { 2, 121, 468}, { 4, 113, 299, 110, 103}, { 3, 103, 117, 243}, { 5, 99, 104, 117, 225, 110}, { 3, 119, 233, 105}, { 4, 121, 117, 225, 110}, { 4, 113, 117, 257, 110}, 
 	{ 2, 107, 363}, { 2, 102, 249}, { 4, 121, 117, 225, 110}, { 4, 121, 117, 225, 110}, { 1, 232}, { 0, 0}, { 2, 116, 250}, { 2, 116, 250}, 
@@ -2304,7 +2305,7 @@ us6 han_transliterate_expand_map_87[256] = {
 	{ 2, 121, 236}, { 3, 112, 233, 105}, { 2, 106, 299}, { 4, 122, 104, 468, 110}, { 2, 113, 237}, { 3, 115, 224, 111}, { 2, 106, 249}, { 2, 110, 237}
 };
 
-us6 han_transliterate_expand_map_99[256] = {
+static us6 han_transliterate_expand_map_99[256] = {
 	{ 2, 98, 242}, { 3, 99, 104, 237}, { 3, 103, 117, 224}, { 3, 122, 104, 236}, { 3, 107, 117, 242}, { 3, 100, 117, 466}, { 3, 100, 117, 466}, { 3, 122, 104, 464}, 
 	{ 3, 113, 105, 232}, { 2, 224, 110}, { 4, 110, 242, 110, 103}, { 4, 122, 104, 232, 110}, { 2, 103, 233}, { 4, 106, 105, 224, 111}, { 3, 107, 117, 224}, { 4, 100, 242, 110, 103}, 
 	{ 2, 114, 250}, { 4, 116, 105, 257, 111}, { 3, 108, 105, 232}, { 3, 122, 104, 257}, { 2, 108, 474}, { 3, 100, 105, 233}, { 2, 119, 257}, { 3, 106, 117, 233}, 
@@ -2339,7 +2340,7 @@ us6 han_transliterate_expand_map_99[256] = {
 	{ 3, 122, 104, 257}, { 3, 98, 275, 105}, { 3, 121, 225, 111}, { 0, 0}, { 0, 0}, { 3, 108, 462, 110}, { 3, 119, 232, 110}, { 3, 113, 236, 110}
 };
 
-us6 han_transliterate_expand_map_146[256] = {
+static us6 han_transliterate_expand_map_146[256] = {
 	{ 2, 98, 462}, { 4, 102, 257, 110, 103}, { 4, 99, 104, 233, 110}, { 4, 120, 237, 110, 103}, { 3, 116, 466, 117}, { 3, 121, 117, 232}, { 3, 121, 225, 110}, { 2, 102, 363}, 
 	{ 2, 112, 299}, { 2, 110, 224}, { 3, 120, 299, 110}, { 1, 233}, { 3, 106, 117, 233}, { 3, 100, 249, 110}, { 3, 103, 333, 117}, { 3, 121, 464, 110}, 
 	{ 4, 113, 105, 225, 110}, { 3, 98, 462, 110}, { 2, 106, 237}, { 3, 114, 233, 110}, { 4, 99, 104, 257, 111}, { 3, 110, 105, 468}, { 3, 102, 275, 110}, { 3, 121, 468, 110}, 
@@ -2374,7 +2375,7 @@ us6 han_transliterate_expand_map_146[256] = {
 	{ 2, 106, 249}, { 5, 99, 104, 462, 110, 103}, { 4, 121, 117, 257, 110}, { 4, 106, 105, 224, 110}, { 4, 103, 257, 110, 103}, { 4, 100, 105, 224, 111}, { 3, 116, 225, 111}, { 5, 99, 104, 225, 110, 103}
 };
 
-us6 han_transliterate_expand_map_60[256] = {
+static us6 han_transliterate_expand_map_60[256] = {
 	{ 2, 108, 237}, { 3, 108, 117, 466}, { 4, 115, 104, 283, 110}, { 4, 109, 105, 225, 110}, { 4, 106, 105, 224, 110}, { 2, 100, 237}, { 3, 98, 232, 105}, { 0, 0}, 
 	{ 4, 108, 105, 462, 110}, { 0, 0}, { 3, 120, 250, 110}, { 3, 112, 237, 110}, { 3, 113, 117, 232}, { 4, 108, 243, 110, 103}, { 3, 122, 117, 236}, { 0, 0}, 
 	{ 3, 106, 117, 233}, { 0, 0}, { 3, 115, 104, 233}, { 0, 0}, { 3, 120, 105, 232}, { 0, 0}, { 3, 108, 462, 110}, { 2, 99, 249}, 
@@ -2409,7 +2410,7 @@ us6 han_transliterate_expand_map_60[256] = {
 	{ 0, 0}, { 4, 119, 462, 110, 103}, { 3, 121, 243, 117}, { 2, 122, 233}, { 2, 98, 236}, { 2, 109, 464}, { 0, 0}, { 3, 120, 105, 232}
 };
 
-us6 han_transliterate_expand_map_72[256] = {
+static us6 han_transliterate_expand_map_72[256] = {
 	{ 5, 99, 104, 462, 110, 103}, { 0, 0}, { 3, 99, 104, 250}, { 5, 108, 105, 462, 110, 103}, { 4, 116, 105, 462, 110}, { 3, 107, 468, 110}, { 5, 99, 104, 225, 110, 103}, { 3, 106, 117, 233}, 
 	{ 2, 116, 250}, { 3, 104, 117, 224}, { 3, 102, 232, 105}, { 2, 98, 464}, { 0, 0}, { 3, 113, 105, 225}, { 2, 119, 242}, { 2, 106, 236}, 
 	{ 2, 113, 249}, { 3, 107, 117, 464}, { 2, 104, 250}, { 2, 99, 249}, { 3, 115, 117, 236}, { 0, 0}, { 0, 0}, { 3, 113, 105, 249}, 
@@ -2444,7 +2445,7 @@ us6 han_transliterate_expand_map_72[256] = {
 	{ 3, 114, 462, 110}, { 2, 102, 225}, { 0, 0}, { 0, 0}, { 5, 108, 105, 225, 110, 103}, { 2, 116, 464}, { 2, 109, 236}, { 0, 0}
 };
 
-us6 han_transliterate_expand_map_77[256] = {
+static us6 han_transliterate_expand_map_77[256] = {
 	{ 4, 116, 243, 110, 103}, { 2, 121, 249}, { 4, 104, 224, 110, 103}, { 3, 110, 225, 111}, { 2, 108, 236}, { 3, 102, 233, 110}, { 2, 112, 250}, { 4, 108, 237, 110, 103}, 
 	{ 2, 462, 111}, { 4, 120, 117, 225, 110}, { 2, 121, 237}, { 4, 120, 117, 225, 110}, { 4, 109, 233, 110, 103}, { 0, 0}, { 3, 108, 283, 105}, { 3, 121, 224, 110}, 
 	{ 3, 98, 462, 111}, { 3, 100, 105, 233}, { 4, 108, 237, 110, 103}, { 3, 115, 104, 299}, { 4, 106, 105, 257, 111}, { 3, 108, 105, 232}, { 4, 106, 299, 110, 103}, { 2, 106, 250}, 
@@ -2479,7 +2480,7 @@ us6 han_transliterate_expand_map_77[256] = {
 	{ 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}
 };
 
-us6 han_transliterate_expand_map_86[256] = {
+static us6 han_transliterate_expand_map_86[256] = {
 	{ 2, 100, 237}, { 2, 113, 299}, { 4, 106, 105, 224, 111}, { 5, 99, 104, 333, 110, 103}, { 4, 106, 105, 257, 111}, { 3, 107, 462, 105}, { 3, 116, 224, 110}, { 3, 115, 257, 110}, 
 	{ 3, 99, 225, 111}, { 3, 106, 105, 257}, { 2, 225, 105}, { 4, 120, 105, 257, 111}, { 4, 112, 105, 257, 111}, { 3, 108, 111, 117}, { 2, 103, 257}, { 2, 103, 468}, 
 	{ 4, 120, 105, 257, 111}, { 2, 104, 363}, { 3, 104, 117, 236}, { 3, 103, 117, 111}, { 2, 333, 117}, { 4, 120, 105, 257, 110}, { 2, 122, 233}, { 5, 99, 104, 225, 110, 103}, 
@@ -2514,7 +2515,7 @@ us6 han_transliterate_expand_map_86[256] = {
 	{ 2, 114, 236}, { 4, 108, 237, 110, 103}, { 2, 103, 249}, { 3, 103, 117, 243}, { 3, 116, 257, 105}, { 3, 103, 117, 243}, { 2, 116, 250}, { 3, 121, 242, 117}
 };
 
-us6 han_transliterate_expand_map_93[256] = {
+static us6 han_transliterate_expand_map_93[256] = {
 	{ 4, 108, 224, 110, 103}, { 3, 107, 462, 110}, { 3, 108, 225, 111}, { 3, 108, 225, 105}, { 4, 120, 105, 462, 110}, { 3, 113, 117, 232}, { 4, 107, 333, 110, 103}, { 5, 99, 104, 243, 110, 103}, 
 	{ 5, 99, 104, 243, 110, 103}, { 2, 116, 224}, { 0, 0}, { 3, 104, 117, 225}, { 2, 106, 363}, { 3, 108, 225, 105}, { 2, 113, 237}, { 3, 109, 237, 110}, 
 	{ 3, 107, 363, 110}, { 3, 107, 363, 110}, { 2, 122, 250}, { 2, 103, 249}, { 3, 99, 117, 299}, { 2, 121, 225}, { 2, 121, 225}, { 4, 103, 462, 110, 103}, 
@@ -2549,7 +2550,7 @@ us6 han_transliterate_expand_map_93[256] = {
 	{ 2, 121, 237}, { 3, 106, 464, 110}, { 3, 120, 249, 110}, { 4, 106, 117, 224, 110}, { 0, 0}, { 3, 120, 249, 110}, { 3, 106, 299, 110}, { 2, 102, 250}
 };
 
-us6 han_transliterate_expand_map_101[256] = {
+static us6 han_transliterate_expand_map_101[256] = {
 	{ 3, 112, 257, 110}, { 4, 121, 462, 110, 103}, { 3, 108, 232, 105}, { 2, 115, 224}, { 3, 115, 104, 363}, { 3, 122, 462, 110}, { 4, 110, 105, 462, 110}, { 4, 120, 105, 462, 110}, 
 	{ 3, 106, 249, 110}, { 3, 104, 117, 242}, { 2, 108, 236}, { 2, 108, 224}, { 3, 104, 224, 110}, { 4, 121, 237, 110, 103}, { 2, 108, 250}, { 4, 108, 466, 110, 103}, 
 	{ 4, 113, 105, 257, 110}, { 4, 113, 105, 257, 110}, { 3, 122, 462, 110}, { 4, 113, 105, 257, 110}, { 3, 108, 225, 110}, { 3, 115, 257, 110}, { 4, 121, 299, 110, 103}, { 3, 109, 233, 105}, 
@@ -2584,7 +2585,7 @@ us6 han_transliterate_expand_map_101[256] = {
 	{ 4, 121, 225, 110, 103}, { 3, 115, 104, 237}, { 4, 119, 224, 110, 103}, { 3, 109, 237, 110}, { 3, 109, 237, 110}, { 3, 116, 363, 110}, { 4, 99, 104, 363, 110}, { 2, 119, 468}
 };
 
-us6 han_transliterate_expand_map_118[256] = {
+static us6 han_transliterate_expand_map_118[256] = {
 	{ 2, 121, 363}, { 3, 99, 117, 236}, { 2, 121, 462}, { 3, 122, 104, 468}, { 2, 99, 249}, { 3, 100, 224, 110}, { 4, 115, 104, 232, 110}, { 5, 122, 104, 466, 110, 103}, 
 	{ 2, 106, 236}, { 2, 121, 249}, { 3, 104, 243, 117}, { 4, 102, 275, 110, 103}, { 2, 108, 224}, { 4, 121, 225, 110, 103}, { 4, 115, 104, 232, 110}, { 2, 116, 250}, 
 	{ 2, 121, 468}, { 3, 103, 117, 257}, { 3, 119, 233, 110}, { 4, 104, 117, 224, 110}, { 2, 107, 249}, { 3, 106, 105, 462}, { 3, 121, 299, 110}, { 2, 121, 236}, 
@@ -2619,7 +2620,7 @@ us6 han_transliterate_expand_map_118[256] = {
 	{ 5, 120, 105, 257, 110, 103}, { 3, 100, 249, 110}, { 3, 120, 299, 110}, { 2, 120, 236}, { 3, 112, 224, 110}, { 4, 102, 275, 110, 103}, { 3, 100, 249, 110}, { 3, 109, 237, 110}
 };
 
-us6 han_transliterate_expand_map_154[256] = {
+static us6 han_transliterate_expand_map_154[256] = {
 	{ 1, 233}, { 5, 99, 104, 283, 110, 103}, { 3, 120, 299, 110}, { 2, 225, 105}, { 2, 108, 249}, { 4, 122, 104, 117, 299}, { 4, 122, 104, 333, 117}, { 3, 115, 104, 283}, 
 	{ 4, 112, 105, 225, 110}, { 3, 107, 363, 110}, { 3, 116, 225, 111}, { 3, 108, 225, 105}, { 4, 122, 333, 110, 103}, { 2, 107, 232}, { 2, 113, 237}, { 2, 113, 237}, 
 	{ 3, 121, 224, 110}, { 3, 102, 275, 105}, { 3, 115, 257, 111}, { 3, 121, 462, 110}, { 3, 106, 105, 233}, { 3, 121, 462, 111}, { 2, 119, 249}, { 4, 112, 105, 224, 110}, 
@@ -2654,7 +2655,7 @@ us6 han_transliterate_expand_map_154[256] = {
 	{ 0, 0}, { 3, 120, 105, 363}, { 3, 103, 117, 224}, { 2, 106, 236}, { 4, 112, 233, 110, 103}, { 4, 122, 104, 117, 257}, { 4, 115, 104, 257, 111}, { 3, 115, 104, 257}
 };
 
-us6 han_transliterate_expand_map_52[256] = {
+static us6 han_transliterate_expand_map_52[256] = {
 	{ 3, 113, 105, 363}, { 4, 116, 105, 462, 110}, { 0, 0}, { 0, 0}, { 3, 107, 117, 224}, { 2, 119, 468}, { 3, 121, 464, 110}, { 0, 0}, 
 	{ 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 2, 115, 236}, { 0, 0}, { 0, 0}, { 0, 0}, 
 	{ 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 2, 121, 232}, { 0, 0}, 
@@ -2689,7 +2690,7 @@ us6 han_transliterate_expand_map_52[256] = {
 	{ 3, 106, 117, 233}, { 3, 114, 117, 236}, { 4, 106, 105, 224, 110}, { 0, 0}, { 3, 99, 104, 236}, { 5, 99, 104, 243, 110, 103}, { 3, 99, 104, 237}, { 0, 0}
 };
 
-us6 han_transliterate_expand_map_53[256] = {
+static us6 han_transliterate_expand_map_53[256] = {
 	{ 3, 108, 252, 232}, { 0, 0}, { 3, 108, 237, 110}, { 3, 106, 117, 233}, { 2, 115, 249}, { 4, 120, 105, 224, 111}, { 4, 99, 104, 225, 110}, { 0, 0}, 
 	{ 0, 0}, { 3, 122, 104, 250}, { 3, 100, 462, 110}, { 4, 106, 105, 224, 110}, { 4, 122, 104, 242, 117}, { 3, 100, 117, 466}, { 3, 120, 105, 232}, { 2, 108, 236}, 
 	{ 0, 0}, { 3, 99, 104, 236}, { 2, 120, 237}, { 4, 106, 105, 462, 110}, { 0, 0}, { 2, 106, 237}, { 0, 0}, { 3, 102, 232, 105}, 
@@ -2724,7 +2725,7 @@ us6 han_transliterate_expand_map_53[256] = {
 	{ 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 2, 121, 232}, { 5, 120, 105, 462, 110, 103}, { 0, 0}, { 3, 120, 105, 224}
 };
 
-us6 han_transliterate_expand_map_56[256] = {
+static us6 han_transliterate_expand_map_56[256] = {
 	{ 3, 100, 462, 111}, { 0, 0}, { 2, 225, 111}, { 0, 0}, { 2, 120, 237}, { 2, 102, 250}, { 0, 0}, { 3, 106, 105, 249}, 
 	{ 3, 114, 249, 110}, { 4, 116, 243, 110, 103}, { 2, 113, 363}, { 1, 232}, { 0, 0}, { 2, 106, 237}, { 2, 106, 237}, { 3, 104, 117, 225}, 
 	{ 4, 106, 105, 224, 111}, { 3, 122, 117, 236}, { 4, 98, 105, 462, 111}, { 4, 109, 233, 110, 103}, { 3, 98, 224, 105}, { 3, 119, 283, 105}, { 2, 106, 236}, { 2, 224, 111}, 
@@ -2759,7 +2760,7 @@ us6 han_transliterate_expand_map_56[256] = {
 	{ 0, 0}, { 0, 0}, { 0, 0}, { 2, 121, 236}, { 3, 114, 283, 110}, { 3, 115, 104, 249}, { 3, 99, 104, 224}, { 4, 122, 104, 117, 243}
 };
 
-us6 han_transliterate_expand_map_68[256] = {
+static us6 han_transliterate_expand_map_68[256] = {
 	{ 2, 106, 236}, { 4, 110, 105, 462, 111}, { 2, 108, 249}, { 5, 106, 105, 466, 110, 103}, { 3, 104, 224, 110}, { 2, 121, 237}, { 3, 99, 462, 105}, { 4, 99, 104, 250, 110}, 
 	{ 3, 122, 104, 237}, { 2, 122, 236}, { 2, 100, 225}, { 0, 0}, { 4, 116, 105, 462, 110}, { 4, 122, 104, 242, 117}, { 0, 0}, { 4, 99, 104, 468, 110}, 
 	{ 0, 0}, { 3, 122, 104, 233}, { 0, 0}, { 3, 114, 243, 117}, { 3, 98, 236, 110}, { 2, 106, 237}, { 2, 121, 237}, { 2, 100, 468}, 
@@ -2794,7 +2795,7 @@ us6 han_transliterate_expand_map_68[256] = {
 	{ 0, 0}, { 2, 121, 236}, { 3, 109, 283, 105}, { 0, 0}, { 2, 104, 232}, { 2, 106, 236}, { 0, 0}, { 3, 104, 462, 110}
 };
 
-us6 han_transliterate_expand_map_74[256] = {
+static us6 han_transliterate_expand_map_74[256] = {
 	{ 2, 100, 237}, { 3, 99, 104, 232}, { 0, 0}, { 0, 0}, { 3, 121, 224, 110}, { 4, 108, 105, 225, 111}, { 2, 98, 237}, { 0, 0}, 
 	{ 0, 0}, { 0, 0}, { 0, 0}, { 3, 110, 252, 232}, { 3, 98, 225, 111}, { 4, 121, 464, 110, 103}, { 4, 104, 243, 110, 103}, { 2, 99, 237}, 
 	{ 3, 113, 105, 224}, { 2, 116, 237}, { 2, 121, 249}, { 3, 108, 233, 105}, { 3, 98, 225, 111}, { 0, 0}, { 2, 106, 236}, { 2, 102, 250}, 
@@ -2829,7 +2830,7 @@ us6 han_transliterate_expand_map_74[256] = {
 	{ 3, 110, 225, 111}, { 4, 104, 243, 110, 103}, { 4, 104, 243, 110, 103}, { 3, 120, 117, 233}, { 3, 120, 117, 232}, { 0, 0}, { 2, 98, 236}, { 0, 0}
 };
 
-us6 han_transliterate_expand_map_79[256] = {
+static us6 han_transliterate_expand_map_79[256] = {
 	{ 5, 122, 104, 333, 110, 103}, { 2, 113, 464}, { 3, 112, 232, 105}, { 2, 121, 250}, { 4, 100, 105, 224, 111}, { 3, 100, 249, 110}, { 3, 119, 232, 110}, { 2, 121, 236}, 
 	{ 3, 120, 464, 110}, { 4, 107, 224, 110, 103}, { 2, 121, 299}, { 2, 106, 237}, { 2, 224, 105}, { 2, 119, 117}, { 2, 106, 236}, { 2, 102, 250}, 
 	{ 2, 102, 225}, { 3, 120, 105, 363}, { 3, 106, 236, 110}, { 3, 98, 275, 105}, { 3, 100, 462, 110}, { 2, 102, 363}, { 4, 116, 462, 110, 103}, { 5, 122, 104, 242, 110, 103}, 
@@ -2864,7 +2865,7 @@ us6 han_transliterate_expand_map_79[256] = {
 	{ 4, 102, 232, 110, 103}, { 2, 121, 224}, { 2, 462, 110}, { 3, 98, 232, 105}, { 2, 121, 249}, { 3, 120, 299, 110}, { 2, 98, 464}, { 4, 106, 105, 224, 110}
 };
 
-us6 han_transliterate_expand_map_90[256] = {
+static us6 han_transliterate_expand_map_90[256] = {
 	{ 4, 115, 333, 110, 103}, { 3, 119, 275, 105}, { 4, 104, 243, 110, 103}, { 2, 119, 225}, { 3, 108, 243, 117}, { 2, 121, 224}, { 3, 114, 462, 111}, { 4, 106, 105, 257, 111}, 
 	{ 4, 108, 117, 225, 110}, { 4, 112, 299, 110, 103}, { 4, 120, 105, 224, 110}, { 4, 115, 104, 224, 111}, { 2, 108, 464}, { 5, 99, 104, 233, 110, 103}, { 4, 120, 105, 224, 111}, { 4, 109, 225, 110, 103}, 
 	{ 0, 0}, { 3, 115, 117, 333}, { 2, 119, 468}, { 3, 119, 283, 105}, { 2, 107, 232}, { 3, 108, 224, 105}, { 4, 99, 104, 117, 242}, { 4, 100, 236, 110, 103}, 
@@ -2899,7 +2900,7 @@ us6 han_transliterate_expand_map_90[256] = {
 	{ 4, 122, 104, 462, 110}, { 3, 109, 225, 111}, { 4, 120, 105, 225, 110}, { 4, 120, 105, 225, 110}, { 2, 109, 242}, { 4, 108, 105, 225, 111}, { 4, 108, 105, 225, 110}, { 3, 104, 117, 224}
 };
 
-us6 han_transliterate_expand_map_102[256] = {
+static us6 han_transliterate_expand_map_102[256] = {
 	{ 3, 121, 250, 110}, { 3, 98, 232, 105}, { 3, 225, 110, 103}, { 2, 122, 232}, { 3, 98, 462, 110}, { 3, 106, 105, 233}, { 3, 107, 363, 110}, { 5, 115, 104, 275, 110, 103}, 
 	{ 2, 104, 249}, { 4, 102, 462, 110, 103}, { 3, 104, 224, 111}, { 3, 103, 117, 236}, { 5, 99, 104, 257, 110, 103}, { 4, 120, 117, 257, 110}, { 4, 109, 237, 110, 103}, { 3, 104, 363, 110}, 
 	{ 3, 102, 275, 110}, { 3, 113, 464, 110}, { 2, 104, 363}, { 2, 121, 236}, { 2, 120, 237}, { 3, 120, 299, 110}, { 3, 121, 225, 110}, { 2, 122, 232}, 
@@ -2934,7 +2935,7 @@ us6 han_transliterate_expand_map_102[256] = {
 	{ 3, 115, 104, 363}, { 3, 99, 225, 111}, { 3, 99, 225, 111}, { 0, 0}, { 3, 109, 224, 110}, { 4, 99, 275, 110, 103}, { 4, 99, 233, 110, 103}, { 2, 116, 236}
 };
 
-us6 han_transliterate_expand_map_107[256] = {
+static us6 han_transliterate_expand_map_107[256] = {
 	{ 5, 120, 105, 257, 110, 103}, { 4, 110, 243, 110, 103}, { 2, 98, 243}, { 4, 99, 104, 225, 110}, { 3, 108, 225, 110}, { 2, 106, 468}, { 6, 115, 104, 117, 257, 110, 103}, { 3, 115, 104, 232}, 
 	{ 3, 119, 233, 105}, { 4, 99, 242, 110, 103}, { 4, 113, 117, 225, 110}, { 2, 113, 250}, { 0, 0}, { 0, 0}, { 2, 121, 249}, { 3, 108, 117, 243}, 
 	{ 2, 108, 464}, { 3, 122, 224, 110}, { 4, 108, 117, 225, 110}, { 4, 100, 462, 110, 103}, { 3, 106, 117, 233}, { 0, 0}, { 3, 108, 462, 110}, { 3, 108, 225, 110}, 
@@ -2969,7 +2970,7 @@ us6 han_transliterate_expand_map_107[256] = {
 	{ 3, 115, 117, 299}, { 2, 121, 363}, { 2, 121, 363}, { 3, 116, 117, 242}, { 2, 104, 233}, { 4, 106, 105, 224, 110}, { 2, 116, 224}, { 3, 115, 257, 110}
 };
 
-us6 han_transliterate_expand_map_119[256] = {
+static us6 han_transliterate_expand_map_119[256] = {
 	{ 4, 109, 237, 110, 103}, { 5, 115, 104, 283, 110, 103}, { 3, 115, 104, 236}, { 3, 121, 250, 110}, { 4, 109, 105, 462, 110}, { 3, 112, 257, 110}, { 4, 102, 462, 110, 103}, { 4, 109, 105, 462, 111}, 
 	{ 3, 100, 257, 110}, { 3, 109, 233, 105}, { 3, 109, 224, 111}, { 3, 107, 224, 110}, { 4, 120, 105, 224, 110}, { 2, 333, 117}, { 3, 115, 104, 236}, { 4, 121, 257, 110, 103}, 
 	{ 5, 122, 104, 275, 110, 103}, { 3, 121, 462, 111}, { 4, 115, 104, 232, 110}, { 3, 104, 117, 242}, { 2, 100, 224}, { 4, 122, 104, 283, 110}, { 5, 107, 117, 224, 110, 103}, { 2, 106, 363}, 
@@ -3004,7 +3005,7 @@ us6 han_transliterate_expand_map_119[256] = {
 	{ 3, 103, 257, 110}, { 2, 119, 249}, { 3, 116, 117, 333}, { 2, 107, 249}, { 5, 113, 105, 257, 110, 103}, { 2, 120, 236}, { 3, 102, 225, 110}, { 5, 107, 117, 224, 110, 103}
 };
 
-us6 han_transliterate_expand_map_133[256] = {
+static us6 han_transliterate_expand_map_133[256] = {
 	{ 2, 98, 249}, { 5, 122, 104, 257, 110, 103}, { 3, 108, 117, 243}, { 5, 106, 105, 224, 110, 103}, { 3, 109, 224, 110}, { 3, 121, 225, 110}, { 4, 108, 237, 110, 103}, { 2, 106, 236}, 
 	{ 4, 112, 105, 462, 111}, { 3, 103, 468, 110}, { 3, 104, 462, 110}, { 2, 100, 237}, { 2, 115, 249}, { 2, 108, 249}, { 3, 115, 104, 232}, { 5, 115, 104, 257, 110, 103}, 
 	{ 2, 100, 237}, { 3, 109, 105, 232}, { 3, 120, 363, 110}, { 3, 109, 224, 110}, { 2, 98, 243}, { 2, 100, 236}, { 3, 99, 117, 243}, { 3, 122, 104, 101}, 
@@ -3039,7 +3040,7 @@ us6 han_transliterate_expand_map_133[256] = {
 	{ 3, 99, 104, 250}, { 2, 462, 105}, { 3, 108, 236, 110}, { 3, 122, 462, 111}, { 4, 120, 117, 257, 110}, { 4, 99, 104, 232, 110}, { 3, 108, 224, 105}, { 3, 104, 117, 242}
 };
 
-us6 han_transliterate_expand_map_142[256] = {
+static us6 han_transliterate_expand_map_142[256] = {
 	{ 3, 99, 104, 249}, { 4, 106, 236, 110, 103}, { 3, 110, 105, 232}, { 4, 120, 105, 257, 111}, { 2, 98, 243}, { 3, 99, 104, 236}, { 3, 113, 363, 110}, { 3, 109, 466, 117}, 
 	{ 3, 115, 104, 363}, { 4, 108, 225, 110, 103}, { 4, 121, 466, 110, 103}, { 4, 106, 105, 462, 111}, { 4, 99, 104, 243, 117}, { 4, 113, 105, 257, 111}, { 0, 0}, { 2, 116, 224}, 
 	{ 4, 106, 105, 224, 110}, { 2, 113, 237}, { 2, 119, 333}, { 3, 119, 283, 105}, { 4, 122, 104, 117, 243}, { 3, 106, 105, 233}, { 2, 106, 237}, { 3, 110, 105, 275}, 
@@ -3074,7 +3075,7 @@ us6 han_transliterate_expand_map_142[256] = {
 	{ 4, 122, 104, 243, 117}, { 3, 122, 104, 464}, { 3, 121, 225, 111}, { 2, 107, 275}, { 2, 121, 236}, { 4, 113, 299, 110, 103}, { 3, 115, 104, 236}, { 4, 112, 237, 110, 103}
 };
 
-us6 han_transliterate_expand_map_151[256] = {
+static us6 han_transliterate_expand_map_151[256] = {
 	{ 2, 120, 363}, { 2, 106, 236}, { 2, 109, 249}, { 4, 99, 104, 233, 110}, { 4, 120, 105, 257, 111}, { 3, 122, 104, 225}, { 4, 116, 237, 110, 103}, { 4, 122, 104, 232, 110}, 
 	{ 3, 112, 232, 105}, { 3, 109, 233, 105}, { 4, 108, 237, 110, 103}, { 2, 113, 299}, { 4, 99, 104, 333, 117}, { 3, 104, 117, 242}, { 3, 115, 104, 224}, { 3, 102, 275, 105}, 
 	{ 4, 119, 275, 110, 103}, { 4, 122, 104, 257, 110}, { 3, 121, 299, 110}, { 2, 110, 237}, { 4, 99, 104, 242, 117}, { 3, 116, 250, 110}, { 3, 108, 237, 110}, { 0, 0}, 
@@ -3109,7 +3110,7 @@ us6 han_transliterate_expand_map_151[256] = {
 	{ 4, 112, 233, 110, 103}, { 4, 104, 233, 110, 103}, { 4, 121, 299, 110, 103}, { 3, 121, 249, 110}, { 4, 112, 233, 110, 103}, { 3, 121, 299, 110}, { 3, 121, 299, 110}, { 5, 120, 105, 462, 110, 103}
 };
 
-us6 han_transliterate_expand_map_153[256] = {
+static us6 han_transliterate_expand_map_153[256] = {
 	{ 3, 104, 224, 105}, { 3, 114, 232, 110}, { 4, 116, 105, 462, 110}, { 4, 106, 105, 462, 111}, { 3, 106, 105, 225}, { 4, 98, 464, 110, 103}, { 3, 121, 225, 111}, { 4, 116, 243, 110, 103}, 
 	{ 2, 99, 237}, { 5, 120, 105, 462, 110, 103}, { 4, 121, 462, 110, 103}, { 4, 121, 462, 110, 103}, { 2, 283, 114}, { 3, 121, 224, 110}, { 2, 108, 101}, { 2, 121, 299}, 
 	{ 3, 99, 257, 110}, { 2, 98, 243}, { 3, 110, 283, 105}, { 1, 232}, { 2, 98, 363}, { 3, 106, 249, 110}, { 3, 100, 242, 117}, { 2, 115, 249}, 
@@ -3144,7 +3145,7 @@ us6 han_transliterate_expand_map_153[256] = {
 	{ 3, 113, 299, 110}, { 4, 109, 225, 110, 103}, { 5, 108, 105, 225, 110, 103}, { 3, 104, 224, 110}, { 2, 116, 250}, { 4, 120, 117, 224, 110}, { 3, 116, 117, 236}, { 3, 106, 249, 110}
 };
 
-us6 han_transliterate_expand_map_54[256] = {
+static us6 han_transliterate_expand_map_54[256] = {
 	{ 3, 122, 117, 242}, { 2, 121, 236}, { 2, 99, 237}, { 0, 0}, { 0, 0}, { 4, 120, 105, 225, 110}, { 3, 116, 225, 105}, { 4, 114, 243, 110, 103}, 
 	{ 2, 121, 299}, { 3, 122, 104, 236}, { 2, 121, 236}, { 4, 120, 105, 225, 110}, { 2, 106, 249}, { 2, 106, 237}, { 3, 104, 462, 110}, { 0, 0}, 
 	{ 3, 112, 224, 111}, { 2, 108, 236}, { 0, 0}, { 3, 108, 225, 110}, { 3, 99, 462, 110}, { 3, 104, 462, 110}, { 3, 121, 225, 110}, { 0, 0}, 
@@ -3179,7 +3180,7 @@ us6 han_transliterate_expand_map_54[256] = {
 	{ 3, 115, 104, 249}, { 4, 112, 105, 225, 110}, { 0, 0}, { 3, 107, 117, 464}, { 3, 115, 104, 224}, { 0, 0}, { 4, 120, 105, 225, 110}, { 3, 122, 104, 236}
 };
 
-us6 han_transliterate_expand_map_55[256] = {
+static us6 han_transliterate_expand_map_55[256] = {
 	{ 0, 0}, { 0, 0}, { 0, 0}, { 4, 108, 105, 224, 110}, { 3, 120, 250, 110}, { 2, 120, 249}, { 2, 109, 236}, { 3, 104, 117, 236}, 
 	{ 2, 109, 249}, { 0, 0}, { 4, 112, 224, 110, 103}, { 2, 121, 236}, { 3, 103, 242, 117}, { 4, 116, 225, 110, 103}, { 2, 113, 237}, { 3, 121, 250, 110}, 
 	{ 3, 115, 104, 249}, { 2, 102, 250}, { 2, 121, 236}, { 2, 100, 225}, { 0, 0}, { 4, 108, 105, 225, 110}, { 3, 99, 225, 111}, { 3, 99, 462, 110}, 
@@ -3214,7 +3215,7 @@ us6 han_transliterate_expand_map_55[256] = {
 	{ 0, 0}, { 3, 108, 225, 111}, { 3, 108, 243, 117}, { 4, 113, 105, 224, 110}, { 2, 225, 111}, { 4, 98, 105, 462, 111}, { 0, 0}, { 4, 109, 225, 110, 103}
 };
 
-us6 han_transliterate_expand_map_57[256] = {
+static us6 han_transliterate_expand_map_57[256] = {
 	{ 0, 0}, { 4, 109, 105, 462, 110}, { 2, 106, 237}, { 4, 102, 225, 110, 103}, { 3, 112, 232, 105}, { 2, 224, 105}, { 3, 102, 224, 110}, { 2, 462, 111}, 
 	{ 3, 113, 236, 110}, { 3, 113, 105, 224}, { 4, 120, 105, 224, 111}, { 0, 0}, { 0, 0}, { 4, 113, 105, 462, 111}, { 0, 0}, { 4, 116, 243, 110, 103}, 
 	{ 0, 0}, { 3, 121, 242, 117}, { 0, 0}, { 3, 98, 232, 110}, { 2, 102, 250}, { 3, 99, 104, 249}, { 3, 122, 104, 249}, { 0, 0}, 
@@ -3249,7 +3250,7 @@ us6 han_transliterate_expand_map_57[256] = {
 	{ 0, 0}, { 2, 116, 232}, { 2, 116, 224}, { 3, 122, 104, 464}, { 4, 98, 105, 224, 111}, { 2, 103, 249}, { 0, 0}, { 0, 0}
 };
 
-us6 han_transliterate_expand_map_63[256] = {
+static us6 han_transliterate_expand_map_63[256] = {
 	{ 0, 0}, { 0, 0}, { 1, 233}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 5, 113, 105, 243, 110, 103}, 
 	{ 3, 108, 117, 243}, { 3, 121, 236, 110}, { 3, 116, 250, 110}, { 2, 103, 468}, { 2, 121, 468}, { 3, 108, 283, 105}, { 3, 98, 232, 105}, { 3, 110, 283, 105}, 
 	{ 4, 112, 105, 225, 110}, { 4, 108, 105, 224, 110}, { 3, 113, 105, 468}, { 4, 108, 105, 225, 110}, { 0, 0}, { 0, 0}, { 2, 108, 236}, { 4, 100, 464, 110, 103}, 
@@ -3284,7 +3285,7 @@ us6 han_transliterate_expand_map_63[256] = {
 	{ 3, 119, 462, 110}, { 2, 116, 224}, { 3, 98, 225, 111}, { 0, 0}, { 3, 121, 225, 110}, { 0, 0}, { 3, 122, 104, 249}, { 2, 121, 462}
 };
 
-us6 han_transliterate_expand_map_64[256] = {
+static us6 han_transliterate_expand_map_64[256] = {
 	{ 3, 102, 225, 110}, { 3, 121, 242, 117}, { 0, 0}, { 3, 116, 117, 237}, { 4, 109, 233, 110, 103}, { 3, 115, 104, 232}, { 3, 106, 236, 110}, { 2, 103, 468}, 
 	{ 2, 113, 236}, { 4, 113, 105, 225, 111}, { 4, 106, 105, 462, 111}, { 3, 121, 225, 110}, { 0, 0}, { 3, 107, 224, 110}, { 4, 109, 105, 462, 110}, { 4, 120, 105, 224, 110}, 
 	{ 3, 115, 462, 110}, { 2, 110, 224}, { 0, 0}, { 4, 104, 117, 224, 110}, { 3, 110, 105, 250}, { 5, 99, 104, 232, 110, 103}, { 0, 0}, { 3, 106, 117, 233}, 
@@ -3319,7 +3320,7 @@ us6 han_transliterate_expand_map_64[256] = {
 	{ 4, 120, 105, 224, 110}, { 3, 108, 224, 110}, { 2, 109, 243}, { 2, 98, 224}, { 0, 0}, { 2, 102, 250}, { 2, 98, 464}, { 0, 0}
 };
 
-us6 han_transliterate_expand_map_65[256] = {
+static us6 han_transliterate_expand_map_65[256] = {
 	{ 3, 104, 117, 242}, { 2, 121, 236}, { 3, 108, 105, 249}, { 0, 0}, { 0, 0}, { 4, 106, 117, 224, 110}, { 3, 104, 117, 243}, { 5, 99, 104, 233, 110, 103}, 
 	{ 3, 100, 242, 117}, { 1, 233}, { 0, 0}, { 3, 121, 462, 110}, { 4, 122, 104, 117, 236}, { 2, 100, 249}, { 2, 113, 464}, { 2, 121, 250}, 
 	{ 4, 113, 117, 224, 110}, { 3, 104, 117, 243}, { 3, 110, 105, 232}, { 4, 104, 233, 110, 103}, { 2, 106, 468}, { 3, 115, 104, 232}, { 0, 0}, { 0, 0}, 
@@ -3354,7 +3355,7 @@ us6 han_transliterate_expand_map_65[256] = {
 	{ 5, 99, 104, 233, 110, 103}, { 3, 106, 249, 110}, { 4, 99, 104, 243, 117}, { 3, 104, 117, 236}, { 3, 99, 104, 236}, { 3, 122, 104, 236}, { 3, 121, 225, 110}, { 0, 0}
 };
 
-us6 han_transliterate_expand_map_69[256] = {
+static us6 han_transliterate_expand_map_69[256] = {
 	{ 0, 0}, { 2, 108, 236}, { 2, 122, 464}, { 2, 122, 468}, { 3, 121, 225, 111}, { 0, 0}, { 2, 108, 237}, { 2, 113, 464}, 
 	{ 3, 103, 462, 110}, { 2, 108, 236}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 2, 115, 249}, { 4, 99, 104, 242, 117}, 
 	{ 0, 0}, { 3, 120, 105, 233}, { 3, 98, 232, 105}, { 2, 120, 468}, { 4, 106, 236, 110, 103}, { 2, 112, 250}, { 4, 108, 237, 110, 103}, { 5, 120, 105, 225, 110, 103}, 
@@ -3389,7 +3390,7 @@ us6 han_transliterate_expand_map_69[256] = {
 	{ 0, 0}, { 2, 99, 236}, { 3, 121, 462, 110}, { 3, 106, 105, 233}, { 0, 0}, { 3, 119, 232, 105}, { 4, 120, 105, 462, 110}, { 4, 110, 237, 110, 103}
 };
 
-us6 han_transliterate_expand_map_71[256] = {
+static us6 han_transliterate_expand_map_71[256] = {
 	{ 3, 110, 462, 111}, { 2, 120, 236}, { 0, 0}, { 0, 0}, { 3, 99, 104, 237}, { 3, 119, 233, 105}, { 2, 109, 242}, { 3, 103, 468, 110}, 
 	{ 0, 0}, { 0, 0}, { 3, 122, 224, 111}, { 3, 104, 117, 236}, { 4, 108, 117, 225, 110}, { 4, 108, 105, 225, 111}, { 3, 108, 225, 111}, { 0, 0}, 
 	{ 0, 0}, { 3, 113, 105, 224}, { 2, 224, 111}, { 3, 110, 105, 232}, { 3, 115, 117, 237}, { 3, 109, 224, 105}, { 3, 116, 224, 110}, { 3, 120, 236, 110}, 
@@ -3424,7 +3425,7 @@ us6 han_transliterate_expand_map_71[256] = {
 	{ 3, 107, 117, 237}, { 3, 108, 105, 232}, { 4, 98, 462, 110, 103}, { 2, 100, 249}, { 2, 119, 468}, { 0, 0}, { 3, 106, 117, 283}, { 2, 108, 249}
 };
 
-us6 han_transliterate_expand_map_75[256] = {
+static us6 han_transliterate_expand_map_75[256] = {
 	{ 3, 121, 466, 117}, { 2, 121, 237}, { 3, 120, 117, 232}, { 2, 115, 224}, { 2, 121, 249}, { 2, 108, 236}, { 2, 108, 236}, { 4, 121, 117, 224, 110}, 
 	{ 3, 100, 117, 236}, { 3, 104, 224, 111}, { 3, 113, 105, 232}, { 4, 108, 233, 110, 103}, { 0, 0}, { 0, 0}, { 3, 103, 117, 243}, { 2, 98, 249}, 
 	{ 3, 119, 283, 105}, { 3, 119, 232, 105}, { 0, 0}, { 2, 224, 110}, { 2, 120, 249}, { 5, 115, 104, 462, 110, 103}, { 4, 104, 233, 110, 103}, { 4, 121, 225, 110, 103}, 
@@ -3459,7 +3460,7 @@ us6 han_transliterate_expand_map_75[256] = {
 	{ 2, 99, 236}, { 0, 0}, { 3, 107, 117, 242}, { 0, 0}, { 2, 100, 237}, { 2, 102, 468}, { 4, 116, 105, 225, 111}, { 2, 122, 250}
 };
 
-us6 han_transliterate_expand_map_80[256] = {
+static us6 han_transliterate_expand_map_80[256] = {
 	{ 5, 99, 104, 257, 110, 103}, { 3, 99, 104, 237}, { 4, 98, 236, 110, 103}, { 3, 122, 225, 110}, { 3, 121, 225, 111}, { 3, 99, 117, 236}, { 3, 108, 105, 462}, { 3, 119, 462, 110}, 
 	{ 3, 108, 225, 105}, { 4, 99, 257, 110, 103}, { 4, 122, 242, 110, 103}, { 2, 103, 232}, { 4, 103, 117, 257, 110}, { 3, 98, 232, 105}, { 4, 116, 105, 257, 110}, { 3, 115, 104, 363}, 
 	{ 3, 115, 104, 363}, { 3, 109, 101, 110}, { 3, 100, 224, 111}, { 3, 116, 225, 110}, { 3, 106, 117, 233}, { 4, 99, 104, 117, 237}, { 4, 120, 236, 110, 103}, { 4, 112, 233, 110, 103}, 
@@ -3494,7 +3495,7 @@ us6 han_transliterate_expand_map_80[256] = {
 	{ 3, 106, 236, 110}, { 3, 106, 105, 224}, { 4, 113, 105, 224, 111}, { 2, 112, 236}, { 4, 102, 275, 110, 103}, { 4, 122, 104, 242, 117}, { 2, 224, 105}, { 3, 115, 224, 105}
 };
 
-us6 han_transliterate_expand_map_83[256] = {
+static us6 han_transliterate_expand_map_83[256] = {
 	{ 3, 121, 250, 110}, { 0, 0}, { 0, 0}, { 3, 103, 224, 105}, { 3, 103, 224, 105}, { 3, 98, 257, 111}, { 4, 99, 333, 110, 103}, { 0, 0}, 
 	{ 5, 120, 105, 333, 110, 103}, { 4, 112, 275, 110, 103}, { 2, 106, 250}, { 3, 116, 225, 111}, { 2, 103, 233}, { 2, 112, 250}, { 2, 224, 110}, { 3, 112, 225, 111}, 
 	{ 2, 102, 250}, { 4, 103, 333, 110, 103}, { 2, 100, 225}, { 3, 106, 105, 249}, { 5, 113, 105, 333, 110, 103}, { 2, 98, 464}, { 3, 104, 117, 224}, { 3, 98, 283, 105}, 
@@ -3529,7 +3530,7 @@ us6 han_transliterate_expand_map_83[256] = {
 	{ 2, 115, 299}, { 3, 116, 224, 110}, { 3, 99, 104, 464}, { 2, 108, 232}, { 4, 100, 105, 257, 111}, { 2, 106, 299}, { 0, 0}, { 4, 104, 333, 110, 103}
 };
 
-us6 han_transliterate_expand_map_88[256] = {
+static us6 han_transliterate_expand_map_88[256] = {
 	{ 2, 107, 363}, { 2, 107, 232}, { 4, 116, 225, 110, 103}, { 3, 107, 363, 110}, { 2, 110, 236}, { 4, 106, 105, 257, 110}, { 3, 100, 117, 299}, { 3, 106, 464, 110}, 
 	{ 4, 103, 257, 110, 103}, { 2, 121, 249}, { 1, 232}, { 4, 112, 233, 110, 103}, { 2, 103, 249}, { 2, 116, 249}, { 4, 108, 232, 110, 103}, { 0, 0}, 
 	{ 2, 121, 225}, { 4, 113, 105, 224, 110}, { 0, 0}, { 2, 224, 110}, { 0, 0}, { 3, 100, 117, 242}, { 3, 110, 462, 111}, { 2, 116, 363}, 
@@ -3564,7 +3565,7 @@ us6 han_transliterate_expand_map_88[256] = {
 	{ 3, 107, 468, 110}, { 2, 121, 299}, { 2, 104, 250}, { 2, 120, 249}, { 3, 107, 468, 110}, { 4, 115, 104, 242, 117}, { 4, 109, 462, 110, 103}, { 3, 122, 468, 110}
 };
 
-us6 han_transliterate_expand_map_91[256] = {
+static us6 han_transliterate_expand_map_91[256] = {
 	{ 3, 103, 117, 299}, { 4, 100, 275, 110, 103}, { 3, 122, 104, 299}, { 2, 120, 363}, { 0, 0}, { 3, 104, 117, 225}, { 2, 120, 299}, { 3, 104, 117, 236}, 
 	{ 3, 114, 462, 111}, { 2, 120, 299}, { 3, 121, 224, 110}, { 4, 99, 104, 225, 110}, { 4, 106, 105, 257, 111}, { 3, 109, 283, 105}, { 3, 102, 224, 110}, { 3, 102, 257, 110}, 
 	{ 4, 120, 105, 257, 110}, { 2, 121, 236}, { 3, 119, 232, 105}, { 4, 106, 105, 224, 111}, { 2, 102, 249}, { 3, 115, 104, 236}, { 2, 98, 236}, { 4, 115, 104, 224, 110}, 
@@ -3599,7 +3600,7 @@ us6 han_transliterate_expand_map_91[256] = {
 	{ 3, 99, 249, 110}, { 3, 100, 117, 236}, { 2, 115, 236}, { 3, 120, 250, 110}, { 3, 100, 462, 111}, { 2, 108, 476}, { 3, 100, 117, 236}, { 4, 115, 104, 242, 117}
 };
 
-us6 han_transliterate_expand_map_97[256] = {
+static us6 han_transliterate_expand_map_97[256] = {
 	{ 4, 113, 105, 462, 111}, { 4, 99, 104, 243, 117}, { 3, 98, 232, 105}, { 4, 120, 117, 257, 110}, { 3, 119, 275, 105}, { 2, 103, 233}, { 4, 113, 105, 257, 110}, { 3, 119, 283, 105}, 
 	{ 2, 121, 249}, { 2, 121, 250}, { 2, 98, 236}, { 4, 120, 117, 257, 110}, { 4, 104, 117, 224, 110}, { 3, 109, 464, 110}, { 2, 98, 236}, { 2, 121, 236}, 
 	{ 4, 109, 105, 462, 110}, { 4, 121, 466, 110, 103}, { 3, 107, 224, 105}, { 4, 100, 224, 110, 103}, { 3, 121, 299, 110}, { 1, 232}, { 4, 99, 104, 233, 110}, { 3, 109, 242, 117}, 
@@ -3634,7 +3635,7 @@ us6 han_transliterate_expand_map_97[256] = {
 	{ 4, 120, 117, 225, 110}, { 4, 114, 224, 110, 103}, { 4, 99, 104, 224, 110}, { 2, 106, 236}, { 2, 106, 249}, { 4, 104, 117, 257, 110}, { 3, 115, 104, 232}, { 2, 121, 236}
 };
 
-us6 han_transliterate_expand_map_111[256] = {
+static us6 han_transliterate_expand_map_111[256] = {
 	{ 4, 113, 236, 110, 103}, { 2, 121, 250}, { 4, 112, 105, 224, 111}, { 2, 106, 237}, { 2, 121, 225}, { 4, 106, 105, 462, 111}, { 2, 113, 299}, { 2, 120, 464}, 
 	{ 2, 106, 236}, { 2, 108, 249}, { 2, 108, 474}, { 4, 108, 243, 110, 103}, { 3, 106, 464, 110}, { 3, 103, 117, 243}, { 4, 99, 243, 110, 103}, { 3, 108, 242, 117}, 
 	{ 3, 122, 104, 237}, { 3, 103, 224, 105}, { 5, 113, 105, 225, 110, 103}, { 2, 108, 237}, { 3, 121, 462, 110}, { 3, 99, 225, 111}, { 4, 106, 105, 224, 111}, { 4, 99, 333, 110, 103}, 
@@ -3669,7 +3670,7 @@ us6 han_transliterate_expand_map_111[256] = {
 	{ 0, 0}, { 0, 0}, { 4, 106, 105, 224, 110}, { 3, 119, 283, 105}, { 3, 108, 117, 242}, { 3, 122, 224, 110}, { 2, 108, 476}, { 2, 108, 236}
 };
 
-us6 han_transliterate_expand_map_114[256] = {
+static us6 han_transliterate_expand_map_114[256] = {
 	{ 2, 104, 232}, { 3, 108, 224, 110}, { 4, 98, 105, 257, 111}, { 4, 114, 243, 110, 103}, { 2, 108, 236}, { 2, 109, 242}, { 3, 98, 224, 111}, { 3, 114, 117, 242}, 
 	{ 2, 108, 472}, { 2, 108, 224}, { 2, 225, 111}, { 3, 120, 249, 110}, { 5, 107, 117, 224, 110, 103}, { 4, 115, 104, 117, 242}, { 0, 0}, { 2, 108, 236}, 
 	{ 2, 108, 250}, { 3, 106, 117, 233}, { 4, 108, 105, 224, 111}, { 3, 121, 224, 110}, { 2, 120, 299}, { 3, 120, 105, 232}, { 4, 108, 243, 110, 103}, { 2, 121, 232}, 
@@ -3704,7 +3705,7 @@ us6 han_transliterate_expand_map_114[256] = {
 	{ 2, 108, 105}, { 3, 120, 105, 225}, { 3, 121, 237, 110}, { 4, 115, 117, 257, 110}, { 4, 108, 225, 110, 103}, { 3, 98, 232, 105}, { 3, 122, 104, 236}, { 3, 121, 225, 110}
 };
 
-us6 han_transliterate_expand_map_116[256] = {
+static us6 han_transliterate_expand_map_116[256] = {
 	{ 3, 104, 225, 110}, { 4, 120, 117, 225, 110}, { 3, 121, 225, 110}, { 3, 113, 105, 250}, { 4, 113, 117, 462, 110}, { 4, 108, 225, 110, 103}, { 2, 108, 464}, { 3, 120, 105, 249}, 
 	{ 2, 102, 250}, { 3, 108, 105, 250}, { 2, 121, 233}, { 2, 120, 299}, { 4, 108, 237, 110, 103}, { 2, 108, 236}, { 3, 106, 236, 110}, { 4, 108, 105, 225, 110}, 
 	{ 3, 115, 117, 466}, { 0, 0}, { 0, 0}, { 3, 119, 225, 110}, { 4, 100, 105, 224, 110}, { 3, 112, 237, 110}, { 4, 122, 104, 462, 110}, { 3, 99, 117, 236}, 
@@ -3739,7 +3740,7 @@ us6 han_transliterate_expand_map_116[256] = {
 	{ 0, 0}, { 4, 106, 117, 224, 110}, { 5, 99, 104, 225, 110, 103}, { 3, 99, 104, 299}, { 0, 0}, { 4, 100, 224, 110, 103}, { 4, 109, 283, 110, 103}, { 3, 112, 466, 117}
 };
 
-us6 han_transliterate_expand_map_120[256] = {
+static us6 han_transliterate_expand_map_120[256] = {
 	{ 4, 100, 224, 110, 103}, { 2, 109, 462}, { 3, 115, 104, 257}, { 3, 100, 257, 110}, { 3, 106, 117, 233}, { 2, 108, 236}, { 2, 102, 363}, { 3, 109, 237, 110}, 
 	{ 3, 110, 117, 466}, { 3, 104, 117, 242}, { 4, 107, 224, 110, 103}, { 3, 122, 104, 464}, { 2, 113, 236}, { 3, 107, 462, 110}, { 3, 106, 105, 232}, { 3, 102, 275, 110}, 
 	{ 1, 232}, { 2, 121, 224}, { 2, 112, 299}, { 3, 122, 104, 233}, { 3, 121, 225, 110}, { 3, 115, 117, 236}, { 5, 122, 104, 117, 257, 110}, { 3, 99, 104, 275}, 
@@ -3774,7 +3775,7 @@ us6 han_transliterate_expand_map_120[256] = {
 	{ 4, 100, 236, 110, 103}, { 4, 100, 105, 224, 110}, { 5, 104, 117, 225, 110, 103}, { 3, 112, 225, 110}, { 2, 122, 225}, { 4, 113, 105, 257, 111}, { 2, 100, 299}, { 2, 108, 236}
 };
 
-us6 han_transliterate_expand_map_121[256] = {
+static us6 han_transliterate_expand_map_121[256] = {
 	{ 0, 0}, { 4, 106, 105, 257, 111}, { 0, 0}, { 5, 122, 104, 462, 110, 103}, { 4, 113, 105, 225, 111}, { 3, 100, 363, 110}, { 4, 120, 105, 462, 110}, { 2, 121, 249}, 
 	{ 4, 122, 104, 117, 236}, { 2, 104, 233}, { 3, 104, 117, 242}, { 4, 122, 104, 225, 105}, { 3, 108, 232, 105}, { 2, 107, 283}, { 3, 99, 104, 468}, { 2, 106, 237}, 
 	{ 3, 113, 117, 232}, { 4, 100, 224, 110, 103}, { 2, 121, 464}, { 5, 106, 105, 257, 110, 103}, { 2, 112, 236}, { 2, 112, 299}, { 2, 121, 249}, { 3, 112, 299, 110}, 
@@ -3809,7 +3810,7 @@ us6 han_transliterate_expand_map_121[256] = {
 	{ 3, 106, 105, 275}, { 3, 114, 283, 110}, { 2, 100, 249}, { 2, 121, 237}, { 3, 122, 104, 363}, { 3, 104, 117, 236}, { 4, 110, 243, 110, 103}, { 2, 102, 468}
 };
 
-us6 han_transliterate_expand_map_130[256] = {
+static us6 han_transliterate_expand_map_130[256] = {
 	{ 3, 121, 462, 111}, { 2, 121, 250}, { 5, 99, 104, 333, 110, 103}, { 2, 120, 236}, { 2, 120, 236}, { 3, 106, 105, 249}, { 2, 121, 250}, { 2, 121, 468}, 
 	{ 4, 120, 236, 110, 103}, { 2, 106, 468}, { 3, 106, 105, 249}, { 3, 120, 236, 110}, { 3, 115, 104, 233}, { 3, 115, 104, 283}, { 0, 0}, { 3, 106, 105, 468}, 
 	{ 3, 115, 104, 236}, { 3, 116, 257, 110}, { 3, 115, 104, 363}, { 3, 115, 104, 236}, { 4, 116, 105, 462, 110}, { 3, 100, 224, 110}, { 2, 112, 249}, { 2, 112, 249}, 
@@ -3844,7 +3845,7 @@ us6 han_transliterate_expand_map_130[256] = {
 	{ 2, 104, 363}, { 4, 112, 237, 110, 103}, { 3, 109, 233, 105}, { 2, 102, 250}, { 5, 115, 104, 275, 110, 103}, { 2, 103, 363}, { 2, 98, 236}, { 3, 119, 232, 105}
 };
 
-us6 han_transliterate_expand_map_139[256] = {
+static us6 han_transliterate_expand_map_139[256] = {
 	{ 3, 109, 243, 117}, { 2, 121, 232}, { 3, 119, 232, 105}, { 0, 0}, { 4, 116, 233, 110, 103}, { 3, 122, 333, 117}, { 4, 115, 104, 224, 110}, { 4, 106, 105, 462, 110}, 
 	{ 2, 98, 243}, { 0, 0}, { 5, 104, 117, 462, 110, 103}, { 3, 104, 117, 242}, { 2, 103, 275}, { 4, 121, 237, 110, 103}, { 2, 109, 237}, { 4, 120, 105, 462, 111}, 
 	{ 2, 109, 236}, { 2, 120, 236}, { 5, 113, 105, 257, 110, 103}, { 4, 99, 104, 275, 110}, { 3, 110, 252, 232}, { 2, 116, 237}, { 2, 115, 249}, { 4, 98, 224, 110, 103}, 
@@ -3879,7 +3880,7 @@ us6 han_transliterate_expand_map_139[256] = {
 	{ 3, 122, 104, 363}, { 3, 122, 333, 117}, { 3, 110, 117, 242}, { 2, 100, 250}, { 4, 122, 104, 117, 243}, { 3, 102, 283, 105}, { 2, 107, 232}, { 3, 119, 283, 105}
 };
 
-us6 han_transliterate_expand_map_140[256] = {
+static us6 han_transliterate_expand_map_140[256] = {
 	{ 2, 121, 250}, { 4, 115, 104, 117, 237}, { 4, 115, 104, 283, 110}, { 4, 100, 105, 224, 111}, { 4, 99, 104, 462, 110}, { 5, 108, 105, 224, 110, 103}, { 4, 122, 104, 363, 110}, { 3, 115, 117, 236}, 
 	{ 3, 116, 225, 110}, { 4, 115, 104, 283, 110}, { 2, 121, 236}, { 3, 109, 243, 117}, { 4, 99, 104, 233, 110}, { 3, 100, 105, 233}, { 5, 104, 117, 462, 110, 103}, { 4, 106, 105, 224, 110}, 
 	{ 3, 120, 105, 233}, { 3, 110, 252, 232}, { 2, 121, 232}, { 3, 119, 232, 105}, { 1, 232}, { 2, 121, 249}, { 4, 120, 117, 257, 110}, { 4, 99, 104, 225, 110}, 
@@ -3914,7 +3915,7 @@ us6 han_transliterate_expand_map_140[256] = {
 	{ 5, 115, 104, 232, 110, 103}, { 2, 224, 105}, { 5, 122, 104, 117, 224, 110}, { 2, 102, 249}, { 3, 103, 242, 117}, { 3, 115, 224, 105}, { 2, 122, 233}, { 4, 108, 105, 225, 111}
 };
 
-us6 han_transliterate_expand_map_148[256] = {
+static us6 han_transliterate_expand_map_148[256] = {
 	{ 3, 107, 117, 236}, { 2, 115, 299}, { 3, 108, 105, 249}, { 3, 110, 225, 111}, { 4, 104, 233, 110, 103}, { 3, 112, 105, 283}, { 3, 115, 117, 236}, { 3, 102, 225, 110}, 
 	{ 4, 113, 105, 225, 111}, { 4, 113, 117, 257, 110}, { 4, 121, 225, 110, 103}, { 4, 116, 224, 110, 103}, { 5, 120, 105, 224, 110, 103}, { 3, 106, 117, 233}, { 4, 106, 105, 257, 111}, { 3, 122, 363, 110}, 
 	{ 4, 108, 105, 225, 111}, { 3, 106, 105, 233}, { 3, 108, 225, 111}, { 3, 100, 117, 236}, { 3, 116, 225, 110}, { 3, 122, 257, 110}, { 2, 106, 299}, { 4, 106, 105, 462, 110}, 
@@ -3949,7 +3950,7 @@ us6 han_transliterate_expand_map_148[256] = {
 	{ 3, 122, 104, 249}, { 3, 108, 225, 111}, { 2, 112, 249}, { 2, 119, 250}, { 3, 108, 225, 105}, { 2, 116, 232}, { 4, 108, 105, 224, 110}, { 4, 107, 275, 110, 103}
 };
 
-us6 han_transliterate_expand_map_157[256] = {
+static us6 han_transliterate_expand_map_157[256] = {
 	{ 3, 102, 466, 117}, { 4, 121, 105, 257, 111}, { 3, 106, 117, 232}, { 3, 106, 117, 233}, { 2, 112, 299}, { 4, 104, 117, 257, 110}, { 4, 122, 104, 232, 110}, { 3, 98, 462, 111}, 
 	{ 3, 121, 224, 110}, { 2, 121, 257}, { 5, 122, 104, 232, 110, 103}, { 4, 102, 257, 110, 103}, { 4, 102, 232, 110, 103}, { 3, 119, 233, 110}, { 2, 333, 117}, { 2, 116, 232}, 
 	{ 3, 106, 105, 257}, { 2, 110, 250}, { 4, 108, 237, 110, 103}, { 3, 109, 105, 232}, { 2, 102, 250}, { 3, 116, 117, 243}, { 3, 119, 233, 110}, { 2, 108, 236}, 
@@ -3984,7 +3985,7 @@ us6 han_transliterate_expand_map_157[256] = {
 	{ 2, 121, 249}, { 4, 121, 299, 110, 103}, { 2, 108, 249}, { 4, 116, 117, 225, 110}, { 4, 120, 105, 225, 110}, { 3, 120, 117, 233}, { 2, 121, 236}, { 2, 112, 236}
 };
 
-us6 han_transliterate_expand_map_92[256] = {
+static us6 han_transliterate_expand_map_92[256] = {
 	{ 2, 112, 466}, { 4, 102, 275, 110, 103}, { 5, 122, 104, 117, 257, 110}, { 2, 102, 363}, { 3, 115, 104, 232}, { 2, 107, 232}, { 5, 106, 105, 257, 110, 103}, { 5, 106, 105, 257, 110, 103}, 
 	{ 5, 122, 104, 117, 257, 110}, { 3, 119, 232, 105}, { 3, 122, 363, 110}, { 3, 120, 250, 110}, { 3, 115, 104, 249}, { 3, 100, 117, 236}, { 3, 100, 462, 111}, { 4, 120, 105, 462, 111}, 
 	{ 2, 106, 299}, { 4, 115, 104, 462, 111}, { 2, 283, 114}, { 2, 283, 114}, { 2, 283, 114}, { 2, 103, 462}, { 4, 106, 105, 257, 110}, { 3, 115, 104, 250}, 
@@ -4019,7 +4020,7 @@ us6 han_transliterate_expand_map_92[256] = {
 	{ 5, 99, 104, 233, 110, 103}, { 2, 116, 250}, { 4, 103, 283, 110, 103}, { 3, 106, 249, 110}, { 3, 104, 224, 111}, { 3, 120, 105, 225}, { 3, 121, 299, 110}, { 2, 121, 468}
 };
 
-us6 han_transliterate_expand_map_94[256] = {
+static us6 han_transliterate_expand_map_94[256] = {
 	{ 2, 122, 257}, { 2, 98, 236}, { 3, 115, 104, 236}, { 2, 98, 249}, { 4, 100, 299, 110, 103}, { 5, 115, 104, 117, 224, 105}, { 3, 102, 257, 110}, { 3, 110, 105, 232}, 
 	{ 3, 115, 104, 299}, { 3, 102, 275, 110}, { 2, 112, 224}, { 3, 122, 104, 464}, { 2, 120, 299}, { 2, 104, 249}, { 3, 100, 224, 110}, { 3, 119, 233, 105}, 
 	{ 5, 122, 104, 224, 110, 103}, { 4, 116, 462, 110, 103}, { 3, 100, 224, 105}, { 2, 109, 224}, { 3, 112, 232, 105}, { 2, 112, 224}, { 3, 116, 105, 275}, { 2, 102, 250}, 
@@ -4054,7 +4055,7 @@ us6 han_transliterate_expand_map_94[256] = {
 	{ 2, 100, 237}, { 2, 112, 242}, { 4, 106, 105, 224, 110}, { 3, 104, 117, 237}, { 3, 110, 462, 105}, { 3, 104, 117, 237}, { 4, 103, 242, 110, 103}, { 4, 110, 105, 224, 110}
 };
 
-us6 han_transliterate_expand_map_108[256] = {
+static us6 han_transliterate_expand_map_108[256] = {
 	{ 2, 108, 472}, { 2, 109, 250}, { 2, 108, 237}, { 4, 116, 243, 110, 103}, { 4, 114, 466, 110, 103}, { 5, 99, 104, 462, 110, 103}, { 2, 112, 468}, { 3, 108, 117, 243}, 
 	{ 4, 122, 104, 257, 110}, { 3, 115, 224, 111}, { 4, 122, 104, 257, 110}, { 4, 109, 233, 110, 103}, { 3, 108, 117, 243}, { 2, 113, 250}, { 3, 100, 105, 233}, { 3, 115, 104, 236}, 
 	{ 2, 100, 464}, { 3, 109, 237, 110}, { 3, 106, 117, 233}, { 4, 109, 225, 110, 103}, { 2, 113, 236}, { 3, 112, 105, 275}, { 3, 110, 462, 105}, { 2, 113, 236}, 
@@ -4089,7 +4090,7 @@ us6 han_transliterate_expand_map_108[256] = {
 	{ 2, 108, 250}, { 0, 0}, { 2, 98, 243}, { 3, 120, 105, 232}, { 2, 112, 111}, { 2, 122, 233}, { 4, 106, 299, 110, 103}, { 3, 121, 237, 110}
 };
 
-us6 han_transliterate_expand_map_117[256] = {
+static us6 han_transliterate_expand_map_117[256] = {
 	{ 4, 122, 104, 117, 236}, { 4, 112, 237, 110, 103}, { 4, 98, 105, 257, 110}, { 4, 122, 104, 242, 117}, { 4, 122, 104, 275, 110}, { 0, 0}, { 2, 99, 237}, { 4, 121, 299, 110, 103}, 
 	{ 2, 113, 236}, { 4, 120, 105, 225, 110}, { 3, 108, 466, 117}, { 2, 100, 236}, { 2, 333, 117}, { 4, 109, 233, 110, 103}, { 5, 122, 104, 117, 257, 110}, { 4, 112, 232, 110, 103}, 
 	{ 3, 108, 237, 110}, { 4, 122, 232, 110, 103}, { 2, 119, 468}, { 2, 112, 236}, { 3, 100, 257, 110}, { 4, 119, 232, 110, 103}, { 4, 121, 299, 110, 103}, { 3, 121, 462, 110}, 
@@ -4124,7 +4125,7 @@ us6 han_transliterate_expand_map_117[256] = {
 	{ 3, 99, 104, 236}, { 2, 98, 236}, { 2, 98, 236}, { 3, 109, 237, 110}, { 2, 103, 363}, { 3, 100, 117, 299}, { 1, 275}, { 3, 119, 283, 105}
 };
 
-us6 han_transliterate_expand_map_129[256] = {
+static us6 han_transliterate_expand_map_129[256] = {
 	{ 5, 99, 104, 233, 110, 103}, { 4, 116, 105, 224, 111}, { 3, 122, 104, 299}, { 3, 99, 117, 236}, { 3, 109, 233, 105}, { 3, 120, 105, 233}, { 3, 99, 117, 236}, { 3, 120, 105, 233}, 
 	{ 3, 109, 224, 105}, { 3, 109, 224, 105}, { 2, 106, 237}, { 0, 0}, { 0, 0}, { 4, 107, 117, 224, 105}, { 2, 115, 224}, { 4, 122, 224, 110, 103}, 
 	{ 2, 113, 237}, { 3, 110, 462, 111}, { 2, 109, 464}, { 4, 110, 243, 110, 103}, { 4, 108, 117, 225, 110}, { 3, 119, 462, 110}, { 2, 98, 243}, { 3, 119, 283, 110}, 
@@ -4159,7 +4160,7 @@ us6 han_transliterate_expand_map_129[256] = {
 	{ 3, 122, 104, 236}, { 3, 120, 105, 363}, { 3, 116, 225, 105}, { 4, 122, 104, 275, 110}, { 3, 106, 105, 249}, { 4, 120, 105, 224, 110}, { 2, 121, 250}, { 3, 99, 104, 257}
 };
 
-us6 han_transliterate_expand_map_131[256] = {
+static us6 han_transliterate_expand_map_131[256] = {
 	{ 2, 102, 250}, { 4, 122, 104, 117, 243}, { 3, 109, 224, 111}, { 3, 102, 224, 110}, { 3, 106, 105, 257}, { 3, 109, 225, 111}, { 3, 109, 462, 111}, { 2, 98, 225}, 
 	{ 2, 122, 464}, { 2, 109, 242}, { 2, 122, 299}, { 2, 100, 464}, { 3, 99, 104, 237}, { 2, 106, 236}, { 4, 106, 299, 110, 103}, { 4, 108, 243, 110, 103}, 
 	{ 0, 0}, { 4, 110, 105, 462, 111}, { 0, 0}, { 3, 120, 117, 233}, { 4, 121, 237, 110, 103}, { 5, 113, 105, 243, 110, 103}, { 2, 103, 233}, { 4, 109, 464, 110, 103}, 
@@ -4194,7 +4195,7 @@ us6 han_transliterate_expand_map_131[256] = {
 	{ 3, 121, 257, 110}, { 2, 106, 363}, { 4, 106, 105, 257, 110}, { 3, 108, 464, 110}, { 3, 116, 462, 110}, { 3, 115, 104, 250}, { 4, 116, 105, 225, 110}, { 3, 100, 224, 111}
 };
 
-us6 han_transliterate_expand_map_132[256] = {
+static us6 han_transliterate_expand_map_132[256] = {
 	{ 2, 104, 468}, { 2, 113, 237}, { 2, 104, 233}, { 3, 99, 117, 236}, { 3, 116, 225, 111}, { 4, 99, 104, 363, 110}, { 3, 98, 275, 105}, { 5, 99, 104, 225, 110, 103}, 
 	{ 4, 104, 117, 225, 110}, { 3, 102, 233, 105}, { 3, 108, 225, 105}, { 2, 113, 299}, { 4, 109, 233, 110, 103}, { 4, 112, 237, 110, 103}, { 3, 119, 275, 105}, { 3, 100, 224, 110}, 
 	{ 3, 115, 104, 224}, { 4, 104, 117, 225, 110}, { 3, 121, 462, 110}, { 2, 121, 237}, { 4, 116, 105, 225, 111}, { 2, 113, 237}, { 3, 119, 462, 110}, { 2, 99, 232}, 
@@ -4229,7 +4230,7 @@ us6 han_transliterate_expand_map_132[256] = {
 	{ 3, 99, 225, 111}, { 2, 121, 468}, { 2, 121, 236}, { 2, 106, 237}, { 4, 108, 105, 462, 111}, { 2, 98, 236}, { 2, 108, 468}, { 2, 115, 249}
 };
 
-us6 han_transliterate_expand_map_138[256] = {
+static us6 han_transliterate_expand_map_138[256] = {
 	{ 3, 121, 225, 110}, { 0, 0}, { 4, 100, 236, 110, 103}, { 2, 102, 249}, { 3, 113, 105, 250}, { 3, 113, 105, 250}, { 4, 106, 105, 224, 111}, { 4, 104, 333, 110, 103}, 
 	{ 2, 106, 236}, { 3, 102, 224, 110}, { 3, 120, 249, 110}, { 4, 100, 105, 224, 111}, { 4, 104, 243, 110, 103}, { 3, 99, 104, 224}, { 3, 116, 462, 111}, { 2, 120, 363}, 
 	{ 3, 106, 105, 233}, { 2, 121, 237}, { 3, 114, 232, 110}, { 3, 120, 117, 110}, { 3, 121, 237, 110}, { 4, 115, 104, 224, 110}, { 2, 113, 236}, { 3, 116, 117, 333}, 
@@ -4264,7 +4265,7 @@ us6 han_transliterate_expand_map_138[256] = {
 	{ 3, 122, 104, 363}, { 4, 121, 225, 110, 103}, { 3, 121, 224, 110}, { 4, 104, 275, 110, 103}, { 4, 120, 117, 257, 110}, { 2, 103, 233}, { 3, 110, 117, 242}, { 2, 113, 236}
 };
 
-us6 han_transliterate_expand_map_158[256] = {
+static us6 han_transliterate_expand_map_158[256] = {
 	{ 3, 115, 104, 250}, { 3, 108, 117, 243}, { 2, 113, 299}, { 2, 121, 237}, { 2, 106, 237}, { 3, 122, 104, 233}, { 2, 121, 250}, { 4, 122, 104, 257, 110}, 
 	{ 2, 121, 232}, { 4, 121, 225, 110, 103}, { 2, 112, 236}, { 4, 110, 237, 110, 103}, { 3, 104, 117, 242}, { 2, 109, 237}, { 4, 121, 299, 110, 103}, { 4, 109, 233, 110, 103}, 
 	{ 2, 100, 237}, { 3, 121, 117, 232}, { 2, 121, 250}, { 3, 108, 283, 105}, { 3, 98, 224, 111}, { 2, 108, 250}, { 2, 104, 232}, { 4, 108, 243, 110, 103}, 
@@ -4299,7 +4300,7 @@ us6 han_transliterate_expand_map_158[256] = {
 	{ 2, 108, 250}, { 3, 122, 104, 464}, { 3, 102, 283, 110}, { 2, 102, 249}, { 2, 102, 468}, { 3, 109, 464, 110}, { 3, 109, 464, 110}, { 4, 121, 117, 225, 110}
 };
 
-us6 han_transliterate_expand_map_115[256] = {
+static us6 han_transliterate_expand_map_115[256] = {
 	{ 3, 115, 104, 257}, { 2, 108, 236}, { 3, 104, 224, 110}, { 4, 120, 105, 462, 110}, { 4, 106, 299, 110, 103}, { 3, 112, 225, 105}, { 3, 102, 275, 105}, { 3, 121, 225, 111}, 
 	{ 2, 98, 224}, { 2, 113, 237}, { 2, 110, 237}, { 4, 98, 105, 257, 111}, { 3, 121, 236, 110}, { 3, 108, 225, 105}, { 3, 108, 105, 232}, { 4, 106, 105, 257, 110}, 
 	{ 5, 113, 105, 257, 110, 103}, { 3, 107, 363, 110}, { 3, 121, 257, 110}, { 3, 103, 117, 466}, { 4, 122, 242, 110, 103}, { 2, 109, 237}, { 5, 99, 104, 257, 110, 103}, { 2, 121, 299}, 
@@ -4334,7 +4335,7 @@ us6 han_transliterate_expand_map_115[256] = {
 	{ 2, 119, 250}, { 5, 99, 104, 233, 110, 103}, { 3, 106, 249, 110}, { 3, 109, 233, 105}, { 3, 98, 232, 105}, { 4, 116, 464, 110, 103}, { 4, 120, 105, 224, 110}, { 4, 99, 104, 117, 242}
 };
 
-us6 han_transliterate_expand_map_127[256] = {
+static us6 han_transliterate_expand_map_127[256] = {
 	{ 4, 122, 104, 117, 105}, { 2, 122, 299}, { 2, 107, 232}, { 5, 120, 105, 257, 110, 103}, { 4, 106, 105, 257, 110}, { 4, 109, 105, 462, 110}, { 3, 108, 224, 110}, { 2, 116, 237}, 
 	{ 4, 109, 105, 462, 111}, { 2, 113, 236}, { 3, 121, 363, 110}, { 3, 104, 117, 236}, { 2, 115, 299}, { 3, 100, 117, 466}, { 4, 100, 117, 224, 110}, { 4, 98, 105, 224, 110}, 
 	{ 4, 120, 105, 224, 110}, { 3, 103, 333, 117}, { 4, 122, 104, 117, 236}, { 4, 104, 117, 462, 110}, { 2, 100, 236}, { 2, 108, 474}, { 4, 98, 105, 257, 110}, { 3, 109, 237, 110}, 
@@ -4369,7 +4370,7 @@ us6 han_transliterate_expand_map_127[256] = {
 	{ 3, 112, 283, 110}, { 4, 113, 105, 224, 111}, { 2, 225, 111}, { 3, 102, 257, 110}, { 2, 121, 236}, { 3, 104, 117, 236}, { 4, 120, 117, 257, 110}, { 3, 100, 224, 111}
 };
 
-us6 han_transliterate_expand_map_62[256] = {
+static us6 han_transliterate_expand_map_62[256] = {
 	{ 3, 116, 225, 105}, { 3, 104, 462, 110}, { 0, 0}, { 4, 100, 105, 462, 110}, { 2, 106, 236}, { 3, 106, 105, 233}, { 0, 0}, { 0, 0}, 
 	{ 0, 0}, { 3, 120, 105, 232}, { 2, 108, 224}, { 3, 102, 225, 110}, { 3, 104, 117, 242}, { 2, 120, 236}, { 3, 110, 105, 232}, { 2, 109, 237}, 
 	{ 3, 114, 225, 110}, { 4, 99, 117, 224, 110}, { 3, 121, 237, 110}, { 2, 109, 236}, { 0, 0}, { 3, 106, 117, 233}, { 0, 0}, { 4, 116, 243, 110, 103}, 
@@ -4404,7 +4405,7 @@ us6 han_transliterate_expand_map_62[256] = {
 	{ 3, 99, 233, 110}, { 0, 0}, { 2, 108, 236}, { 0, 0}, { 0, 0}, { 3, 115, 117, 236}, { 0, 0}, { 3, 115, 104, 468}
 };
 
-us6 han_transliterate_expand_map_67[256] = {
+static us6 han_transliterate_expand_map_67[256] = {
 	{ 0, 0}, { 0, 0}, { 2, 242, 117}, { 4, 115, 104, 117, 242}, { 4, 103, 283, 110, 103}, { 4, 116, 225, 110, 103}, { 3, 103, 117, 236}, { 3, 104, 117, 236}, 
 	{ 2, 116, 224}, { 0, 0}, { 3, 121, 225, 111}, { 0, 0}, { 2, 113, 236}, { 3, 104, 224, 110}, { 3, 108, 252, 232}, { 2, 109, 236}, 
 	{ 2, 109, 236}, { 0, 0}, { 2, 108, 249}, { 3, 102, 225, 110}, { 2, 242, 117}, { 2, 109, 237}, { 3, 106, 105, 233}, { 2, 102, 468}, 
@@ -4439,7 +4440,7 @@ us6 han_transliterate_expand_map_67[256] = {
 	{ 2, 121, 250}, { 4, 120, 105, 224, 110}, { 0, 0}, { 4, 110, 233, 110, 103}, { 3, 99, 225, 110}, { 2, 98, 249}, { 0, 0}, { 2, 113, 464}
 };
 
-us6 han_transliterate_expand_map_81[256] = {
+static us6 han_transliterate_expand_map_81[256] = {
 	{ 2, 121, 237}, { 3, 106, 249, 110}, { 4, 110, 243, 110, 103}, { 4, 99, 104, 225, 110}, { 2, 121, 236}, { 4, 100, 257, 110, 103}, { 4, 106, 464, 110, 103}, { 4, 120, 117, 257, 110}, 
 	{ 4, 107, 117, 224, 105}, { 4, 106, 105, 462, 110}, { 3, 99, 104, 249}, { 3, 100, 257, 110}, { 4, 106, 105, 462, 111}, { 3, 115, 104, 462}, { 3, 122, 224, 105}, { 0, 0}, 
 	{ 3, 98, 236, 110}, { 2, 224, 110}, { 2, 114, 250}, { 3, 116, 225, 105}, { 4, 99, 104, 243, 117}, { 4, 99, 104, 225, 105}, { 3, 108, 225, 110}, { 2, 110, 464}, 
@@ -4474,7 +4475,7 @@ us6 han_transliterate_expand_map_81[256] = {
 	{ 2, 116, 363}, { 2, 257, 111}, { 3, 99, 104, 363}, { 2, 106, 299}, { 4, 100, 224, 110, 103}, { 3, 104, 225, 110}, { 3, 104, 225, 110}, { 3, 122, 225, 111}
 };
 
-us6 han_transliterate_expand_map_104[256] = {
+static us6 han_transliterate_expand_map_104[256] = {
 	{ 3, 122, 104, 299}, { 3, 108, 105, 468}, { 3, 109, 233, 105}, { 0, 0}, { 4, 114, 243, 110, 103}, { 3, 122, 104, 224}, { 0, 0}, { 4, 98, 105, 257, 111}, 
 	{ 4, 122, 104, 224, 110}, { 3, 106, 105, 233}, { 4, 108, 243, 110, 103}, { 4, 100, 242, 110, 103}, { 2, 108, 250}, { 0, 0}, { 2, 108, 236}, { 3, 108, 225, 110}, 
 	{ 4, 121, 466, 110, 103}, { 3, 115, 104, 249}, { 3, 120, 250, 110}, { 5, 115, 104, 117, 257, 110}, { 2, 113, 236}, { 4, 122, 104, 275, 110}, { 2, 113, 299}, { 2, 108, 236}, 
@@ -4509,7 +4510,7 @@ us6 han_transliterate_expand_map_104[256] = {
 	{ 3, 122, 333, 117}, { 4, 122, 104, 117, 333}, { 4, 103, 117, 257, 110}, { 3, 102, 233, 110}, { 3, 102, 233, 110}, { 4, 99, 104, 275, 110}, { 5, 113, 105, 243, 110, 103}, { 3, 110, 105, 232}
 };
 
-us6 han_transliterate_expand_map_109[256] = {
+static us6 han_transliterate_expand_map_109[256] = {
 	{ 4, 122, 104, 333, 117}, { 3, 106, 105, 233}, { 2, 121, 236}, { 3, 104, 117, 299}, { 3, 104, 117, 237}, { 3, 122, 117, 464}, { 5, 99, 104, 233, 110, 103}, { 3, 121, 299, 110}, 
 	{ 3, 119, 233, 105}, { 3, 104, 242, 117}, { 4, 106, 105, 224, 110}, { 4, 121, 225, 110, 103}, { 3, 108, 105, 232}, { 2, 115, 236}, { 2, 106, 236}, { 2, 233, 114}, 
 	{ 4, 120, 237, 110, 103}, { 2, 102, 250}, { 2, 115, 462}, { 3, 115, 117, 466}, { 3, 122, 104, 464}, { 3, 121, 299, 110}, { 2, 119, 250}, { 2, 120, 464}, 
@@ -4544,7 +4545,7 @@ us6 han_transliterate_expand_map_109[256] = {
 	{ 4, 113, 299, 110, 103}, { 3, 121, 257, 110}, { 4, 113, 105, 462, 110}, { 4, 116, 105, 257, 110}, { 4, 109, 105, 462, 111}, { 3, 122, 104, 464}, { 3, 121, 464, 110}, { 2, 109, 236}
 };
 
-us6 han_transliterate_expand_map_155[256] = {
+static us6 han_transliterate_expand_map_155[256] = {
 	{ 2, 116, 236}, { 2, 108, 236}, { 3, 98, 236, 110}, { 4, 122, 333, 110, 103}, { 2, 116, 236}, { 4, 112, 233, 110, 103}, { 4, 115, 333, 110, 103}, { 5, 122, 104, 275, 110, 103}, 
 	{ 4, 113, 117, 225, 110}, { 4, 122, 333, 110, 103}, { 4, 115, 104, 249, 110}, { 4, 106, 105, 257, 110}, { 3, 100, 117, 466}, { 2, 104, 250}, { 2, 108, 224}, { 3, 106, 105, 363}, 
 	{ 2, 113, 237}, { 4, 108, 105, 225, 110}, { 4, 122, 104, 283, 110}, { 3, 98, 236, 110}, { 4, 112, 233, 110, 103}, { 2, 109, 242}, { 3, 115, 257, 110}, { 3, 109, 224, 110}, 
@@ -4579,7 +4580,7 @@ us6 han_transliterate_expand_map_155[256] = {
 	{ 3, 104, 243, 117}, { 4, 120, 299, 110, 103}, { 3, 122, 104, 363}, { 2, 108, 224}, { 4, 122, 333, 110, 103}, { 2, 106, 236}, { 4, 98, 105, 257, 110}, { 4, 98, 105, 257, 110}
 };
 
-us6 han_transliterate_expand_map_59[256] = {
+static us6 han_transliterate_expand_map_59[256] = {
 	{ 0, 0}, { 0, 0}, { 2, 121, 250}, { 3, 116, 225, 105}, { 4, 99, 104, 224, 110}, { 3, 109, 224, 110}, { 4, 109, 105, 225, 110}, { 4, 104, 117, 224, 110}, 
 	{ 0, 0}, { 4, 110, 117, 462, 110}, { 4, 104, 117, 462, 110}, { 3, 104, 243, 117}, { 4, 106, 236, 110, 103}, { 2, 98, 243}, { 4, 120, 105, 462, 110}, { 2, 108, 236}, 
 	{ 3, 106, 464, 110}, { 0, 0}, { 4, 109, 462, 110, 103}, { 4, 112, 105, 224, 111}, { 3, 104, 225, 111}, { 4, 121, 225, 110, 103}, { 0, 0}, { 4, 120, 105, 224, 110}, 
@@ -4614,7 +4615,7 @@ us6 han_transliterate_expand_map_59[256] = {
 	{ 3, 106, 464, 110}, { 4, 98, 105, 462, 111}, { 4, 106, 105, 224, 110}, { 3, 103, 468, 110}, { 0, 0}, { 0, 0}, { 0, 0}, { 3, 108, 105, 232}
 };
 
-us6 han_transliterate_expand_map_103[256] = {
+static us6 han_transliterate_expand_map_103[256] = {
 	{ 3, 122, 117, 236}, { 3, 99, 462, 110}, { 2, 120, 249}, { 3, 104, 117, 236}, { 3, 121, 236, 110}, { 3, 113, 105, 232}, { 3, 102, 275, 110}, { 2, 112, 237}, 
 	{ 3, 121, 117, 232}, { 3, 121, 466, 117}, { 4, 114, 117, 462, 110}, { 4, 112, 233, 110, 103}, { 3, 98, 257, 110}, { 2, 102, 250}, { 4, 108, 237, 110, 103}, { 3, 102, 283, 105}, 
 	{ 2, 113, 250}, { 0, 0}, { 2, 110, 476}, { 4, 116, 105, 224, 111}, { 4, 115, 104, 117, 242}, { 4, 122, 104, 232, 110}, { 4, 108, 462, 110, 103}, { 4, 108, 462, 110, 103}, 
@@ -4649,7 +4650,7 @@ us6 han_transliterate_expand_map_103[256] = {
 	{ 3, 112, 275, 105}, { 3, 115, 104, 236}, { 4, 103, 117, 462, 105}, { 3, 99, 104, 225}, { 3, 121, 462, 111}, { 3, 106, 117, 233}, { 3, 106, 105, 249}, { 3, 115, 104, 236}
 };
 
-us6 han_transliterate_expand_map_145[256] = {
+static us6 han_transliterate_expand_map_145[256] = {
 	{ 3, 114, 117, 242}, { 3, 98, 232, 105}, { 1, 232}, { 2, 121, 250}, { 4, 106, 117, 224, 110}, { 2, 121, 468}, { 3, 121, 249, 110}, { 3, 104, 242, 117}, 
 	{ 3, 107, 117, 237}, { 5, 120, 105, 257, 110, 103}, { 5, 120, 105, 257, 110, 103}, { 3, 115, 333, 117}, { 4, 116, 225, 110, 103}, { 4, 109, 237, 110, 103}, { 2, 120, 236}, { 2, 114, 249}, 
 	{ 3, 99, 104, 249}, { 2, 122, 299}, { 3, 122, 333, 117}, { 2, 106, 250}, { 2, 119, 363}, { 5, 120, 105, 257, 110, 103}, { 3, 121, 250, 110}, { 3, 104, 224, 111}, 
@@ -4684,7 +4685,7 @@ us6 han_transliterate_expand_map_145[256] = {
 	{ 2, 120, 236}, { 2, 110, 474}, { 4, 113, 105, 257, 110}, { 0, 0}, { 4, 106, 105, 224, 110}, { 2, 112, 299}, { 2, 121, 233}, { 3, 121, 237, 110}
 };
 
-us6 han_transliterate_expand_map_70[256] = {
+static us6 han_transliterate_expand_map_70[256] = {
 	{ 2, 102, 249}, { 2, 103, 233}, { 0, 0}, { 2, 109, 242}, { 2, 102, 249}, { 3, 110, 225, 105}, { 4, 120, 105, 462, 110}, { 3, 119, 233, 110}, 
 	{ 2, 108, 236}, { 3, 99, 225, 110}, { 3, 109, 105, 232}, { 0, 0}, { 2, 110, 236}, { 4, 99, 104, 224, 105}, { 0, 0}, { 2, 120, 249}, 
 	{ 2, 110, 476}, { 3, 109, 224, 105}, { 0, 0}, { 3, 107, 224, 110}, { 0, 0}, { 4, 104, 225, 110, 103}, { 0, 0}, { 0, 0}, 
@@ -4719,7 +4720,7 @@ us6 han_transliterate_expand_map_70[256] = {
 	{ 3, 99, 104, 232}, { 3, 99, 224, 110}, { 3, 106, 105, 232}, { 3, 121, 242, 117}, { 3, 104, 117, 464}, { 3, 122, 104, 462}, { 2, 115, 249}, { 2, 103, 233}
 };
 
-us6 han_transliterate_expand_map_73[256] = {
+static us6 han_transliterate_expand_map_73[256] = {
 	{ 0, 0}, { 3, 99, 233, 110}, { 3, 109, 233, 105}, { 3, 121, 236, 110}, { 4, 109, 105, 462, 110}, { 2, 116, 250}, { 3, 107, 117, 237}, { 0, 0}, 
 	{ 0, 0}, { 2, 109, 236}, { 4, 114, 243, 110, 103}, { 3, 103, 117, 243}, { 0, 0}, { 2, 109, 237}, { 2, 106, 250}, { 2, 112, 464}, 
 	{ 3, 106, 464, 110}, { 4, 119, 224, 110, 103}, { 2, 106, 464}, { 4, 109, 233, 110, 103}, { 4, 106, 105, 224, 110}, { 3, 120, 117, 232}, { 3, 98, 224, 111}, { 3, 103, 462, 110}, 
@@ -4754,7 +4755,7 @@ us6 han_transliterate_expand_map_73[256] = {
 	{ 0, 0}, { 0, 0}, { 5, 120, 105, 243, 110, 103}, { 0, 0}, { 2, 104, 250}, { 3, 99, 117, 464}, { 0, 0}, { 3, 113, 117, 232}
 };
 
-us6 han_transliterate_expand_map_100[256] = {
+static us6 han_transliterate_expand_map_100[256] = {
 	{ 4, 99, 104, 257, 110}, { 2, 103, 275}, { 3, 108, 466, 117}, { 4, 122, 466, 110, 103}, { 4, 103, 275, 110, 103}, { 4, 106, 105, 462, 111}, { 3, 103, 242, 117}, { 3, 113, 236, 110}, 
 	{ 4, 121, 466, 110, 103}, { 3, 113, 117, 232}, { 4, 99, 104, 333, 117}, { 3, 99, 104, 464}, { 4, 122, 104, 462, 110}, { 3, 115, 468, 110}, { 3, 115, 363, 110}, { 2, 98, 243}, 
 	{ 3, 99, 104, 249}, { 4, 114, 466, 110, 103}, { 4, 98, 232, 110, 103}, { 3, 99, 117, 333}, { 3, 115, 257, 111}, { 2, 107, 232}, { 3, 121, 225, 111}, { 3, 100, 462, 111}, 
@@ -4789,7 +4790,7 @@ us6 han_transliterate_expand_map_100[256] = {
 	{ 3, 108, 105, 232}, { 3, 116, 257, 110}, { 3, 98, 462, 105}, { 3, 115, 466, 117}, { 2, 108, 468}, { 3, 108, 252, 232}, { 3, 114, 462, 111}, { 3, 122, 104, 237}
 };
 
-us6 han_transliterate_expand_map_110[256] = {
+static us6 han_transliterate_expand_map_110[256] = {
 	{ 3, 98, 275, 110}, { 4, 121, 117, 257, 110}, { 3, 119, 232, 110}, { 2, 114, 232}, { 3, 102, 275, 105}, { 4, 113, 299, 110, 103}, { 4, 121, 117, 257, 110}, { 2, 107, 283}, 
 	{ 2, 106, 236}, { 3, 115, 104, 232}, { 4, 121, 117, 257, 110}, { 0, 0}, { 2, 108, 249}, { 2, 122, 236}, { 2, 100, 250}, { 0, 0}, 
 	{ 4, 106, 105, 224, 110}, { 3, 109, 464, 110}, { 2, 112, 236}, { 0, 0}, { 2, 121, 250}, { 4, 121, 117, 257, 110}, { 4, 115, 104, 283, 110}, { 4, 115, 104, 232, 110}, 
@@ -4824,7 +4825,7 @@ us6 han_transliterate_expand_map_110[256] = {
 	{ 2, 104, 468}, { 2, 104, 363}, { 3, 121, 243, 117}, { 4, 99, 104, 462, 110}, { 3, 102, 224, 110}, { 4, 121, 243, 110, 103}, { 3, 103, 468, 110}, { 3, 109, 462, 110}
 };
 
-us6 han_transliterate_expand_map_113[256] = {
+static us6 han_transliterate_expand_map_113[256] = {
 	{ 2, 104, 250}, { 0, 0}, { 3, 115, 104, 250}, { 2, 104, 232}, { 3, 120, 363, 110}, { 2, 107, 249}, { 3, 106, 117, 233}, { 4, 120, 105, 257, 111}, 
 	{ 2, 120, 299}, { 3, 121, 257, 110}, { 3, 104, 224, 110}, { 6, 122, 104, 117, 224, 110, 103}, { 3, 106, 249, 110}, { 2, 100, 236}, { 3, 120, 105, 232}, { 2, 106, 237}, 
 	{ 2, 119, 249}, { 0, 0}, { 0, 0}, { 3, 104, 225, 110}, { 3, 121, 224, 110}, { 4, 104, 117, 224, 110}, { 3, 109, 232, 110}, { 2, 106, 250}, 
@@ -4859,7 +4860,7 @@ us6 han_transliterate_expand_map_113[256] = {
 	{ 2, 114, 250}, { 4, 120, 105, 462, 110}, { 3, 107, 462, 111}, { 3, 120, 363, 110}, { 3, 106, 236, 110}, { 4, 99, 104, 243, 117}, { 4, 99, 104, 243, 117}, { 3, 121, 224, 111}
 };
 
-us6 han_transliterate_expand_map_128[256] = {
+static us6 han_transliterate_expand_map_128[256] = {
 	{ 3, 121, 224, 111}, { 3, 108, 462, 111}, { 0, 0}, { 3, 107, 462, 111}, { 3, 109, 224, 111}, { 3, 122, 104, 283}, { 2, 113, 237}, { 3, 103, 466, 117}, 
 	{ 3, 103, 466, 117}, { 3, 103, 466, 117}, { 3, 100, 105, 232}, { 3, 100, 105, 232}, { 2, 233, 114}, { 4, 115, 104, 117, 462}, { 4, 114, 117, 462, 110}, { 2, 233, 114}, 
 	{ 3, 110, 224, 105}, { 5, 122, 104, 117, 257, 110}, { 3, 108, 283, 105}, { 4, 116, 299, 110, 103}, { 2, 122, 464}, { 4, 103, 275, 110, 103}, { 4, 99, 104, 224, 111}, { 3, 104, 224, 111}, 
@@ -4894,7 +4895,7 @@ us6 han_transliterate_expand_map_128[256] = {
 	{ 5, 120, 105, 333, 110, 103}, { 2, 233, 114}, { 1, 232}, { 4, 120, 237, 110, 103}, { 4, 112, 105, 225, 110}, { 4, 110, 233, 110, 103}, { 2, 122, 236}, { 0, 0}
 };
 
-us6 han_transliterate_expand_map_135[256] = {
+static us6 han_transliterate_expand_map_135[256] = {
 	{ 3, 115, 104, 468}, { 4, 120, 117, 225, 110}, { 4, 102, 275, 110, 103}, { 4, 115, 104, 232, 110}, { 4, 122, 104, 232, 110}, { 2, 102, 468}, { 4, 120, 105, 224, 110}, { 3, 122, 104, 233}, 
 	{ 2, 119, 250}, { 2, 102, 250}, { 2, 108, 237}, { 4, 108, 225, 110, 103}, { 2, 98, 236}, { 3, 99, 104, 250}, { 4, 121, 117, 257, 110}, { 3, 121, 466, 117}, 
 	{ 3, 106, 105, 233}, { 3, 100, 224, 110}, { 3, 121, 225, 110}, { 4, 116, 237, 110, 103}, { 4, 100, 105, 224, 110}, { 4, 115, 104, 117, 236}, { 3, 104, 117, 237}, { 2, 119, 333}, 
@@ -4929,7 +4930,7 @@ us6 han_transliterate_expand_map_135[256] = {
 	{ 2, 108, 464}, { 3, 120, 105, 232}, { 4, 115, 104, 224, 110}, { 2, 121, 464}, { 4, 106, 464, 110, 103}, { 2, 100, 225}, { 4, 99, 104, 225, 110}, { 2, 113, 236}
 };
 
-us6 han_transliterate_expand_map_144[256] = {
+static us6 han_transliterate_expand_map_144[256] = {
 	{ 3, 116, 117, 236}, { 4, 115, 242, 110, 103}, { 3, 115, 104, 236}, { 3, 116, 225, 111}, { 4, 112, 225, 110, 103}, { 3, 104, 242, 117}, { 2, 110, 236}, { 3, 100, 249, 110}, 
 	{ 5, 106, 105, 466, 110, 103}, { 4, 120, 117, 462, 110}, { 3, 120, 249, 110}, { 2, 98, 363}, { 3, 121, 243, 117}, { 4, 120, 105, 257, 111}, { 3, 113, 105, 250}, { 3, 116, 242, 117}, 
 	{ 3, 122, 104, 250}, { 3, 113, 105, 250}, { 2, 100, 236}, { 2, 100, 236}, { 2, 116, 250}, { 4, 106, 236, 110, 103}, { 2, 116, 236}, { 3, 100, 242, 117}, 
@@ -4964,7 +4965,7 @@ us6 han_transliterate_expand_map_144[256] = {
 	{ 3, 100, 257, 110}, { 2, 106, 250}, { 4, 121, 333, 110, 103}, { 4, 113, 105, 257, 111}, { 2, 121, 299}, { 3, 100, 333, 117}, { 3, 121, 462, 110}, { 3, 109, 233, 105}
 };
 
-us6 han_transliterate_expand_map_156[256] = {
+static us6 han_transliterate_expand_map_156[256] = {
 	{ 4, 104, 117, 224, 110}, { 4, 113, 117, 225, 110}, { 2, 122, 233}, { 3, 119, 275, 105}, { 3, 119, 275, 105}, { 2, 121, 250}, { 3, 113, 363, 110}, { 3, 114, 243, 117}, 
 	{ 3, 100, 105, 233}, { 5, 104, 117, 225, 110, 103}, { 4, 108, 105, 224, 110}, { 3, 121, 462, 110}, { 3, 113, 105, 250}, { 3, 113, 105, 363}, { 4, 106, 105, 224, 110}, { 2, 98, 236}, 
 	{ 1, 232}, { 4, 121, 225, 110, 103}, { 2, 102, 249}, { 3, 115, 257, 105}, { 4, 106, 105, 462, 110}, { 3, 120, 105, 225}, { 3, 116, 117, 466}, { 2, 104, 250}, 
@@ -4999,7 +5000,7 @@ us6 han_transliterate_expand_map_156[256] = {
 	{ 2, 104, 249}, { 3, 113, 237, 110}, { 2, 102, 363}, { 3, 102, 275, 110}, { 3, 119, 233, 110}, { 4, 106, 105, 257, 110}, { 3, 115, 104, 299}, { 2, 121, 249}
 };
 
-us6 han_transliterate_expand_map_159[256] = {
+static us6 han_transliterate_expand_map_159[256] = {
 	{ 2, 99, 249}, { 2, 113, 249}, { 4, 99, 104, 225, 111}, { 2, 119, 257}, { 3, 122, 104, 363}, { 3, 122, 104, 299}, { 4, 109, 225, 110, 103}, { 2, 225, 111}, 
 	{ 3, 98, 105, 275}, { 3, 116, 117, 243}, { 2, 98, 236}, { 4, 121, 117, 225, 110}, { 4, 99, 104, 225, 111}, { 3, 116, 117, 243}, { 4, 100, 464, 110, 103}, { 2, 109, 236}, 
 	{ 3, 110, 224, 105}, { 4, 100, 464, 110, 103}, { 2, 122, 299}, { 2, 103, 468}, { 2, 103, 468}, { 4, 100, 333, 110, 103}, { 3, 102, 233, 110}, { 3, 116, 225, 111}, 
@@ -5034,7 +5035,7 @@ us6 han_transliterate_expand_map_159[256] = {
 	{ 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}
 };
 
-us6 han_transliterate_expand_map_98[256] = {
+static us6 han_transliterate_expand_map_98[256] = {
 	{ 4, 108, 105, 224, 110}, { 3, 110, 462, 110}, { 2, 109, 237}, { 4, 116, 462, 110, 103}, { 3, 106, 117, 233}, { 4, 103, 224, 110, 103}, { 4, 103, 224, 110, 103}, { 4, 103, 224, 110, 103}, 
 	{ 2, 103, 275}, { 3, 121, 117, 232}, { 2, 119, 249}, { 4, 106, 105, 257, 110}, { 2, 120, 363}, { 3, 115, 104, 249}, { 4, 114, 243, 110, 103}, { 2, 120, 236}, 
 	{ 5, 99, 104, 233, 110, 103}, { 2, 119, 466}, { 3, 106, 105, 232}, { 2, 103, 275}, { 4, 106, 105, 257, 110}, { 5, 113, 105, 257, 110, 103}, { 3, 104, 117, 242}, { 5, 113, 105, 257, 110, 103}, 
@@ -5069,7 +5070,7 @@ us6 han_transliterate_expand_map_98[256] = {
 	{ 3, 99, 104, 464}, { 3, 120, 105, 233}, { 2, 99, 232}, { 3, 104, 117, 299}, { 3, 112, 299, 110}, { 5, 122, 104, 117, 257, 105}, { 3, 115, 104, 105}, { 2, 110, 225}
 };
 
-us6 han_transliterate_expand_map_136[256] = {
+static us6 han_transliterate_expand_map_136[256] = {
 	{ 2, 99, 299}, { 5, 120, 105, 224, 110, 103}, { 3, 115, 104, 232}, { 3, 108, 117, 466}, { 3, 113, 237, 110}, { 4, 121, 105, 110, 103}, { 4, 99, 104, 224, 105}, { 2, 108, 236}, 
 	{ 2, 122, 233}, { 4, 120, 117, 257, 110}, { 4, 108, 105, 225, 110}, { 3, 122, 104, 250}, { 2, 122, 233}, { 3, 120, 105, 275}, { 4, 109, 462, 110, 103}, { 3, 120, 105, 232}, 
 	{ 2, 113, 237}, { 4, 114, 243, 110, 103}, { 4, 106, 105, 462, 110}, { 4, 109, 283, 110, 103}, { 3, 104, 225, 111}, { 2, 114, 250}, { 3, 104, 117, 242}, { 4, 122, 104, 117, 243}, 
@@ -5104,7 +5105,7 @@ us6 han_transliterate_expand_map_136[256] = {
 	{ 3, 108, 117, 466}, { 3, 103, 117, 466}, { 3, 121, 462, 110}, { 2, 100, 468}, { 2, 120, 237}, { 3, 122, 104, 236}, { 2, 106, 363}, { 2, 113, 464}
 };
 
-us6 han_transliterate_expand_map_137[256] = {
+static us6 han_transliterate_expand_map_137[256] = {
 	{ 2, 106, 236}, { 3, 122, 104, 237}, { 3, 103, 117, 224}, { 3, 107, 232, 110}, { 0, 0}, { 2, 116, 236}, { 2, 116, 237}, { 2, 102, 249}, 
 	{ 5, 99, 104, 243, 110, 103}, { 3, 120, 105, 275}, { 4, 98, 105, 462, 110}, { 3, 100, 105, 233}, { 3, 107, 363, 110}, { 4, 100, 117, 257, 110}, { 3, 120, 105, 249}, { 3, 120, 105, 249}, 
 	{ 2, 104, 232}, { 4, 121, 117, 224, 110}, { 3, 98, 257, 111}, { 3, 98, 462, 111}, { 2, 102, 249}, { 2, 121, 250}, { 4, 116, 117, 224, 110}, { 3, 121, 462, 110}, 
@@ -5139,7 +5140,7 @@ us6 han_transliterate_expand_map_137[256] = {
 	{ 3, 99, 104, 249}, { 2, 120, 299}, { 2, 121, 237}, { 2, 108, 249}, { 3, 106, 117, 233}, { 2, 120, 299}, { 3, 121, 224, 110}, { 2, 120, 299}
 };
 
-us6 han_transliterate_expand_map_89[256] = {
+static us6 han_transliterate_expand_map_89[256] = {
 	{ 4, 115, 104, 242, 117}, { 2, 121, 299}, { 3, 122, 104, 464}, { 2, 103, 363}, { 3, 99, 104, 249}, { 5, 106, 105, 224, 110, 103}, { 4, 102, 275, 110, 103}, { 3, 98, 232, 105}, 
 	{ 0, 0}, { 4, 98, 105, 224, 110}, { 3, 115, 117, 299}, { 3, 113, 363, 110}, { 4, 108, 237, 110, 103}, { 2, 102, 249}, { 3, 122, 117, 242}, { 3, 120, 105, 224}, 
 	{ 5, 120, 105, 242, 110, 103}, { 0, 0}, { 3, 110, 225, 111}, { 3, 120, 105, 224}, { 3, 107, 117, 237}, { 2, 120, 299}, { 3, 119, 224, 105}, { 4, 121, 117, 224, 110}, 
@@ -5174,7 +5175,7 @@ us6 han_transliterate_expand_map_89[256] = {
 	{ 3, 121, 225, 110}, { 3, 99, 104, 224}, { 4, 115, 104, 275, 110}, { 3, 121, 299, 110}, { 3, 99, 104, 464}, { 3, 103, 117, 464}, { 4, 113, 117, 257, 110}, { 2, 122, 299}
 };
 
-us6 han_transliterate_expand_map_78[256] = {
+static us6 han_transliterate_expand_map_78[256] = {
 	{ 2, 121, 299}, { 4, 100, 299, 110, 103}, { 3, 107, 462, 111}, { 2, 113, 299}, { 5, 115, 104, 224, 110, 103}, { 3, 120, 105, 224}, { 0, 0}, { 3, 119, 224, 110}, 
 	{ 5, 122, 104, 224, 110, 103}, { 3, 115, 257, 110}, { 5, 115, 104, 224, 110, 103}, { 3, 120, 105, 224}, { 2, 106, 299}, { 2, 98, 249}, { 2, 121, 468}, { 4, 109, 105, 462, 110}, 
 	{ 3, 103, 224, 105}, { 4, 99, 104, 466, 117}, { 4, 99, 104, 466, 117}, { 5, 122, 104, 117, 257, 110}, { 3, 113, 105, 283}, { 2, 112, 299}, { 3, 115, 104, 236}, { 3, 115, 104, 236}, 
@@ -5209,7 +5210,7 @@ us6 han_transliterate_expand_map_78[256] = {
 	{ 3, 121, 462, 111}, { 4, 102, 275, 110, 103}, { 4, 99, 257, 110, 103}, { 3, 114, 232, 110}, { 4, 119, 225, 110, 103}, { 3, 102, 232, 110}, { 2, 100, 299}, { 4, 102, 462, 110, 103}
 };
 
-us6 han_transliterate_expand_map_124[256] = {
+static us6 han_transliterate_expand_map_124[256] = {
 	{ 2, 122, 233}, { 2, 120, 464}, { 3, 103, 117, 243}, { 2, 121, 237}, { 2, 104, 249}, { 4, 99, 104, 462, 110}, { 3, 107, 242, 117}, { 2, 99, 249}, 
 	{ 4, 112, 237, 110, 103}, { 4, 99, 104, 242, 117}, { 2, 106, 299}, { 3, 103, 117, 464}, { 2, 115, 249}, { 3, 108, 466, 117}, { 3, 122, 104, 224}, { 2, 108, 249}, 
 	{ 4, 110, 105, 462, 110}, { 3, 115, 117, 333}, { 4, 99, 117, 224, 110}, { 0, 0}, { 3, 115, 117, 333}, { 2, 108, 232}, { 4, 100, 117, 224, 110}, { 0, 0}, 
@@ -5244,7 +5245,7 @@ us6 han_transliterate_expand_map_124[256] = {
 	{ 2, 109, 236}, { 2, 115, 299}, { 3, 106, 105, 363}, { 2, 120, 236}, { 4, 103, 333, 110, 103}, { 5, 122, 104, 283, 110, 103}, { 3, 106, 105, 363}, { 3, 121, 242, 117}
 };
 
-us6 han_transliterate_expand_map_76[256] = {
+static us6 han_transliterate_expand_map_76[256] = {
 	{ 2, 119, 466}, { 3, 102, 232, 105}, { 3, 99, 224, 105}, { 4, 112, 233, 110, 103}, { 3, 115, 104, 236}, { 0, 0}, { 3, 114, 243, 117}, { 2, 113, 237}, 
 	{ 3, 99, 104, 462}, { 3, 112, 225, 110}, { 2, 98, 243}, { 3, 109, 225, 110}, { 4, 122, 466, 110, 103}, { 2, 99, 236}, { 3, 103, 117, 236}, { 2, 106, 236}, 
 	{ 3, 108, 225, 110}, { 0, 0}, { 4, 109, 233, 110, 103}, { 4, 109, 105, 225, 110}, { 3, 112, 225, 110}, { 2, 108, 250}, { 4, 99, 117, 225, 110}, { 0, 0}, 
@@ -5279,7 +5280,7 @@ us6 han_transliterate_expand_map_76[256] = {
 	{ 2, 109, 225}, { 3, 107, 242, 117}, { 3, 121, 224, 110}, { 3, 99, 225, 110}, { 0, 0}, { 2, 104, 232}, { 0, 0}, { 3, 108, 225, 110}
 };
 
-us6 han_transliterate_expand_map_112[256] = {
+static us6 han_transliterate_expand_map_112[256] = {
 	{ 3, 121, 333, 117}, { 4, 121, 224, 110, 103}, { 2, 108, 468}, { 2, 115, 236}, { 3, 106, 105, 233}, { 4, 121, 236, 110, 103}, { 2, 100, 250}, { 4, 119, 462, 110, 103}, 
 	{ 3, 104, 117, 299}, { 3, 120, 105, 232}, { 3, 112, 225, 110}, { 4, 115, 104, 283, 110}, { 4, 98, 105, 257, 111}, { 4, 99, 104, 225, 110}, { 2, 109, 242}, { 3, 108, 105, 250}, 
 	{ 4, 106, 105, 257, 110}, { 2, 112, 249}, { 2, 115, 232}, { 5, 99, 104, 233, 110, 103}, { 2, 103, 468}, { 3, 98, 299, 110}, { 3, 104, 117, 242}, { 4, 120, 105, 224, 110}, 
@@ -5314,7 +5315,7 @@ us6 han_transliterate_expand_map_112[256] = {
 	{ 3, 104, 462, 105}, { 4, 112, 275, 110, 103}, { 4, 108, 462, 110, 103}, { 4, 115, 104, 257, 110}, { 2, 104, 363}, { 4, 102, 275, 110, 103}, { 3, 99, 104, 236}, { 4, 114, 243, 110, 103}
 };
 
-us6 han_transliterate_expand_map_141[256] = {
+static us6 han_transliterate_expand_map_141[256] = {
 	{ 3, 119, 232, 105}, { 3, 98, 224, 105}, { 4, 99, 104, 283, 110}, { 5, 122, 104, 117, 224, 110}, { 3, 122, 104, 236}, { 4, 122, 104, 117, 236}, { 4, 98, 105, 257, 111}, { 3, 121, 363, 110}, 
 	{ 4, 122, 232, 110, 103}, { 3, 116, 462, 110}, { 3, 122, 224, 110}, { 3, 121, 224, 110}, { 0, 0}, { 4, 115, 104, 224, 110}, { 3, 119, 224, 110}, { 4, 121, 237, 110, 103}, 
 	{ 3, 106, 236, 110}, { 3, 103, 462, 110}, { 4, 120, 105, 225, 110}, { 4, 122, 257, 110, 103}, { 2, 98, 236}, { 2, 100, 250}, { 3, 115, 104, 250}, { 3, 121, 224, 110}, 
@@ -5349,7 +5350,7 @@ us6 han_transliterate_expand_map_141[256] = {
 	{ 2, 98, 236}, { 4, 120, 105, 257, 110}, { 3, 100, 117, 242}, { 2, 106, 299}, { 2, 106, 250}, { 2, 106, 236}, { 3, 115, 104, 250}, { 2, 116, 250}
 };
 
-us6 han_transliterate_expand_map_152[256] = {
+static us6 han_transliterate_expand_map_152[256] = {
 	{ 2, 104, 249}, { 2, 121, 232}, { 4, 100, 464, 110, 103}, { 4, 113, 464, 110, 103}, { 3, 112, 224, 110}, { 5, 120, 105, 224, 110, 103}, { 4, 115, 104, 249, 110}, { 3, 104, 257, 110}, 
 	{ 2, 120, 363}, { 2, 121, 237}, { 2, 120, 249}, { 2, 103, 249}, { 4, 115, 242, 110, 103}, { 3, 107, 117, 464}, { 2, 113, 237}, { 4, 104, 225, 110, 103}, 
 	{ 2, 121, 249}, { 3, 119, 225, 110}, { 3, 98, 257, 110}, { 3, 100, 249, 110}, { 2, 100, 237}, { 3, 100, 257, 110}, { 3, 112, 224, 110}, { 2, 112, 333}, 
@@ -5384,7 +5385,7 @@ us6 han_transliterate_expand_map_152[256] = {
 	{ 3, 116, 257, 111}, { 3, 108, 105, 468}, { 2, 99, 237}, { 3, 116, 105, 232}, { 2, 115, 236}, { 3, 98, 462, 111}, { 3, 115, 104, 236}, { 3, 100, 117, 242}
 };
 
-us6 han_transliterate_expand_map_61[256] = {
+static us6 han_transliterate_expand_map_61[256] = {
 	{ 3, 102, 224, 110}, { 2, 121, 236}, { 0, 0}, { 3, 108, 232, 105}, { 4, 121, 237, 110, 103}, { 0, 0}, { 3, 106, 236, 110}, { 3, 115, 104, 232}, 
 	{ 3, 121, 236, 110}, { 2, 106, 464}, { 0, 0}, { 2, 115, 249}, { 0, 0}, { 0, 0}, { 0, 0}, { 4, 119, 462, 110, 103}, 
 	{ 4, 109, 105, 224, 110}, { 2, 115, 249}, { 2, 121, 236}, { 3, 122, 462, 105}, { 2, 115, 232}, { 2, 106, 237}, { 3, 108, 117, 242}, { 0, 0}, 
@@ -5419,7 +5420,7 @@ us6 han_transliterate_expand_map_61[256] = {
 	{ 3, 100, 105, 233}, { 4, 115, 104, 224, 111}, { 0, 0}, { 2, 119, 250}, { 3, 121, 224, 110}, { 0, 0}, { 3, 106, 117, 233}, { 0, 0}
 };
 
-us6 han_transliterate_expand_map_95[256] = {
+static us6 han_transliterate_expand_map_95[256] = {
 	{ 3, 107, 257, 105}, { 4, 98, 105, 224, 110}, { 2, 121, 236}, { 2, 113, 236}, { 4, 110, 242, 110, 103}, { 3, 102, 233, 110}, { 2, 106, 468}, { 3, 121, 462, 110}, 
 	{ 2, 121, 236}, { 4, 122, 224, 110, 103}, { 2, 98, 236}, { 2, 121, 236}, { 2, 121, 299}, { 2, 232, 114}, { 3, 115, 257, 110}, { 3, 115, 104, 236}, 
 	{ 2, 232, 114}, { 3, 115, 104, 236}, { 3, 115, 104, 236}, { 4, 103, 333, 110, 103}, { 4, 100, 105, 224, 111}, { 3, 121, 464, 110}, { 2, 104, 249}, { 2, 102, 250}, 
@@ -5454,7 +5455,7 @@ us6 han_transliterate_expand_map_95[256] = {
 	{ 3, 110, 105, 468}, { 4, 119, 462, 110, 103}, { 4, 120, 105, 257, 110}, { 3, 120, 299, 110}, { 4, 107, 257, 110, 103}, { 2, 104, 363}, { 3, 107, 224, 105}, { 3, 102, 232, 110}
 };
 
-us6 han_transliterate_expand_map_123[256] = {
+static us6 han_transliterate_expand_map_123[256] = {
 	{ 4, 109, 225, 110, 103}, { 3, 122, 104, 250}, { 0, 0}, { 2, 100, 468}, { 2, 106, 299}, { 4, 120, 105, 225, 111}, { 2, 98, 97}, { 4, 115, 117, 224, 110}, 
 	{ 2, 106, 237}, { 4, 122, 104, 283, 110}, { 4, 122, 104, 224, 111}, { 3, 115, 468, 110}, { 2, 121, 225}, { 4, 122, 104, 117, 236}, { 4, 121, 117, 225, 110}, { 2, 104, 249}, 
 	{ 4, 103, 257, 110, 103}, { 4, 120, 105, 224, 111}, { 3, 99, 233, 110}, { 2, 112, 237}, { 2, 98, 464}, { 4, 106, 105, 462, 110}, { 2, 121, 464}, { 4, 100, 333, 110, 103}, 
@@ -5489,7 +5490,7 @@ us6 han_transliterate_expand_map_123[256] = {
 	{ 3, 115, 275, 110}, { 5, 122, 104, 117, 224, 110}, { 3, 112, 225, 105}, { 4, 112, 105, 224, 111}, { 3, 100, 333, 117}, { 2, 121, 468}, { 3, 109, 105, 232}, { 5, 122, 104, 117, 257, 110}
 };
 
-us6 han_transliterate_expand_map_125[256] = {
+static us6 han_transliterate_expand_map_125[256] = {
 	{ 2, 106, 236}, { 3, 99, 104, 224}, { 4, 122, 104, 242, 117}, { 3, 120, 250, 110}, { 3, 121, 117, 275}, { 4, 104, 243, 110, 103}, { 2, 121, 363}, { 2, 104, 233}, 
 	{ 3, 119, 225, 110}, { 3, 114, 232, 110}, { 3, 119, 232, 110}, { 3, 119, 233, 110}, { 3, 113, 105, 250}, { 2, 110, 224}, { 2, 122, 299}, { 3, 116, 466, 117}, 
 	{ 3, 110, 105, 468}, { 3, 102, 243, 117}, { 3, 106, 105, 232}, { 3, 115, 104, 363}, { 4, 99, 104, 250, 110}, { 2, 112, 237}, { 3, 121, 464, 110}, { 3, 115, 104, 257}, 
@@ -5524,7 +5525,7 @@ us6 han_transliterate_expand_map_125[256] = {
 	{ 3, 121, 299, 110}, { 2, 116, 237}, { 3, 103, 117, 257}, { 3, 122, 104, 236}, { 3, 121, 363, 110}, { 5, 99, 104, 275, 110, 103}, { 4, 99, 104, 225, 110}, { 3, 100, 224, 105}
 };
 
-us6 han_transliterate_expand_map_122[256] = {
+static us6 han_transliterate_expand_map_122[256] = {
 	{ 2, 120, 299}, { 3, 107, 462, 111}, { 4, 108, 225, 110, 103}, { 2, 102, 363}, { 2, 122, 232}, { 4, 115, 104, 117, 236}, { 2, 108, 474}, { 3, 107, 468, 110}, 
 	{ 3, 103, 462, 110}, { 4, 103, 275, 110, 103}, { 2, 116, 237}, { 5, 99, 104, 233, 110, 103}, { 2, 116, 250}, { 4, 115, 104, 257, 111}, { 4, 115, 104, 117, 236}, { 2, 121, 224}, 
 	{ 3, 108, 468, 110}, { 2, 108, 249}, { 2, 103, 249}, { 3, 122, 117, 243}, { 3, 114, 283, 110}, { 4, 122, 104, 249, 110}, { 4, 98, 224, 110, 103}, { 3, 98, 224, 105}, 
@@ -5559,7 +5560,7 @@ us6 han_transliterate_expand_map_122[256] = {
 	{ 4, 106, 236, 110, 103}, { 3, 122, 104, 250}, { 3, 122, 104, 250}, { 2, 108, 232}, { 4, 112, 233, 110, 103}, { 2, 121, 250}, { 3, 99, 104, 237}, { 3, 103, 257, 110}
 };
 
-us6 han_transliterate_expand_map_134[256] = {
+static us6 han_transliterate_expand_map_134[256] = {
 	{ 3, 116, 117, 242}, { 2, 119, 249}, { 3, 114, 117, 464}, { 3, 114, 117, 464}, { 2, 113, 237}, { 4, 104, 233, 110, 103}, { 2, 108, 250}, { 2, 115, 363}, 
 	{ 3, 116, 117, 237}, { 4, 109, 225, 110, 103}, { 3, 121, 249, 110}, { 4, 112, 237, 110, 103}, { 2, 121, 468}, { 3, 120, 363, 110}, { 2, 106, 236}, { 5, 106, 105, 333, 110, 103}, 
 	{ 4, 120, 105, 257, 110}, { 2, 109, 243}, { 0, 0}, { 2, 115, 363}, { 5, 106, 105, 333, 110, 103}, { 0, 0}, { 3, 110, 105, 232}, { 2, 98, 242}, 
@@ -5594,7 +5595,7 @@ us6 han_transliterate_expand_map_134[256] = {
 	{ 4, 115, 104, 257, 111}, { 4, 121, 466, 110, 103}, { 3, 106, 105, 225}, { 4, 115, 104, 117, 236}, { 3, 99, 104, 275}, { 3, 98, 224, 105}, { 1, 233}, { 3, 104, 224, 110}
 };
 
-us6 han_transliterate_expand_map_143[256] = {
+static us6 han_transliterate_expand_map_143[256] = {
 	{ 2, 233, 114}, { 5, 113, 105, 243, 110, 103}, { 2, 106, 250}, { 4, 106, 105, 224, 111}, { 5, 103, 117, 257, 110, 103}, { 2, 108, 249}, { 3, 107, 462, 105}, { 4, 113, 117, 225, 110}, 
 	{ 4, 122, 104, 333, 117}, { 3, 122, 224, 105}, { 3, 122, 104, 236}, { 3, 115, 104, 275}, { 5, 108, 105, 224, 110, 103}, { 2, 121, 249}, { 4, 115, 104, 257, 111}, { 3, 121, 243, 117}, 
 	{ 4, 104, 117, 462, 110}, { 3, 121, 468, 110}, { 3, 122, 104, 233}, { 3, 119, 462, 110}, { 2, 102, 468}, { 4, 113, 299, 110, 103}, { 4, 122, 104, 333, 117}, { 2, 110, 237}, 
@@ -5629,7 +5630,7 @@ us6 han_transliterate_expand_map_143[256] = {
 	{ 4, 98, 232, 110, 103}, { 2, 106, 299}, { 3, 110, 462, 105}, { 2, 121, 237}, { 3, 106, 105, 233}, { 4, 122, 104, 117, 299}, { 3, 108, 105, 232}, { 3, 120, 249, 110}
 };
 
-us6 han_transliterate_expand_map_58[256] = {
+static us6 han_transliterate_expand_map_58[256] = {
 	{ 4, 98, 464, 110, 103}, { 3, 122, 104, 237}, { 4, 100, 466, 110, 103}, { 5, 99, 104, 233, 110, 103}, { 4, 122, 104, 224, 111}, { 3, 110, 232, 105}, { 3, 108, 464, 110}, { 2, 112, 243}, 
 	{ 2, 106, 464}, { 3, 109, 464, 110}, { 3, 119, 283, 105}, { 3, 99, 104, 283}, { 3, 103, 242, 117}, { 0, 0}, { 2, 114, 250}, { 0, 0}, 
 	{ 2, 98, 468}, { 0, 0}, { 3, 107, 117, 237}, { 3, 108, 225, 111}, { 3, 104, 224, 110}, { 4, 121, 237, 110, 103}, { 3, 122, 104, 236}, { 3, 106, 105, 233}, 
@@ -5664,7 +5665,7 @@ us6 han_transliterate_expand_map_58[256] = {
 	{ 3, 113, 105, 232}, { 3, 100, 224, 105}, { 0, 0}, { 3, 107, 249, 110}, { 3, 100, 105, 233}, { 2, 108, 249}, { 0, 0}, { 0, 0}
 };
 
-us6 han_transliterate_expand_map_66[256] = {
+static us6 han_transliterate_expand_map_66[256] = {
 	{ 0, 0}, { 3, 108, 250, 110}, { 4, 98, 236, 110, 103}, { 4, 122, 104, 462, 111}, { 3, 104, 225, 110}, { 2, 121, 249}, { 3, 100, 224, 105}, { 4, 122, 104, 224, 111}, 
 	{ 3, 102, 233, 105}, { 3, 115, 104, 224}, { 4, 108, 237, 110, 103}, { 2, 116, 224}, { 0, 0}, { 4, 109, 225, 110, 103}, { 2, 121, 232}, { 3, 98, 225, 111}, 
 	{ 3, 107, 117, 236}, { 3, 103, 117, 462}, { 3, 110, 462, 110}, { 2, 103, 233}, { 0, 0}, { 3, 99, 104, 237}, { 0, 0}, { 3, 115, 117, 466}, 
@@ -5699,7 +5700,7 @@ us6 han_transliterate_expand_map_66[256] = {
 	{ 3, 120, 250, 110}, { 2, 102, 250}, { 0, 0}, { 3, 110, 237, 110}, { 4, 116, 464, 110, 103}, { 4, 98, 283, 110, 103}, { 3, 122, 104, 462}, { 0, 0}
 };
 
-us6 han_transliterate_expand_map_82[256] = {
+static us6 han_transliterate_expand_map_82[256] = {
 	{ 3, 100, 257, 111}, { 4, 100, 105, 257, 111}, { 3, 100, 257, 111}, { 3, 114, 232, 110}, { 3, 114, 232, 110}, { 6, 99, 104, 117, 257, 110, 103}, { 3, 102, 275, 110}, { 3, 113, 105, 232}, 
 	{ 2, 121, 236}, { 2, 106, 299}, { 3, 107, 257, 110}, { 4, 113, 105, 224, 110}, { 3, 99, 468, 110}, { 3, 99, 104, 250}, { 3, 119, 283, 110}, { 2, 106, 299}, 
 	{ 3, 100, 462, 110}, { 4, 120, 237, 110, 103}, { 3, 104, 117, 224}, { 3, 119, 225, 110}, { 3, 106, 117, 233}, { 2, 108, 237}, { 3, 121, 117, 232}, { 3, 108, 105, 232}, 
@@ -5734,7 +5735,7 @@ us6 han_transliterate_expand_map_82[256] = {
 	{ 4, 113, 117, 224, 110}, { 3, 98, 257, 111}, { 4, 115, 104, 225, 111}, { 3, 121, 250, 110}, { 3, 106, 105, 363}, { 3, 98, 224, 111}, { 3, 103, 333, 117}, { 2, 119, 249}
 };
 
-us6 han_transliterate_expand_map_96[256] = {
+static us6 han_transliterate_expand_map_96[256] = {
 	{ 4, 104, 117, 225, 105}, { 3, 116, 224, 105}, { 4, 115, 466, 110, 103}, { 2, 119, 468}, { 2, 242, 117}, { 5, 99, 104, 224, 110, 103}, { 6, 99, 104, 117, 224, 110, 103}, { 2, 106, 249}, 
 	{ 2, 121, 236}, { 3, 98, 462, 111}, { 4, 99, 104, 257, 111}, { 3, 109, 237, 110}, { 3, 112, 275, 105}, { 3, 122, 117, 242}, { 3, 122, 283, 110}, { 4, 121, 224, 110, 103}, 
 	{ 3, 107, 242, 117}, { 3, 98, 224, 110}, { 2, 110, 249}, { 3, 110, 225, 111}, { 5, 122, 104, 275, 110, 103}, { 2, 112, 224}, { 2, 98, 249}, { 3, 116, 105, 275}, 
@@ -5769,7 +5770,7 @@ us6 han_transliterate_expand_map_96[256] = {
 	{ 5, 113, 105, 243, 110, 103}, { 2, 114, 283}, { 4, 120, 299, 110, 103}, { 2, 99, 232}, { 4, 98, 105, 462, 110}, { 3, 104, 363, 110}, { 4, 122, 333, 110, 103}, { 2, 116, 237}
 };
 
-us6 han_transliterate_expand_map_126[256] = {
+static us6 han_transliterate_expand_map_126[256] = {
 	{ 3, 120, 105, 225}, { 4, 121, 117, 225, 110}, { 4, 122, 466, 110, 103}, { 2, 120, 363}, { 0, 0}, { 0, 0}, { 4, 103, 275, 110, 103}, { 0, 0}, 
 	{ 4, 121, 237, 110, 103}, { 3, 106, 236, 110}, { 2, 121, 236}, { 4, 122, 104, 117, 236}, { 2, 110, 236}, { 4, 98, 257, 110, 103}, { 2, 103, 468}, { 3, 112, 225, 110}, 
 	{ 4, 122, 104, 242, 117}, { 4, 106, 105, 257, 110}, { 3, 99, 117, 466}, { 4, 113, 117, 462, 110}, { 6, 115, 104, 117, 462, 110, 103}, { 3, 121, 363, 110}, { 3, 120, 105, 225}, { 5, 115, 104, 117, 257, 105}, 
@@ -5804,7 +5805,7 @@ us6 han_transliterate_expand_map_126[256] = {
 	{ 4, 99, 104, 243, 117}, { 3, 116, 225, 111}, { 3, 108, 105, 468}, { 4, 113, 117, 462, 110}, { 4, 122, 333, 110, 103}, { 4, 122, 104, 224, 110}, { 3, 119, 462, 110}, { 2, 108, 476}
 };
 
-us6 han_transliterate_expand_map_105[256] = {
+static us6 han_transliterate_expand_map_105[256] = {
 	{ 3, 119, 462, 110}, { 3, 103, 117, 466}, { 2, 108, 249}, { 3, 104, 225, 111}, { 3, 106, 105, 275}, { 2, 121, 464}, { 4, 99, 104, 243, 117}, { 2, 106, 468}, 
 	{ 2, 106, 250}, { 5, 99, 104, 233, 110, 103}, { 3, 122, 117, 243}, { 5, 108, 105, 225, 110, 103}, { 5, 113, 105, 257, 110, 103}, { 3, 122, 104, 237}, { 4, 122, 104, 117, 299}, { 2, 121, 257}, 
 	{ 2, 106, 363}, { 3, 98, 275, 105}, { 4, 106, 105, 257, 111}, { 4, 122, 104, 117, 243}, { 2, 122, 299}, { 3, 98, 299, 110}, { 4, 112, 233, 110, 103}, { 4, 100, 236, 110, 103}, 
@@ -5839,7 +5840,7 @@ us6 han_transliterate_expand_map_105[256] = {
 	{ 3, 110, 105, 232}, { 3, 103, 257, 111}, { 4, 107, 257, 110, 103}, { 3, 103, 117, 299}, { 3, 103, 117, 299}, { 3, 99, 225, 111}, { 3, 109, 225, 110}, { 3, 106, 464, 110}
 };
 
-us6 han_transliterate_expand_map_106[256] = {
+static us6 han_transliterate_expand_map_106[256] = {
 	{ 2, 100, 236}, { 6, 122, 104, 117, 257, 110, 103}, { 2, 108, 232}, { 4, 108, 225, 110, 103}, { 4, 99, 104, 233, 110}, { 4, 99, 333, 110, 103}, { 2, 108, 237}, { 3, 120, 105, 363}, 
 	{ 4, 113, 237, 110, 103}, { 6, 115, 104, 117, 462, 110, 103}, { 3, 102, 225, 110}, { 4, 116, 333, 110, 103}, { 4, 103, 117, 224, 110}, { 2, 106, 299}, { 3, 115, 117, 333}, { 3, 108, 283, 105}, 
 	{ 2, 108, 468}, { 5, 108, 105, 225, 110, 103}, { 2, 109, 236}, { 3, 108, 243, 117}, { 4, 99, 104, 225, 111}, { 2, 115, 249}, { 2, 107, 275}, { 3, 115, 104, 363}, 
@@ -5874,7 +5875,7 @@ us6 han_transliterate_expand_map_106[256] = {
 	{ 2, 106, 468}, { 4, 120, 105, 257, 111}, { 4, 108, 237, 110, 103}, { 4, 121, 299, 110, 103}, { 4, 106, 105, 257, 110}, { 3, 121, 464, 110}, { 3, 121, 243, 117}, { 4, 121, 237, 110, 103}
 };
 
-us6 han_transliterate_expand_map_250[256] = {
+static us6 han_transliterate_expand_map_250[256] = {
 	{ 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, 
 	{ 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 2, 119, 249}, { 3, 104, 117, 242}, { 0, 0}, { 0, 0}, 
 	{ 5, 122, 104, 466, 110, 103}, { 0, 0}, { 4, 113, 237, 110, 103}, { 0, 0}, { 0, 0}, { 2, 120, 299}, { 3, 122, 104, 363}, { 2, 121, 236}, 
@@ -5909,7 +5910,7 @@ us6 han_transliterate_expand_map_250[256] = {
 	{ 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}
 };
 
-us6 han_transliterate_expand_map_249[256] = {
+static us6 han_transliterate_expand_map_249[256] = {
 	{ 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, 
 	{ 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 2, 108, 224}, { 0, 0}, 
 	{ 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, 
@@ -5944,7 +5945,7 @@ us6 han_transliterate_expand_map_249[256] = {
 	{ 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}
 };
 
-unsigned char *jump_table[110] = {
+static unsigned char *jump_table[110] = {
 	han_transliterate_jump_map_84,
 	han_transliterate_jump_map_147,
 	han_transliterate_jump_map_149,
@@ -6056,9 +6057,9 @@ unsigned char *jump_table[110] = {
 	han_transliterate_jump_map_250,
 	han_transliterate_jump_map_249,
 };
-unsigned short *map_table[0] = {
+static unsigned short *map_table[0] = {
 };
-us6 *expand_table[110] = {
+static us6 *expand_table[110] = {
 	han_transliterate_expand_map_84,
 	han_transliterate_expand_map_147,
 	han_transliterate_expand_map_149,
@@ -6170,7 +6171,7 @@ us6 *expand_table[110] = {
 	han_transliterate_expand_map_250,
 	han_transliterate_expand_map_249,
 };
-unsigned short *transpose_table[0] = {
+static unsigned short *transpose_table[0] = {
 };
 
 
@@ -6348,6 +6349,7 @@ int han_transliterate_convert(unsigned short *in, unsigned int in_length, unsign
 	}
 	*out_length = out_idx;
 	*out = tmp_out;
+	return 0;
 }
 
 #if DEBUG_FILTER

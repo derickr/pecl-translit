@@ -3,8 +3,9 @@
  * This file is generated from a transliteration definition table with the name
  * "cyrillic_transliterate.tr".
  */
-typedef unsigned short us3[4];
-unsigned char cyrillic_transliterate_jump_map_4[256] = {
+#include "translit_types.h"
+
+static unsigned char cyrillic_transliterate_jump_map_4[256] = {
 	2, 2, 1, 1, 2, 2, 2, 2, 1, 2, 2, 2, 2, 1, 1, 2, 
 	1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 
 	1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 1, 1, 1, 1, 2, 2, 
@@ -23,7 +24,7 @@ unsigned char cyrillic_transliterate_jump_map_4[256] = {
 	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 };
 
-unsigned short cyrillic_transliterate_replace_map_4[256] = {
+static unsigned short cyrillic_transliterate_replace_map_4[256] = {
 	  0,   0,  68,  71,   0,   0,   0,   0,  74,   0,   0,   0,   0,  73,  86,   0, 
 	 65,  66,  86,  71,  68,  69,   0,  90,  73,  74,  75,  76,  77,  78,  79,  80, 
 	 82,  83,  84,  85,  70,  72,  67,   0,   0,   0,  39,  89,  39,  69,   0,   0, 
@@ -42,7 +43,7 @@ unsigned short cyrillic_transliterate_replace_map_4[256] = {
 	  0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0
 };
 
-us3 cyrillic_transliterate_expand_map_4[256] = {
+static us3 cyrillic_transliterate_expand_map_4[256] = {
 	{ 2, 73, 69}, { 2, 73, 79}, { 0, 0}, { 0, 0}, { 2, 73, 69}, { 2, 68, 83}, { 2, 73, 73}, { 2, 89, 73}, 
 	{ 0, 0}, { 2, 76, 74}, { 2, 78, 74}, { 2, 84, 115}, { 2, 75, 74}, { 0, 0}, { 0, 0}, { 2, 68, 90}, 
 	{ 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 2, 90, 72}, { 0, 0}, 
@@ -77,16 +78,16 @@ us3 cyrillic_transliterate_expand_map_4[256] = {
 	{ 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}
 };
 
-unsigned char *jump_table[1] = {
+static unsigned char *jump_table[1] = {
 	cyrillic_transliterate_jump_map_4,
 };
-unsigned short *map_table[1] = {
+static unsigned short *map_table[1] = {
 	cyrillic_transliterate_replace_map_4,
 };
-us3 *expand_table[1] = {
+static us3 *expand_table[1] = {
 	cyrillic_transliterate_expand_map_4,
 };
-unsigned short *transpose_table[0] = {
+static unsigned short *transpose_table[0] = {
 };
 
 
@@ -155,6 +156,7 @@ int cyrillic_transliterate_convert(unsigned short *in, unsigned int in_length, u
 	}
 	*out_length = out_idx;
 	*out = tmp_out;
+	return 0;
 }
 
 #if DEBUG_FILTER

@@ -3,8 +3,9 @@
  * This file is generated from a transliteration definition table with the name
  * "diacritical_remove.tr".
  */
-typedef unsigned short us0[1];
-unsigned char diacritical_remove_jump_map_0[256] = {
+#include "translit_types.h"
+
+static unsigned char diacritical_remove_jump_map_0[256] = {
 	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
 	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
 	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
@@ -23,7 +24,7 @@ unsigned char diacritical_remove_jump_map_0[256] = {
 	1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1
 };
 
-unsigned char diacritical_remove_jump_map_1[256] = {
+static unsigned char diacritical_remove_jump_map_1[256] = {
 	1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 
 	1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 
 	1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 
@@ -42,7 +43,7 @@ unsigned char diacritical_remove_jump_map_1[256] = {
 	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 };
 
-unsigned char diacritical_remove_jump_map_30[256] = {
+static unsigned char diacritical_remove_jump_map_30[256] = {
 	1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 
 	1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 
 	1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 
@@ -61,7 +62,7 @@ unsigned char diacritical_remove_jump_map_30[256] = {
 	1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0
 };
 
-unsigned short diacritical_remove_replace_map_0[256] = {
+static unsigned short diacritical_remove_replace_map_0[256] = {
 	  0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0, 
 	  0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0, 
 	  0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0, 
@@ -80,7 +81,7 @@ unsigned short diacritical_remove_replace_map_0[256] = {
 	100, 110, 111, 111, 111, 111, 111,   0, 111, 117, 117, 117, 117, 121,   0, 121
 };
 
-unsigned short diacritical_remove_replace_map_1[256] = {
+static unsigned short diacritical_remove_replace_map_1[256] = {
 	 65,  97,  65,  97,  65,  97,  67,  99,  67,  99,  67,  99,  67,  99,  68, 100, 
 	 68, 100,  69, 101,  69, 101,  69, 101,  69, 101,  69, 101,  71,  99,  71,  99, 
 	 71,  99,  71,  99,  72, 104,  72, 104,  73, 105,  73, 105,  73, 105,  73, 105, 
@@ -99,7 +100,7 @@ unsigned short diacritical_remove_replace_map_1[256] = {
 	  0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0
 };
 
-unsigned short diacritical_remove_replace_map_30[256] = {
+static unsigned short diacritical_remove_replace_map_30[256] = {
 	 65,  97,  66,  98,  66,  98,  66,  98,  67,  99,  68, 100,  68, 100,  68, 100, 
 	 68, 100,  68, 100,  69, 101,  69, 101,  69, 101,  69, 101,  69, 101,  70, 102, 
 	 71, 103,  72, 104,  72, 104,  72, 104,  72, 104,  72, 104,  73, 105,  73, 105, 
@@ -118,19 +119,19 @@ unsigned short diacritical_remove_replace_map_30[256] = {
 	 85, 117,  89, 121,  89, 121,  89, 121,  89, 121,   0,   0,   0,   0,   0,   0
 };
 
-unsigned char *jump_table[3] = {
+static unsigned char *jump_table[3] = {
 	diacritical_remove_jump_map_0,
 	diacritical_remove_jump_map_1,
 	diacritical_remove_jump_map_30,
 };
-unsigned short *map_table[3] = {
+static unsigned short *map_table[3] = {
 	diacritical_remove_replace_map_0,
 	diacritical_remove_replace_map_1,
 	diacritical_remove_replace_map_30,
 };
-us0 *expand_table[0] = {
+static us0 *expand_table[0] = {
 };
-unsigned short *transpose_table[0] = {
+static unsigned short *transpose_table[0] = {
 };
 
 
@@ -201,6 +202,7 @@ int diacritical_remove_convert(unsigned short *in, unsigned int in_length, unsig
 	}
 	*out_length = out_idx;
 	*out = tmp_out;
+	return 0;
 }
 
 #if DEBUG_FILTER

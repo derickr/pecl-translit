@@ -3,8 +3,9 @@
  * This file is generated from a transliteration definition table with the name
  * "uppercase_cyrillic.tr".
  */
-typedef unsigned short us0[1];
-unsigned char uppercase_cyrillic_jump_map_4[256] = {
+#include "translit_types.h"
+
+static unsigned char uppercase_cyrillic_jump_map_4[256] = {
 	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
 	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
 	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
@@ -23,7 +24,7 @@ unsigned char uppercase_cyrillic_jump_map_4[256] = {
 	0, 5, 0, 5, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 };
 
-unsigned char uppercase_cyrillic_jump_map_5[256] = {
+static unsigned char uppercase_cyrillic_jump_map_5[256] = {
 	0, 5, 0, 5, 0, 5, 0, 5, 0, 5, 0, 5, 0, 5, 0, 5, 
 	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
 	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
@@ -42,7 +43,7 @@ unsigned char uppercase_cyrillic_jump_map_5[256] = {
 	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 };
 
-unsigned short uppercase_cyrillic_transpose_map_4[256] = {
+static unsigned short uppercase_cyrillic_transpose_map_4[256] = {
 	 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 
 	 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 
 	 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 
@@ -61,7 +62,7 @@ unsigned short uppercase_cyrillic_transpose_map_4[256] = {
 	 0,  1,  0,  1,  0,  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0
 };
 
-unsigned short uppercase_cyrillic_transpose_map_5[256] = {
+static unsigned short uppercase_cyrillic_transpose_map_5[256] = {
 	0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 
 	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
 	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
@@ -80,15 +81,15 @@ unsigned short uppercase_cyrillic_transpose_map_5[256] = {
 	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 };
 
-unsigned char *jump_table[2] = {
+static unsigned char *jump_table[2] = {
 	uppercase_cyrillic_jump_map_4,
 	uppercase_cyrillic_jump_map_5,
 };
-unsigned short *map_table[0] = {
+static unsigned short *map_table[0] = {
 };
-us0 *expand_table[0] = {
+static us0 *expand_table[0] = {
 };
-unsigned short *transpose_table[2] = {
+static unsigned short *transpose_table[2] = {
 	uppercase_cyrillic_transpose_map_4,
 	uppercase_cyrillic_transpose_map_5,
 };
@@ -160,6 +161,7 @@ int uppercase_cyrillic_convert(unsigned short *in, unsigned int in_length, unsig
 	}
 	*out_length = out_idx;
 	*out = tmp_out;
+	return 0;
 }
 
 #if DEBUG_FILTER

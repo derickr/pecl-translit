@@ -27,13 +27,7 @@
 #include "ext/standard/info.h"
 #include "php_translit.h"
 
-#include <translit.h>
-
-
 ZEND_DECLARE_MODULE_GLOBALS(translit)
-
-/* True global resources - no need for thread safety here */
-static int le_translit;
 
 /* {{{ translit_functions[] */
 function_entry translit_functions[] = {
@@ -42,8 +36,7 @@ function_entry translit_functions[] = {
 };
 /* }}} */
 
-/* {{{ translit_module_entry
- */
+/* {{{ translit_module_entry */
 zend_module_entry translit_module_entry = {
 #if ZEND_MODULE_API_NO >= 20010901
 	STANDARD_MODULE_HEADER,
@@ -62,7 +55,7 @@ zend_module_entry translit_module_entry = {
 };
 /* }}} */
 
-#ifdef COMPILE_DL_translit
+#ifdef COMPILE_DL_TRANSLIT
 ZEND_GET_MODULE(translit)
 #endif
 
@@ -71,9 +64,14 @@ PHP_INI_BEGIN()
 PHP_INI_END()
 /* }}} */
 
+
+translit_filter_entry  translit_filters[] = {
+#include "data/filter_table.h"
+	{ NULL, NULL }
+};
+	
 PHP_MINIT_FUNCTION(translit)
 {
-	le_translit = zend_register_list_destructors_ex(rsrc_close_translit, NULL, "translit", module_number);
 }
 	
 /* {{{ PHP_MINFO_FUNCTION
@@ -86,14 +84,51 @@ PHP_MINFO_FUNCTION(translit)
 }
 /* }}} */
 
+static translit_func_t translit_find_filter(char* filter_name)
+{
+	translit_filter_entry *entry = translit_filters;
+
+	while (entry->name != NULL) {
+		if (strcmp(entry->name, filter_name) == 0) {
+			return entry->function;
+		}
+		entry++;
+	}
+	return NULL;
+}
+
 PHP_FUNCTION(transliterate)
 {
-	zval *filter_list;
+	zval *filter_list, **entry;
+	HashTable *target_hash;
+	HashPosition pos;
+	translit_func_t filter;
+	long str_len;
 
-	if (zend_parse_parameters(ZEND_NUM_ARGS() TSRMLS_CC, "a", &filter_list) == FAILURE) {
+	unsigned char *string, *outs;
+	unsigned short *in, *out;
+	unsigned int inl, outl;
+
+
+	if (zend_parse_parameters(ZEND_NUM_ARGS() TSRMLS_CC, "sa", &string, &str_len, &filter_list) == FAILURE) {
 		return;
 	}
+	target_hash = HASH_OF(filter_list);
+	zend_hash_internal_pointer_reset_ex(target_hash, &pos);
+	in = (unsigned short*) string;
+	inl = str_len/2;
 
+	while (zend_hash_get_current_data_ex(target_hash, (void **)&entry, &pos) == SUCCESS) {
+		if (Z_TYPE_PP(entry) == IS_STRING) {
+			if (filter = translit_find_filter(Z_STRVAL_PP(entry))) {
+				filter(in, inl, &out, &outl);
+				in = out;
+				inl = outl;
+			}
+		}
+		zend_hash_move_forward_ex(target_hash, &pos);
+	}
+	RETURN_STRINGL((unsigned char *)out, outl*2, 1);
 }
 /*
  * Local variables:

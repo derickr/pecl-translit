@@ -3,8 +3,9 @@
  * This file is generated from a transliteration definition table with the name
  * "greek_transliterate.tr".
  */
-typedef unsigned short us3[4];
-unsigned char greek_transliterate_jump_map_3[256] = {
+#include "translit_types.h"
+
+static unsigned char greek_transliterate_jump_map_3[256] = {
 	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
 	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
 	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
@@ -23,7 +24,7 @@ unsigned char greek_transliterate_jump_map_3[256] = {
 	3, 1, 3, 1, 3, 1, 1, 3, 3, 3, 3, 3, 0, 0, 0, 0
 };
 
-unsigned short greek_transliterate_replace_map_3[256] = {
+static unsigned short greek_transliterate_replace_map_3[256] = {
 	  0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0, 
 	  0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0, 
 	  0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0, 
@@ -42,7 +43,7 @@ unsigned short greek_transliterate_replace_map_3[256] = {
 	  0, 114,   0, 106,   0, 101, 101,   0,   0,   0,   0,   0,   0,   0,   0,   0
 };
 
-us3 greek_transliterate_expand_map_3[256] = {
+static us3 greek_transliterate_expand_map_3[256] = {
 	{ 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, 
 	{ 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, 
 	{ 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, 
@@ -77,16 +78,16 @@ us3 greek_transliterate_expand_map_3[256] = {
 	{ 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}, { 0, 0}
 };
 
-unsigned char *jump_table[1] = {
+static unsigned char *jump_table[1] = {
 	greek_transliterate_jump_map_3,
 };
-unsigned short *map_table[1] = {
+static unsigned short *map_table[1] = {
 	greek_transliterate_replace_map_3,
 };
-us3 *expand_table[1] = {
+static us3 *expand_table[1] = {
 	greek_transliterate_expand_map_3,
 };
-unsigned short *transpose_table[0] = {
+static unsigned short *transpose_table[0] = {
 };
 
 
@@ -155,6 +156,7 @@ int greek_transliterate_convert(unsigned short *in, unsigned int in_length, unsi
 	}
 	*out_length = out_idx;
 	*out = tmp_out;
+	return 0;
 }
 
 #if DEBUG_FILTER
