@@ -49,7 +49,7 @@ zend_module_entry translit_module_entry = {
 	NULL,
 	PHP_MINFO(translit),
 #if ZEND_MODULE_API_NO >= 20010901
-	"0.3",
+	"0.4",
 #endif
 	STANDARD_MODULE_PROPERTIES
 };
@@ -130,7 +130,7 @@ PHP_FUNCTION(transliterate)
 	in = out = (unsigned short*) string;
 
 	if (charset_in_name && charset_in_len) {
-		php_iconv_string(string, (size_t) str_len, &in, (size_t*) &str_len, "ucs-2", charset_in_name);
+		php_iconv_string(string, (size_t) str_len, &string, (size_t*) &str_len, "ucs-2", charset_in_name);
 		efree_it = 1;
 	}
 

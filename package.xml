@@ -22,10 +22,14 @@
  <license>PHP</license>
  <release>
   <state>beta</state>
-  <version>0.3</version>
-  <date>2004-11-14</date>
+  <version>0.4</version>
+  <date>2004-11-23</date>
   <notes>
-Generate better (and less) code, make Windows compiles happy too.
+Added support for diffent incoming and outgoing encodings to the
+transliterator. This makes the extension depend on the iconv extension.  Added
+a new function "transliterate_filters_get()" to return a list of all available
+filters and added support for aliases of filters with the ALIAS pragma in the
+.tr files. Also removed the special decomposition of the paragraph sign.
   </notes>
  </release>
  <filelist>
@@ -56,6 +60,18 @@ Generate better (and less) code, make Windows compiles happy too.
   </dir>
  </filelist>
  <changelog>
+  <release>
+   <state>beta</state>
+   <version>0.4</version>
+   <date>2004-11-23</date>
+   <notes>
+Added support for diffent incoming and outgoing encodings to the
+transliterator. This makes the extension depend on the iconv extension.  Added
+a new function "transliterate_filters_get()" to return a list of all available
+filters and added support for aliases of filters with the ALIAS pragma in the
+.tr files. Also removed the special decomposition of the paragraph sign.
+   </notes>
+  </release>
   <release>
    <state>beta</state>
    <version>0.3</version>
