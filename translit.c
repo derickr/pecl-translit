@@ -25,6 +25,7 @@
 #include "php.h"
 #include "php_ini.h"
 #include "ext/standard/info.h"
+#include "ext/iconv/php_iconv.h"
 #include "php_translit.h"
 
 /* {{{ translit_functions[] */
@@ -106,7 +107,7 @@ PHP_FUNCTION(transliterate_filters_get)
 }
 /* }}} */
 
-/* {{{ proto string transliterate(string string, array filter_list)
+/* {{{ proto string transliterate(string string, array filter_list [, string charset_in [, string charset_out]])
    Executes the specified filters on the input string */
 PHP_FUNCTION(transliterate)
 {
@@ -114,25 +115,34 @@ PHP_FUNCTION(transliterate)
 	HashTable *target_hash;
 	HashPosition pos;
 	translit_func_t filter;
-	long str_len;
-	int free_it = 0;
+	long str_len, charset_in_len = 0, charset_out_len = 0, tmp_len = 0;
+	int free_it = 0, efree_it = 0;
 
-	unsigned char *string;
-	unsigned short *in, *out;
+	char *string, *charset_in_name = NULL, *charset_out_name = NULL;
+	unsigned short *in, *out, *tmp;
 	unsigned int inl, outl;
 
-	if (zend_parse_parameters(ZEND_NUM_ARGS() TSRMLS_CC, "sa", &string, &str_len, &filter_list) == FAILURE) {
+	if (zend_parse_parameters(ZEND_NUM_ARGS() TSRMLS_CC, "sa|ss", &string, &str_len, &filter_list, &charset_in_name, &charset_in_len, &charset_out_name, &charset_out_len) == FAILURE) {
 		return;
 	}
 	target_hash = HASH_OF(filter_list);
 	zend_hash_internal_pointer_reset_ex(target_hash, &pos);
 	in = out = (unsigned short*) string;
+
+	if (charset_in_name && charset_in_len) {
+		php_iconv_string(string, (size_t) str_len, &in, (size_t*) &str_len, "ucs-2", charset_in_name);
+		efree_it = 1;
+	}
+
 	inl = outl = str_len/2;
 
 	while (zend_hash_get_current_data_ex(target_hash, (void **)&entry, &pos) == SUCCESS) {
 		if (Z_TYPE_PP(entry) == IS_STRING) {
 			if ((filter = translit_find_filter(Z_STRVAL_PP(entry)))) {
 				filter(in, inl, &out, &outl);
+				if (efree_it) {
+					efree(in);
+				}
 				if (free_it) {
 					free(in);
 				} else {
@@ -144,8 +154,20 @@ PHP_FUNCTION(transliterate)
 		}
 		zend_hash_move_forward_ex(target_hash, &pos);
 	}
-	RETVAL_STRINGL((unsigned char *)out, outl*2, 1);
-	free(out);
+
+	if (charset_out_name && charset_out_len) {
+		char *tmp_charset_name;
+		spprintf((char**) &tmp_charset_name, 128, "%s//IGNORE", charset_out_name);
+	
+		php_iconv_string((char *) out, (size_t) (outl * 2), (char **) &tmp, (size_t*) &tmp_len, tmp_charset_name, "ucs-2");
+		RETVAL_STRINGL((unsigned char *)tmp, tmp_len, 1);
+		free(out);
+		efree(tmp);
+		efree(tmp_charset_name);
+	} else {
+		RETVAL_STRINGL((unsigned char *)out, outl * 2, 1);
+		free(out);
+	}
 }
 /* }}} */
 /*
