@@ -59,11 +59,6 @@ zend_module_entry translit_module_entry = {
 ZEND_GET_MODULE(translit)
 #endif
 
-/* {{{ PHP_INI */
-PHP_INI_BEGIN()
-PHP_INI_END()
-/* }}} */
-
 
 translit_filter_entry  translit_filters[] = {
 #include "data/filter_table.h"
@@ -72,6 +67,7 @@ translit_filter_entry  translit_filters[] = {
 	
 PHP_MINIT_FUNCTION(translit)
 {
+	return SUCCESS;
 }
 	
 /* {{{ PHP_MINFO_FUNCTION
@@ -108,7 +104,7 @@ PHP_FUNCTION(transliterate)
 	long str_len;
 	int free_it = 0;
 
-	unsigned char *string, *outs;
+	unsigned char *string;
 	unsigned short *in, *out;
 	unsigned int inl, outl;
 
@@ -122,7 +118,7 @@ PHP_FUNCTION(transliterate)
 
 	while (zend_hash_get_current_data_ex(target_hash, (void **)&entry, &pos) == SUCCESS) {
 		if (Z_TYPE_PP(entry) == IS_STRING) {
-			if (filter = translit_find_filter(Z_STRVAL_PP(entry))) {
+			if ((filter = translit_find_filter(Z_STRVAL_PP(entry)))) {
 				filter(in, inl, &out, &outl);
 				if (free_it) {
 					free(in);

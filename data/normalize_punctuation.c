@@ -247,8 +247,6 @@ static unsigned short *normalize_punctuation_map_table[5] = {
 static us2 *normalize_punctuation_expand_table[1] = {
 	normalize_punctuation_expand_map_32,
 };
-static unsigned short *normalize_punctuation_transpose_table[0] = {
-};
 
 
 int normalize_punctuation_convert(unsigned short *in, unsigned int in_length, unsigned short **out, unsigned int *out_length)

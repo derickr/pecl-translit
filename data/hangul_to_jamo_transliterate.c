@@ -2,15 +2,11 @@
 
 int hangul_to_jamo_transliterate_convert(unsigned short *in, unsigned int in_length, unsigned short **out, unsigned int *out_length)
 {
-	unsigned int i, j, no_jump, jump, out_idx;
-	unsigned char block, cp;
-	unsigned char *jump_map;
-	unsigned short *replace_map, *transpose_map;
-	us3 *expand_map;
+	unsigned int i, out_idx;
 	unsigned short *tmp_out;
 	unsigned int    str_length, SIndex;
 	unsigned short  SBase = 0xAC00, LBase = 0x1100, VBase = 0x1161, L, V, T;
-	unsigned short  TBase = 0x11A7, SCount = 11172, LCount = 19, VCount = 21, TCount = 28, NCount;
+	unsigned short  TBase = 0x11A7, SCount = 11172, VCount = 21, TCount = 28, NCount;
 
 	NCount = VCount * TCount;
 	

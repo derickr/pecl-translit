@@ -6057,8 +6057,6 @@ static unsigned char *han_transliterate_jump_table[110] = {
 	han_transliterate_jump_map_250,
 	han_transliterate_jump_map_249,
 };
-static unsigned short *han_transliterate_map_table[0] = {
-};
 static us6 *han_transliterate_expand_table[110] = {
 	han_transliterate_expand_map_84,
 	han_transliterate_expand_map_147,
@@ -6170,8 +6168,6 @@ static us6 *han_transliterate_expand_table[110] = {
 	han_transliterate_expand_map_106,
 	han_transliterate_expand_map_250,
 	han_transliterate_expand_map_249,
-};
-static unsigned short *han_transliterate_transpose_table[0] = {
 };
 
 

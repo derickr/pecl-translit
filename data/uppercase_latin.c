@@ -163,10 +163,6 @@ static unsigned char *uppercase_latin_jump_table[4] = {
 	uppercase_latin_jump_map_2,
 	uppercase_latin_jump_map_30,
 };
-static unsigned short *uppercase_latin_map_table[0] = {
-};
-static us0 *uppercase_latin_expand_table[0] = {
-};
 static unsigned short *uppercase_latin_transpose_table[4] = {
 	uppercase_latin_transpose_map_0,
 	uppercase_latin_transpose_map_1,

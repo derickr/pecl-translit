@@ -87,8 +87,6 @@ static unsigned short *greek_transliterate_map_table[1] = {
 static us3 *greek_transliterate_expand_table[1] = {
 	greek_transliterate_expand_map_3,
 };
-static unsigned short *greek_transliterate_transpose_table[0] = {
-};
 
 
 int greek_transliterate_convert(unsigned short *in, unsigned int in_length, unsigned short **out, unsigned int *out_length)

@@ -87,8 +87,6 @@ static unsigned short *hebrew_transliterate_map_table[1] = {
 static us2 *hebrew_transliterate_expand_table[1] = {
 	hebrew_transliterate_expand_map_5,
 };
-static unsigned short *hebrew_transliterate_transpose_table[0] = {
-};
 
 
 int hebrew_transliterate_convert(unsigned short *in, unsigned int in_length, unsigned short **out, unsigned int *out_length)

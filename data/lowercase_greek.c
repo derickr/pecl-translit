@@ -46,10 +46,6 @@ static unsigned short lowercase_greek_transpose_map_3[256] = {
 static unsigned char *lowercase_greek_jump_table[1] = {
 	lowercase_greek_jump_map_3,
 };
-static unsigned short *lowercase_greek_map_table[0] = {
-};
-static us0 *lowercase_greek_expand_table[0] = {
-};
 static unsigned short *lowercase_greek_transpose_table[1] = {
 	lowercase_greek_transpose_map_3,
 };

@@ -87,8 +87,6 @@ static unsigned short *jamo_transliterate_map_table[1] = {
 static us3 *jamo_transliterate_expand_table[1] = {
 	jamo_transliterate_expand_map_17,
 };
-static unsigned short *jamo_transliterate_transpose_table[0] = {
-};
 
 
 int jamo_transliterate_convert(unsigned short *in, unsigned int in_length, unsigned short **out, unsigned int *out_length)

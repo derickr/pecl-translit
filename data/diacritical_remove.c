@@ -169,10 +169,6 @@ static unsigned short *diacritical_remove_map_table[4] = {
 	diacritical_remove_replace_map_2,
 	diacritical_remove_replace_map_30,
 };
-static us0 *diacritical_remove_expand_table[0] = {
-};
-static unsigned short *diacritical_remove_transpose_table[0] = {
-};
 
 
 int diacritical_remove_convert(unsigned short *in, unsigned int in_length, unsigned short **out, unsigned int *out_length)

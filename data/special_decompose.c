@@ -62,12 +62,8 @@ static us5 decompose_special_expand_map_0[256] = {
 static unsigned char *decompose_special_jump_table[1] = {
 	decompose_special_jump_map_0,
 };
-static unsigned short *decompose_special_map_table[0] = {
-};
 static us5 *decompose_special_expand_table[1] = {
 	decompose_special_expand_map_0,
-};
-static unsigned short *decompose_special_transpose_table[0] = {
 };
 
 
@@ -259,8 +255,6 @@ static unsigned short *decompose_currency_signs_map_table[2] = {
 };
 static us3 *decompose_currency_signs_expand_table[1] = {
 	decompose_currency_signs_expand_map_32,
-};
-static unsigned short *decompose_currency_signs_transpose_table[0] = {
 };
 
 
@@ -489,8 +483,6 @@ static unsigned short *decompose_map_table[2] = {
 static us5 *decompose_expand_table[2] = {
 	decompose_expand_map_0,
 	decompose_expand_map_32,
-};
-static unsigned short *decompose_transpose_table[0] = {
 };
 
 

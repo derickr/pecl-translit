@@ -108,8 +108,6 @@ static unsigned short *normalize_superscript_numbers_map_table[2] = {
 	normalize_superscript_numbers_replace_map_0,
 	normalize_superscript_numbers_replace_map_32,
 };
-static us0 *normalize_superscript_numbers_expand_table[0] = {
-};
 static unsigned short *normalize_superscript_numbers_transpose_table[1] = {
 	normalize_superscript_numbers_transpose_map_32,
 };
@@ -223,10 +221,6 @@ static unsigned short normalize_subscript_numbers_transpose_map_32[256] = {
 
 static unsigned char *normalize_subscript_numbers_jump_table[1] = {
 	normalize_subscript_numbers_jump_map_32,
-};
-static unsigned short *normalize_subscript_numbers_map_table[0] = {
-};
-static us0 *normalize_subscript_numbers_expand_table[0] = {
 };
 static unsigned short *normalize_subscript_numbers_transpose_table[1] = {
 	normalize_subscript_numbers_transpose_map_32,
@@ -988,8 +982,6 @@ static unsigned short *normalize_numbers_map_table[2] = {
 	normalize_numbers_replace_map_0,
 	normalize_numbers_replace_map_32,
 };
-static us0 *normalize_numbers_expand_table[0] = {
-};
 static unsigned short *normalize_numbers_transpose_table[16] = {
 	normalize_numbers_transpose_map_32,
 	normalize_numbers_transpose_map_6,
@@ -1196,8 +1188,6 @@ static unsigned short *normalize_superscript_map_table[2] = {
 	normalize_superscript_replace_map_0,
 	normalize_superscript_replace_map_32,
 };
-static us0 *normalize_superscript_expand_table[0] = {
-};
 static unsigned short *normalize_superscript_transpose_table[1] = {
 	normalize_superscript_transpose_map_32,
 };
@@ -1333,8 +1323,6 @@ static unsigned char *normalize_subscript_jump_table[1] = {
 };
 static unsigned short *normalize_subscript_map_table[1] = {
 	normalize_subscript_replace_map_32,
-};
-static us0 *normalize_subscript_expand_table[0] = {
 };
 static unsigned short *normalize_subscript_transpose_table[1] = {
 	normalize_subscript_transpose_map_32,

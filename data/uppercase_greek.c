@@ -68,8 +68,6 @@ static unsigned char *uppercase_greek_jump_table[1] = {
 static unsigned short *uppercase_greek_map_table[1] = {
 	uppercase_greek_replace_map_3,
 };
-static us0 *uppercase_greek_expand_table[0] = {
-};
 static unsigned short *uppercase_greek_transpose_table[1] = {
 	uppercase_greek_transpose_map_3,
 };

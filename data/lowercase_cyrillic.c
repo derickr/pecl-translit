@@ -85,10 +85,6 @@ static unsigned char *lowercase_cyrillic_jump_table[2] = {
 	lowercase_cyrillic_jump_map_4,
 	lowercase_cyrillic_jump_map_5,
 };
-static unsigned short *lowercase_cyrillic_map_table[0] = {
-};
-static us0 *lowercase_cyrillic_expand_table[0] = {
-};
 static unsigned short *lowercase_cyrillic_transpose_table[2] = {
 	lowercase_cyrillic_transpose_map_4,
 	lowercase_cyrillic_transpose_map_5,

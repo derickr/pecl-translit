@@ -183,54 +183,63 @@ ENDHEADER;
 		}
 		
 		$rev_jump = array();
+		$table_definition = '';
 		/* Generate jump table */
 		$c = 0;
-		$table_definition = "static unsigned char *{$function_name}_jump_table[". (count($jumps)). "] = {\n";
-		foreach ($jumps as $block => $dummy)
-		{
-			$table_definition .= "\t{$function_name}_jump_map_{$block},\n";
-			$rev_jump[$c] = $block;
-			$c++;
+		if (count($jumps)) {
+			$table_definition .= "static unsigned char *{$function_name}_jump_table[". (count($jumps)). "] = {\n";
+			foreach ($jumps as $block => $dummy)
+			{
+				$table_definition .= "\t{$function_name}_jump_map_{$block},\n";
+				$rev_jump[$c] = $block;
+				$c++;
+			}
+			$table_definition .= "};\n";
 		}
-		$table_definition .= "};\n";
 
 
 		$rev_map = array();
 		/* Generate map table */
 		$c = 0;
-		$table_definition .= "static unsigned short *{$function_name}_map_table[". (count($map)). "] = {\n";
-		foreach ($map as $block => $dummy)
-		{
-			$table_definition .= "\t{$function_name}_replace_map_{$block},\n";
-			$rev_map[$block] = $c;
-			$c++;
+		if (count($map)) {
+			$table_definition .= "static unsigned short *{$function_name}_map_table[". (count($map)). "] = {\n";
+			foreach ($map as $block => $dummy)
+			{
+				$table_definition .= "\t{$function_name}_replace_map_{$block},\n";
+				$rev_map[$block] = $c;
+				$c++;
+			}
+			$table_definition .= "};\n";
 		}
-		$table_definition .= "};\n";
 
 
 		$rev_expand = array();
 		/* Generate expand table */
 		$c = 0;
-		$table_definition .= "static us$expand_max_length *{$function_name}_expand_table[". (count($expand)). "] = {\n";
-		foreach ($expand as $block => $dummy)
-		{
-			$table_definition .= "\t{$function_name}_expand_map_{$block},\n";
-			$rev_expand[$block] = $c;
-			$c++;
+		if (count($expand)) {
+			$table_definition .= "static us$expand_max_length *{$function_name}_expand_table[". (count($expand)). "] = {\n";
+			foreach ($expand as $block => $dummy)
+			{
+				$table_definition .= "\t{$function_name}_expand_map_{$block},\n";
+				$rev_expand[$block] = $c;
+				$c++;
+			}
+			$table_definition .= "};\n";
 		}
-		$table_definition .= "};\n";
 
 		$rev_transpose = array();
 		/* Generate transpose table */
 		$c = 0;
-		$table_definition .= "static unsigned short *{$function_name}_transpose_table[". (count($transpose)). "] = {\n";
-		foreach ($transpose as $block => $dummy)
-		{
-			$table_definition .= "\t{$function_name}_transpose_map_{$block},\n";
-			$rev_transpose[$block] = $c;
-			$c++;
+		if (count($transpose)) {
+			$table_definition .= "static unsigned short *{$function_name}_transpose_table[". (count($transpose)). "] = {\n";
+			foreach ($transpose as $block => $dummy)
+			{
+				$table_definition .= "\t{$function_name}_transpose_map_{$block},\n";
+				$rev_transpose[$block] = $c;
+				$c++;
+			}
+			$table_definition .= "};\n";
 		}
-		$table_definition .= "};\n";
 
 		$txt .= <<<ENDCODE
 $table_definition

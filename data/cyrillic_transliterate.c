@@ -87,8 +87,6 @@ static unsigned short *cyrillic_transliterate_map_table[1] = {
 static us3 *cyrillic_transliterate_expand_table[1] = {
 	cyrillic_transliterate_expand_map_4,
 };
-static unsigned short *cyrillic_transliterate_transpose_table[0] = {
-};
 
 
 int cyrillic_transliterate_convert(unsigned short *in, unsigned int in_length, unsigned short **out, unsigned int *out_length)
@@ -239,8 +237,6 @@ static unsigned short *cyrillic_transliterate_bulgarian_map_table[1] = {
 };
 static us3 *cyrillic_transliterate_bulgarian_expand_table[1] = {
 	cyrillic_transliterate_bulgarian_expand_map_4,
-};
-static unsigned short *cyrillic_transliterate_bulgarian_transpose_table[0] = {
 };
 
 

@@ -117,13 +117,9 @@ static unsigned char *normalize_ligature_jump_table[2] = {
 	normalize_ligature_jump_map_0,
 	normalize_ligature_jump_map_1,
 };
-static unsigned short *normalize_ligature_map_table[0] = {
-};
 static us2 *normalize_ligature_expand_table[2] = {
 	normalize_ligature_expand_map_0,
 	normalize_ligature_expand_map_1,
-};
-static unsigned short *normalize_ligature_transpose_table[0] = {
 };
 
 
