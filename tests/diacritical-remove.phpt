@@ -1,0 +1,4 @@
+<?php
+	$string = "Vær så god";
+	echo transliterate($string, array('diacritical_remove'), 'iso-8859-15', 'us-ascii');
+?>
