@@ -97,6 +97,8 @@ static translit_func_t translit_find_filter(char* filter_name)
 	return NULL;
 }
 
+/* {{{ proto string transliterate(string string, array filter_list)
+   Executes the specified filters on the input string */
 PHP_FUNCTION(transliterate)
 {
 	zval *filter_list, **entry;
@@ -104,11 +106,11 @@ PHP_FUNCTION(transliterate)
 	HashPosition pos;
 	translit_func_t filter;
 	long str_len;
+	int free_it = 0;
 
 	unsigned char *string, *outs;
 	unsigned short *in, *out;
 	unsigned int inl, outl;
-
 
 	if (zend_parse_parameters(ZEND_NUM_ARGS() TSRMLS_CC, "sa", &string, &str_len, &filter_list) == FAILURE) {
 		return;
@@ -122,14 +124,21 @@ PHP_FUNCTION(transliterate)
 		if (Z_TYPE_PP(entry) == IS_STRING) {
 			if (filter = translit_find_filter(Z_STRVAL_PP(entry))) {
 				filter(in, inl, &out, &outl);
+				if (free_it) {
+					free(in);
+				} else {
+					free_it = 1;
+				}
 				in = out;
 				inl = outl;
 			}
 		}
 		zend_hash_move_forward_ex(target_hash, &pos);
 	}
-	RETURN_STRINGL((unsigned char *)out, outl*2, 1);
+	RETVAL_STRINGL((unsigned char *)out, outl*2, 1);
+	free(out);
 }
+/* }}} */
 /*
  * Local variables:
  * tab-width: 4
