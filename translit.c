@@ -130,7 +130,7 @@ PHP_FUNCTION(transliterate)
 	in = out = (unsigned short*) string;
 
 	if (charset_in_name && charset_in_len) {
-		php_iconv_string(string, (size_t) str_len, &string, (size_t*) &str_len, "ucs-2", charset_in_name);
+		php_iconv_string(string, (size_t) str_len, (char **) &in, (size_t*) &str_len, "ucs-2", charset_in_name);
 		efree_it = 1;
 	}
 
@@ -142,6 +142,7 @@ PHP_FUNCTION(transliterate)
 				filter(in, inl, &out, &outl);
 				if (efree_it) {
 					efree(in);
+					efree_it = 0;
 				}
 				if (free_it) {
 					free(in);
