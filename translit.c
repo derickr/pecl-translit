@@ -30,6 +30,7 @@
 /* {{{ translit_functions[] */
 function_entry translit_functions[] = {
 	PHP_FE(transliterate, NULL)
+	PHP_FE(transliterate_filters_get, NULL)
 	{NULL, NULL, NULL}
 };
 /* }}} */
@@ -90,6 +91,20 @@ static translit_func_t translit_find_filter(char* filter_name)
 	}
 	return NULL;
 }
+
+/* {{{ proto array transliterate_filters_get(void)
+   Returns an array with all available filters */
+PHP_FUNCTION(transliterate_filters_get)
+{
+	translit_filter_entry *entry = translit_filters;
+
+	array_init(return_value);
+	while (entry->name != NULL) {
+		add_next_index_string(return_value, entry->name, 1);
+		entry++;
+	}
+}
+/* }}} */
 
 /* {{{ proto string transliterate(string string, array filter_list)
    Executes the specified filters on the input string */

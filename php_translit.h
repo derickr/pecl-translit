@@ -49,6 +49,7 @@ PHP_RSHUTDOWN_FUNCTION(translit);
 PHP_MINFO_FUNCTION(translit);
 
 PHP_FUNCTION(transliterate);
+PHP_FUNCTION(transliterate_filters_get);
 
 #ifdef ZTS
 #define TRANSLIT_G(v) TSRMG(translit_globals_id, zend_translit_globals *, v)
