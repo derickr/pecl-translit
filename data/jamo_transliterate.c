@@ -96,8 +96,15 @@ int jamo_transliterate_convert(unsigned short *in, unsigned int in_length, unsig
 	unsigned char *jump_map;
 	unsigned short *replace_map, *transpose_map;
 	us3 *expand_map;
-	unsigned short *tmp_out;
+	unsigned short *tmp_out = NULL;
 	unsigned int    str_length;
+
+	/* Init table pointers */
+	jump_map = NULL;
+	replace_map = NULL;
+	transpose_map = NULL;
+	expand_map = NULL;
+	j = 0;
 
 	/* Determine initial string length */
 	str_length = in_length;
@@ -139,16 +146,6 @@ int jamo_transliterate_convert(unsigned short *in, unsigned int in_length, unsig
 					tmp_out[out_idx] = expand_map[cp][j];
 					out_idx++;
 				}
-				break;
-			case 3: /* Skip */
-				break;
-			case 4: /* Transpose Up */
-				tmp_out[out_idx] = in[i] + transpose_map[cp];
-				out_idx++;
-				break;
-			case 5: /* Transpose Down */
-				tmp_out[out_idx] = in[i] - transpose_map[cp];
-				out_idx++;
 				break;
 		}
 	}

@@ -27,7 +27,7 @@
 #include "ext/standard/info.h"
 #include "php_translit.h"
 
-ZEND_DECLARE_MODULE_GLOBALS(translit)
+//ZEND_DECLARE_MODULE_GLOBALS(translit)
 
 /* {{{ translit_functions[] */
 function_entry translit_functions[] = {

@@ -10,6 +10,7 @@
 	$expand_max_length = 0;
 	$transpose = array();
 	$use_map = true;
+	$skip = false;
 
 	define('JUMP_MAP', 1);
 	define('JUMP_EXPAND', 2);
@@ -50,6 +51,8 @@
 		$block = (int) ($cp / 256);
 		if (!register_jump($cp, JUMP_REMOVE)) {
 			echo "Code point $cp is already defined.\n";
+		} else {
+			$GLOBALS['skip'] = true;
 		}
 	}
 
@@ -251,8 +254,15 @@ int {$function_name}_convert(unsigned short *in, unsigned int in_length, unsigne
 	unsigned char *jump_map;
 	unsigned short *replace_map, *transpose_map;
 	us{$expand_max_length} *expand_map;
-	unsigned short *tmp_out;
+	unsigned short *tmp_out = NULL;
 	unsigned int    str_length;
+
+	/* Init table pointers */
+	jump_map = NULL;
+	replace_map = NULL;
+	transpose_map = NULL;
+	expand_map = NULL;
+	j = 0;
 
 	/* Determine initial string length */
 	str_length = in_length;
@@ -304,18 +314,37 @@ ENDCODE;
 				tmp_out[out_idx] = in[i];
 				out_idx++;
 				break;
+
+ENDCODE;
+		if (count($map)) {
+			$txt .= <<<ENDCODE
 			case 1: /* Simple mapping */
 				tmp_out[out_idx] = replace_map[cp];
 				out_idx++;
 				break;
+
+ENDCODE;
+		}
+		if (count($expand)) {
+			$txt .= <<<ENDCODE
 			case 2: /* Expand to more than one char */
 				for (j = 1; j <= expand_map[cp][0]; j++) {
 					tmp_out[out_idx] = expand_map[cp][j];
 					out_idx++;
 				}
 				break;
+
+ENDCODE;
+		}
+		if ($GLOBALS['skip']) {
+			$txt .= <<<ENDCODE
 			case 3: /* Skip */
 				break;
+
+ENDCODE;
+		}
+		if (count($transpose)) {
+			$txt .= <<<ENDCODE
 			case 4: /* Transpose Up */
 				tmp_out[out_idx] = in[i] + transpose_map[cp];
 				out_idx++;
@@ -324,6 +353,10 @@ ENDCODE;
 				tmp_out[out_idx] = in[i] - transpose_map[cp];
 				out_idx++;
 				break;
+
+ENDCODE;
+		}
+		$txt .= <<<ENDCODE
 		}
 	}
 	*out_length = out_idx;
