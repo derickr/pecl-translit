@@ -8,6 +8,8 @@
 	$expand_max_length = 0;
 	$transpose = array();
 
+	$use_map = true;
+
 	define('JUMP_MAP', 1);
 	define('JUMP_EXPAND', 2);
 	define('JUMP_REMOVE', 3);
@@ -56,7 +58,7 @@
 			register_remove($cp);
 			return;
 		}
-		if (count($res_nrs) == 1) {
+		if (count($res_nrs) == 1 and $GLOBALS['use_map']) {
 			register_map($cp, $res_nrs[0]);
 			return;
 		}
@@ -332,6 +334,11 @@ ENDCODE;
 	
 
 	foreach ($lines as $line) {
+		if (preg_match("/^#pragma\s+(.*)$/", $line, $match)) {
+			if ($match[1] == 'NOMAP') {
+				$use_map = false;
+			}
+		} else
 		if (preg_match("/^([a-z_]+):$/", $line, $match)) {
 			$function_name = $match[1];
 		} else
@@ -352,6 +359,12 @@ ENDCODE;
 					break;
 			}
 
+			if (preg_match("/^(U\+[0-9A-F]{4})(,U\+[0-9A-F]{4})*$/", $res, $match)) {
+				$res_nrs   = array();
+				foreach (split(',', preg_replace('/U\+/', '', $match[0])) as $cp) {
+					$res_nrs[] = hexdec($cp);
+				}
+			} else
 			if (preg_match('/^U\+([0-9A-F]{4})-U\+([0-9A-F]{4})$/', $res, $match)) {
 				$res_begin = hexdec($match[1]);
 				$res_end   = hexdec($match[2]);
