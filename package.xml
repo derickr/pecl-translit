@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-1" ?>
 <!DOCTYPE package SYSTEM "../pear/package.dtd">
 <package>
- <name>transliterate</name>
+ <name>translit</name>
  <summary>Transliterates non-latin character sets to latin</summary>
  <maintainers>
   <maintainer>
