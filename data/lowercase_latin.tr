@@ -1,0 +1,22 @@
+# Lower cases latin characters
+
+lowercase_latin:
+# Basic Latin
+U+0041-U+005A  +=   U+0020 
+
+# Latin-1 Supplement
+U+00C0-U+00DE  +=   U+0020
+
+# Latin Extended-A
+Even U+0100-U+0137 += U+0001
+Odd  U+0139-U+0148 += U+0001
+Even U+014A-U+0177 += U+0001
+Odd  U+0179-U+017E += U+0001
+
+# Latin Extended-B (incomplete)
+Odd  U+01CD-U+01DC += U+0001
+Even U+01F8-U+0233 += U+0001
+
+# Latin Extended Additional
+Even U+1E00-U+1E95 += U+0001
+Even U+1EA0-U+1EF9 += U+0001

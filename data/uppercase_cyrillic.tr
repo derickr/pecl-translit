@@ -1,0 +1,13 @@
+# Upper cases cyrillic characters
+
+uppercase_cyrillic:
+# Cyrillic
+U+0450 - U+045F  -= U+0050
+U+0430 - U+044F  -= U+0020
+
+Odd  U+0460 - U+0481 -= U+0001
+Odd  U+048A - U+04BF -= U+0001
+Even U+04C1 - U+04CE -= U+0001
+Odd  U+04D0 - U+04F5 -= U+0001
+
+Odd  U+0500 - U+050F -= U+0001

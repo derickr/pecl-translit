@@ -1,0 +1,3 @@
+#!/bin/sh
+for i in *.tr; do php convert.php $i; done
+for i in *.c; do j=`echo $i | sed 's/\.c//'`; gcc -o $j -ggdb3 -DDEBUG_FILTER=1 $i; done 

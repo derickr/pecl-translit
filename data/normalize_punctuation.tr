@@ -1,0 +1,33 @@
+normalize_punctuation:
+
+# Spaces
+U+00A0,U+2001,U+2003,U+2017,U+203E  = U+0020 
+U+2000,U+2002,U+202F                = ""
+U+2004 - U+2008                     = U+0020
+U+2009 - U+200B                     = ""
+
+# Hypens
+U+00AD          = ""
+U+2010 - U+2012 = "-"
+U+2013 - U+2015 = "--"
+
+# Single quotes
+U+00B4          = "\'"
+U+02B9,U+02C8,U+02CA,U+02CB = "\'"
+U+02BB - U+02C1 = "\'"
+U+2018 - U+201B = "\'"
+U+2032,U+2035   = "\'"
+
+# Double quotes
+U+02BA,U+02DD,U+02EE        = "\""
+U+201C - U+201F             = "\""
+U+2033,U+2034,U+2036,U+2037 = "\""  # double and triple quotes
+
+# Question and Exclamation marks
+U+00A1   = "!"
+U+00BF   = "?"
+U+203C   = "!!"
+U+203D   = "?!"
+U+2047   = "??"
+U+2048   = "?!"
+U+2049   = "!?"

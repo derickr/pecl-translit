@@ -1,0 +1,45 @@
+# Expands ligatures like åto multiple characters
+
+normalize_ligature:
+# Latin-1 Supplement
+U+00C4    > "AE"
+U+00C5    > "AA"
+U+00C6    > "AE"
+U+00D6    > "OE"
+U+00D8    > "OE"
+U+00DC    > "UE"
+U+00DF    > "ss"
+
+U+00E4    > "ae"
+U+00E5    > "aa"
+U+00E6    > "ae"
+U+00F6    > "oe"
+U+00F8    > "oe"
+U+00FC    > "ue"
+
+# Latin Extended-A
+U+0132    > "IJ"
+U+0133    > "ij"
+U+0152    > "OE"
+U+0153    > "OE"
+
+# Latin Extended-B
+U+01C4    > "DZ"
+U+01C5    > "Dz"
+U+01C6    > "dz"
+U+01C7    > "LJ"
+U+01C8    > "Lj"
+U+01C9    > "lj"
+U+01CA    > "NJ"
+U+01CB    > "Nj"
+U+01CC    > "nj"
+
+U+01E2    > "AE"
+U+01E3    > "ae"
+U+01F1    > "DZ"
+U+01F2    > "Dz"
+U+01F3    > "dz"
+U+01FC    > "AE"
+U+01FD    > "ae"
+U+01FE    > "OE"
+U+01FF    > "oe"

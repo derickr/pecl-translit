@@ -1,0 +1,6 @@
+Use convert.php to convert the .tr files to .c files.
+The "make" shell script does this for all things and also builds standalone
+filter programs that can be used like this:
+
+cat test-text.utf8 | iconv -f utf8 -t ucs-2le | ./lowercase_cyrillic | iconv -f ucs-2le -t utf8
+(Providing your terminal can show utf8 encoded data)
