@@ -1,4 +1,4 @@
-#include <malloc.h>
+#include <stdlib.h>
 
 typedef unsigned short us0[1];
 typedef unsigned short us1[2];
