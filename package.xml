@@ -22,14 +22,15 @@
  <license>PHP</license>
  <release>
   <state>beta</state>
-  <version>0.4</version>
-  <date>2004-11-23</date>
+  <version>0.5</version>
+  <date>2005-01-17</date>
   <notes>
-Added support for diffent incoming and outgoing encodings to the
-transliterator. This makes the extension depend on the iconv extension.  Added
-a new function "transliterate_filters_get()" to return a list of all available
-filters and added support for aliases of filters with the ALIAS pragma in the
-.tr files. Also removed the special decomposition of the paragraph sign.
+Added new filters: compact_underscores, remove_punctuation and
+spaces_to_underscore.  Added missing Latin Extended-B conversions for the
+latin_uppercase and latin_lowercase filters, missing punctuation for the
+normalize_punctuation filter and a missing conversion for uppercase_greek.
+Change the han_transliterate filter to add spaces after ideograms.
+Fixed memory leak.
   </notes>
  </release>
  <filelist>
@@ -61,6 +62,19 @@ filters and added support for aliases of filters with the ALIAS pragma in the
   </dir>
  </filelist>
  <changelog>
+  <release>
+   <state>beta</state>
+   <version>0.5</version>
+   <date>2005-01-17</date>
+   <notes>
+Added new filters: compact_underscores, remove_punctuation and
+spaces_to_underscore.  Added missing Latin Extended-B conversions for the
+latin_uppercase and latin_lowercase filters, missing punctuation for the
+normalize_punctuation filter and a missing conversion for uppercase_greek.
+Change the han_transliterate filter to add spaces after ideograms.
+Fixed memory leak.
+   </notes>
+  </release>
   <release>
    <state>beta</state>
    <version>0.4</version>
