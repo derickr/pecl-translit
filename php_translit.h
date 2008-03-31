@@ -32,6 +32,8 @@ typedef struct translit_filter_entry {
 extern zend_module_entry translit_module_entry;
 #define phpext_translit_ptr &translit_module_entry
 
+#define PHP_TRANSLIT_VERSION "0.6.0-dev"
+
 #ifdef PHP_WIN32
 #define PHP_TRANSLIT_API __declspec(dllexport)
 #else

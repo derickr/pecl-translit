@@ -49,7 +49,7 @@ zend_module_entry translit_module_entry = {
 	NULL,
 	PHP_MINFO(translit),
 #if ZEND_MODULE_API_NO >= 20010901
-	"0.5",
+	PHP_TRANSLIT_VERSION,
 #endif
 	STANDARD_MODULE_PROPERTIES
 };
@@ -76,6 +76,7 @@ PHP_MINFO_FUNCTION(translit)
 {
 	php_info_print_table_start();
 	php_info_print_table_header(2, "Transliteration support", "enabled");
+	php_info_print_table_row(2, "Version", PHP_TRANSLIT_VERSION);
 	php_info_print_table_end();
 }
 /* }}} */
