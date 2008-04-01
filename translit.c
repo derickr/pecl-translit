@@ -116,13 +116,15 @@ PHP_FUNCTION(transliterate)
 	HashTable *target_hash;
 	HashPosition pos;
 	translit_func_t filter;
-	long str_len, charset_in_len = 0, charset_out_len = 0, tmp_len = 0;
+	long charset_in_len = 0, charset_out_len = 0, tmp_len = 0;
+	int str_len;
+	size_t str_len_o, str_len_i;
 	int free_it = 0, efree_it = 0;
 
 	char *string, *charset_in_name = NULL, *charset_out_name = NULL;
-	unsigned short *in, *out, *tmp;
-	unsigned int inl, outl;
-
+	unsigned short *in = NULL, *out, *tmp;
+	size_t inl = 0, outl = 0;
+	
 	if (zend_parse_parameters(ZEND_NUM_ARGS() TSRMLS_CC, "sa|ss", &string, &str_len, &filter_list, &charset_in_name, &charset_in_len, &charset_out_name, &charset_out_len) == FAILURE) {
 		return;
 	}
@@ -130,12 +132,15 @@ PHP_FUNCTION(transliterate)
 	zend_hash_internal_pointer_reset_ex(target_hash, &pos);
 	in = out = (unsigned short*) string;
 
+	str_len_i = str_len;
 	if (charset_in_name && charset_in_len) {
-		php_iconv_string(string, (size_t) str_len, (char **) &in, (size_t*) &str_len, "ucs-2", charset_in_name);
+		php_iconv_string(string, (size_t) str_len_i, (char **) &in, &str_len_o, "ucs-2", charset_in_name);
 		efree_it = 1;
+	} else {
+		str_len_o = str_len_i;
 	}
 
-	inl = outl = str_len/2;
+	inl = outl = str_len_o/2;
 
 	while (zend_hash_get_current_data_ex(target_hash, (void **)&entry, &pos) == SUCCESS) {
 		if (Z_TYPE_PP(entry) == IS_STRING) {
