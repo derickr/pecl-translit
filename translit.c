@@ -29,7 +29,7 @@
 #include "php_translit.h"
 
 /* {{{ translit_functions[] */
-function_entry translit_functions[] = {
+zend_function_entry translit_functions[] = {
 	PHP_FE(transliterate, NULL)
 	PHP_FE(transliterate_filters_get, NULL)
 	{NULL, NULL, NULL}
