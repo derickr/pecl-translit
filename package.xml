@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<package packagerversion="1.7.1" version="2.0" xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0
-http://pear.php.net/dtd/tasks-1.0.xsd
-http://pear.php.net/dtd/package-2.0
-http://pear.php.net/dtd/package-2.0.xsd">
+<package packagerversion="1.7.1" version="2.0"
+	xmlns="http://pear.php.net/dtd/package-2.0"
+	xmlns:tasks="http://pear.php.net/dtd/tasks-1.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0 http://pear.php.net/dtd/tasks-1.0.xsd http://pear.php.net/dtd/package-2.0 http://pear.php.net/dtd/package-2.0.xsd">
  <name>translit</name>
  <channel>pecl.php.net</channel>
  <summary>Transliterates non-latin character sets to latin</summary>
@@ -19,18 +20,18 @@ punctuation and spacing.
   <email>derick@php.net</email>
   <active>yes</active>
  </lead>
- <date>2008-04-01</date>
- <time>20:35:48</time>
+ <date>2011-06-15</date>
+ <time>12:12:58</time>
  <version>
-  <release>0.6.0</release>
-  <api>0.6.0</api>
+  <release>0.6.1</release>
+  <api>0.6.1</api>
  </version>
  <stability>
   <release>beta</release>
   <api>beta</api>
  </stability>
  <license uri="http://www.php.net/license">PHP</license>
- <notes>- Fixed typing issues, fixes segfaults and strange behavior.
+ <notes>- Release to make it compile against PHP 5.4 and trunk (due to the function_entry->zend_function_entry change).
   
  </notes>
  <contents>
@@ -66,7 +67,7 @@ punctuation and spacing.
  <dependencies>
   <required>
    <php>
-    <min>4.0.0</min>
+    <min>5.1.0</min>
    </php>
    <pearinstaller>
     <min>1.4.0b1</min>
@@ -76,6 +77,22 @@ punctuation and spacing.
  <providesextension>translit</providesextension>
  <extsrcrelease />
  <changelog>
+  <release>
+   <date>2008-04-01</date>
+   <time>20:35:48</time>
+   <version>
+    <release>0.6.0</release>
+    <api>0.6.0</api>
+   </version>
+   <stability>
+    <release>beta</release>
+    <api>beta</api>
+   </stability>
+   <license uri="http://www.php.net/license">PHP</license>
+   <notes>- Fixed typing issues, fixes segfaults and strange behavior.
+  
+   </notes>
+  </release>
   <release>
    <version>
     <release>0.5</release>
