@@ -130,6 +130,11 @@ PHP_FUNCTION(transliterate)
 	if (zend_parse_parameters(ZEND_NUM_ARGS() TSRMLS_CC, "sa|ss", &string, &str_len, &filter_list, &charset_in_name, &charset_in_len, &charset_out_name, &charset_out_len) == FAILURE) {
 		return;
 	}
+
+	if (!str_len) {
+		RETURN_EMPTY_STRING();
+	}
+
 	target_hash = HASH_OF(filter_list);
 	zend_hash_internal_pointer_reset_ex(target_hash, &pos);
 	in = out = (unsigned short*) string;
