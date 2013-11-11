@@ -33,7 +33,7 @@ int compact_underscores_convert(unsigned short *in, unsigned int in_length, unsi
 			count = 0;
 		}
 	}
-	while (tmp_out[out_idx - 1] == (unsigned short) '_') {
+	while ((out_idx > 0) && tmp_out[out_idx - 1] == (unsigned short) '_') {
 		out_idx--;
 	}
 	*out_length = out_idx;
