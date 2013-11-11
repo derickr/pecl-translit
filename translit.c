@@ -141,7 +141,7 @@ PHP_FUNCTION(transliterate)
 
 	str_len_i = str_len;
 	if (charset_in_name && charset_in_len) {
-		php_iconv_string(string, (size_t) str_len_i, (char **) &in, &str_len_o, "ucs-2", charset_in_name);
+		php_iconv_string(string, (size_t) str_len_i, (char **) &in, &str_len_o, "ucs-2le", charset_in_name);
 		efree_it = 1;
 	} else {
 		str_len_o = str_len_i;
@@ -175,7 +175,7 @@ PHP_FUNCTION(transliterate)
 		char *tmp_charset_name;
 		spprintf((char**) &tmp_charset_name, 128, "%s//IGNORE", charset_out_name);
 	
-		php_iconv_string((char *) out, (size_t) (outl * 2), (char **) &tmp, (size_t*) &tmp_len, tmp_charset_name, "ucs-2");
+		php_iconv_string((char *) out, (size_t) (outl * 2), (char **) &tmp, (size_t*) &tmp_len, tmp_charset_name, "ucs-2le");
 		RETVAL_STRINGL((unsigned char *)tmp, tmp_len, 1);
 		free(out);
 		efree(tmp);
