@@ -60,6 +60,7 @@ punctuation and spacing.
     <file name="uppercase_latin.c" role="src" />
    </dir> <!-- //data -->
    <file name="config.m4" role="src" />
+   <file name="config.w32" role="src" />
    <file name="php_translit.h" role="src" />
    <file name="translit.c" role="src" />
   </dir> <!-- / -->
