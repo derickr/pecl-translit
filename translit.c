@@ -32,7 +32,7 @@
 zend_function_entry translit_functions[] = {
 	PHP_FE(transliterate, NULL)
 	PHP_FE(transliterate_filters_get, NULL)
-	{NULL, NULL, NULL}
+	{NULL, NULL, NULL, 0, 0}
 };
 /* }}} */
 
@@ -102,7 +102,11 @@ PHP_FUNCTION(transliterate_filters_get)
 
 	array_init(return_value);
 	while (entry->name != NULL) {
+#if PHP_VERSION_ID >= 70000
+		add_next_index_string(return_value, entry->name);
+#else
 		add_next_index_string(return_value, entry->name, 1);
+#endif
 		entry++;
 	}
 }
@@ -112,36 +116,67 @@ PHP_FUNCTION(transliterate_filters_get)
    Executes the specified filters on the input string */
 PHP_FUNCTION(transliterate)
 {
-	zval *filter_list, **entry;
+	zval *filter_list;
 	HashTable *target_hash;
 	HashPosition pos;
 	translit_func_t filter;
-	int charset_in_len = 0, charset_out_len = 0;
 	size_t tmp_len = 0;
-	int str_len;
 	size_t str_len_o, str_len_i;
 	int free_it = 0, efree_it = 0;
 
-	char *string, *charset_in_name = NULL, *charset_out_name = NULL;
-	unsigned short *in = NULL, *out, *tmp;
+	char *charset_in_name = NULL, *charset_out_name = NULL;
+#if PHP_VERSION_ID >= 70000
+	size_t charset_in_len = 0, charset_out_len = 0;
+	zend_string *in, *out, *tmp;
+	ulong num_key;
+	zend_string *key;
+	zval *val;
+	zend_string *string;
+#else
+	int charset_in_len = 0, charset_out_len = 0;
+	zval **entry;
+	char *string;
+	int str_len;
+	unsigned short *in = NULL;
+	unsigned short *out, *tmp;
+#endif
 	size_t inl = 0;
 	unsigned int outl = 0;
 	
+#if PHP_VERSION_ID >= 70000
+	if (zend_parse_parameters(ZEND_NUM_ARGS() TSRMLS_CC, "Sa|ss", &string, &filter_list, &charset_in_name, &charset_in_len, &charset_out_name, &charset_out_len) == FAILURE) {
+#else
 	if (zend_parse_parameters(ZEND_NUM_ARGS() TSRMLS_CC, "sa|ss", &string, &str_len, &filter_list, &charset_in_name, &charset_in_len, &charset_out_name, &charset_out_len) == FAILURE) {
+#endif
 		return;
 	}
 
+#if PHP_VERSION_ID >= 70000
+	if (!string->len) {
+#else
 	if (!str_len) {
+#endif
 		RETURN_EMPTY_STRING();
 	}
 
 	target_hash = HASH_OF(filter_list);
 	zend_hash_internal_pointer_reset_ex(target_hash, &pos);
-	in = out = (unsigned short*) string;
 
+#if PHP_VERSION_ID >= 70000
+	in = out = string;
+	str_len_i = string->len;
+#else
+	in = out = (unsigned short*) string;
 	str_len_i = str_len;
+#endif
+
 	if (charset_in_name && charset_in_len) {
+#if PHP_VERSION_ID >= 70000
+		php_iconv_string(string->val, (size_t) str_len_i, (zend_string **) &in, "ucs-2le", charset_in_name);
+		str_len_o = in->len;
+#else
 		php_iconv_string(string, (size_t) str_len_i, (char **) &in, &str_len_o, "ucs-2le", charset_in_name);
+#endif
 		efree_it = 1;
 	} else {
 		str_len_o = str_len_i;
@@ -149,6 +184,15 @@ PHP_FUNCTION(transliterate)
 
 	inl = outl = str_len_o/2;
 
+#if PHP_VERSION_ID >= 70000
+	ZEND_HASH_FOREACH_KEY_VAL(target_hash, num_key, key, val) {
+		if (val) {
+			if ((filter = translit_find_filter(Z_STRVAL_P(val)))) {
+				short unsigned int *tmp_out;
+
+				filter((short unsigned int*) in->val, inl, &tmp_out, &outl);
+				out = zend_string_init((char*) tmp_out, outl, 0);
+#else
 	while (zend_hash_get_current_data_ex(target_hash, (void **)&entry, &pos) == SUCCESS) {
 		if (Z_TYPE_PP(entry) == IS_STRING) {
 			if ((filter = translit_find_filter(Z_STRVAL_PP(entry)))) {
@@ -162,27 +206,44 @@ PHP_FUNCTION(transliterate)
 				} else {
 					free_it = 1;
 				}
+#endif
 				in = out;
 				inl = outl;
 			} else {
+#if PHP_VERSION_ID >= 70000
+				php_error_docref(NULL TSRMLS_CC, E_NOTICE, "Filter '%s' does not exist.", key->val);
+			}
+		}
+	} ZEND_HASH_FOREACH_END();
+#else
 				php_error_docref(NULL TSRMLS_CC, E_NOTICE, "Filter '%s' does not exist.", Z_STRVAL_PP(entry));
 			}
 		}
 		zend_hash_move_forward_ex(target_hash, &pos);
 	}
+#endif
 
 	if (charset_out_name && charset_out_len) {
 		char *tmp_charset_name;
 		spprintf((char**) &tmp_charset_name, 128, "%s//IGNORE", charset_out_name);
 	
+#if PHP_VERSION_ID >= 70000
+		php_iconv_string(out->val, (size_t) (outl * 2), &tmp, tmp_charset_name, "ucs-2le");
+		RETVAL_STRINGL((char *)tmp->val, tmp->len);
+#else
 		php_iconv_string((char *) out, (size_t) (outl * 2), (char **) &tmp, (size_t*) &tmp_len, tmp_charset_name, "ucs-2le");
 		RETVAL_STRINGL((unsigned char *)tmp, tmp_len, 1);
 		free(out);
+#endif
 		efree(tmp);
 		efree(tmp_charset_name);
 	} else {
+#if PHP_VERSION_ID >= 70000
+		RETVAL_STRINGL((char *)out->val, outl * 2);
+#else
 		RETVAL_STRINGL((unsigned char *)out, outl * 2, 1);
 		free(out);
+#endif
 	}
 }
 /* }}} */
