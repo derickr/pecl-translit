@@ -197,7 +197,7 @@ PHP_FUNCTION(transliterate)
 					efree_it = 0;
 				}
 				if (free_it) {
-					free(in);
+					zend_string_release(in);
 				} else {
 					free_it = 1;
 				}
