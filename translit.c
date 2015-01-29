@@ -192,6 +192,15 @@ PHP_FUNCTION(transliterate)
 
 				filter((short unsigned int*) in->val, inl, &tmp_out, &outl);
 				out = zend_string_init((char*) tmp_out, outl * 2, 0);
+				if (efree_it) {
+					zend_string_release(in);
+					efree_it = 0;
+				}
+				if (free_it) {
+					free(in);
+				} else {
+					free_it = 1;
+				}
 #else
 	while (zend_hash_get_current_data_ex(target_hash, (void **)&entry, &pos) == SUCCESS) {
 		if (Z_TYPE_PP(entry) == IS_STRING) {
@@ -230,6 +239,7 @@ PHP_FUNCTION(transliterate)
 #if PHP_VERSION_ID >= 70000
 		php_iconv_string(out->val, (size_t) (outl * 2), &tmp, tmp_charset_name, "ucs-2le");
 		RETVAL_STRINGL((char *)tmp->val, tmp->len);
+		zend_string_release(out);
 #else
 		php_iconv_string((char *) out, (size_t) (outl * 2), (char **) &tmp, (size_t*) &tmp_len, tmp_charset_name, "ucs-2le");
 		RETVAL_STRINGL((unsigned char *)tmp, tmp_len, 1);
@@ -240,6 +250,7 @@ PHP_FUNCTION(transliterate)
 	} else {
 #if PHP_VERSION_ID >= 70000
 		RETVAL_STRINGL((char *)out->val, outl * 2);
+		zend_string_release(out);
 #else
 		RETVAL_STRINGL((unsigned char *)out, outl * 2, 1);
 		free(out);
