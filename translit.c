@@ -191,7 +191,7 @@ PHP_FUNCTION(transliterate)
 				short unsigned int *tmp_out;
 
 				filter((short unsigned int*) in->val, inl, &tmp_out, &outl);
-				out = zend_string_init((char*) tmp_out, outl, 0);
+				out = zend_string_init((char*) tmp_out, outl * 2, 0);
 #else
 	while (zend_hash_get_current_data_ex(target_hash, (void **)&entry, &pos) == SUCCESS) {
 		if (Z_TYPE_PP(entry) == IS_STRING) {
