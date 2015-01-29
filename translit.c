@@ -120,7 +120,6 @@ PHP_FUNCTION(transliterate)
 	HashTable *target_hash;
 	HashPosition pos;
 	translit_func_t filter;
-	size_t tmp_len = 0;
 	size_t str_len_o, str_len_i;
 	int free_it = 0, efree_it = 0;
 
@@ -133,6 +132,7 @@ PHP_FUNCTION(transliterate)
 	zval *val;
 	zend_string *string;
 #else
+	size_t tmp_len = 0;
 	int charset_in_len = 0, charset_out_len = 0;
 	zval **entry;
 	char *string;
