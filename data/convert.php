@@ -131,7 +131,6 @@
 	function generate_md_map($name, $table, $max_length)
 	{
 		$txt = '';
-		$width = ceil(log(max($table), 10));
 		$type = "static us{$max_length}";
 		$txt .= "$type {$name}[256] = {\n";
 		for ($i = 0; $i < 256; $i++) {
