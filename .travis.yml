@@ -1,0 +1,28 @@
+language: php
+
+php:
+  - 5.6
+  - 5.5
+  - 5.4
+  - 5.3
+
+services:
+  - mongodb
+
+env:
+  - REPORT_EXIT_STATUS=1
+
+before_script:
+  - ./.travis.scripts/compile.sh
+
+notifications:
+  email:
+    - derick@php.net
+
+#  - cat ./.travis.scripts/script.gdb | gdb --args $MYPHP `find ...core`
+# Run PHPs run-tests.php 
+script:
+  - MYPHP=`make findphp`
+  - MODULES=`pwd`/modules/
+  - SHOW_ONLY_GROUPS="FAIL,XFAIL,BORK,WARN,LEAK,SKIP" REPORT_EXIT_STATUS=1 TEST_PHP_EXECUTABLE=$MYPHP $MYPHP run-tests.php -n -d extension_dir=$MODULES -d extension=translit.so -q -x --show-diff
+
