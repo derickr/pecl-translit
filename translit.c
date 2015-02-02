@@ -220,7 +220,7 @@ PHP_FUNCTION(transliterate)
 				inl = outl;
 			} else {
 #if PHP_VERSION_ID >= 70000
-				php_error_docref(NULL TSRMLS_CC, E_NOTICE, "Filter '%s' does not exist.", key->val);
+				php_error_docref(NULL TSRMLS_CC, E_NOTICE, "Filter '%s' does not exist.", Z_STRVAL_P(val));
 			}
 		}
 	} ZEND_HASH_FOREACH_END();
