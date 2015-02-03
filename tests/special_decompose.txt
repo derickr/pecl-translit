@@ -8,5 +8,3 @@ decompose currency signs:
 decompose:
 § © « ® ± »
 ¢ £
-
-# vim: encoding=utf8
