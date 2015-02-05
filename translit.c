@@ -112,6 +112,12 @@ PHP_FUNCTION(transliterate_filters_get)
 }
 /* }}} */
 
+#if PHP_VERSION_ID >= 70000
+# define ZPP_STRLEN_TYPE size_t
+#else
+# define ZPP_STRLEN_TYPE int
+#endif
+
 /* {{{ proto string transliterate(string string, array filter_list [, string charset_in [, string charset_out]])
    Executes the specified filters on the input string */
 PHP_FUNCTION(transliterate)
@@ -122,10 +128,10 @@ PHP_FUNCTION(transliterate)
 	translit_func_t filter;
 	size_t str_len_o, str_len_i;
 	int free_it = 0, efree_it = 0;
+	ZPP_STRLEN_TYPE charset_in_len = 0, charset_out_len = 0;
 
 	char *charset_in_name = NULL, *charset_out_name = NULL;
 #if PHP_VERSION_ID >= 70000
-	size_t charset_in_len = 0, charset_out_len = 0;
 	zend_string *in, *out, *tmp;
 	ulong num_key;
 	zend_string *key;
@@ -133,7 +139,6 @@ PHP_FUNCTION(transliterate)
 	zend_string *string;
 #else
 	size_t tmp_len = 0;
-	int charset_in_len = 0, charset_out_len = 0;
 	zval **entry;
 	char *string;
 	int str_len;
