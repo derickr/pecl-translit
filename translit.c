@@ -126,7 +126,7 @@ PHP_FUNCTION(transliterate)
 	HashTable *target_hash;
 	HashPosition pos;
 	translit_func_t filter;
-	size_t str_len_o, str_len_i;
+	size_t string_len_o, string_len_i;
 	int free_it = 0, efree_it = 0;
 	ZPP_STRLEN_TYPE charset_in_len = 0, charset_out_len = 0;
 
@@ -141,7 +141,7 @@ PHP_FUNCTION(transliterate)
 	size_t tmp_len = 0;
 	zval **entry;
 	char *string;
-	int str_len;
+	int string_len;
 	unsigned short *in = NULL;
 	unsigned short *out, *tmp;
 #endif
@@ -151,7 +151,7 @@ PHP_FUNCTION(transliterate)
 #if PHP_VERSION_ID >= 70000
 	if (zend_parse_parameters(ZEND_NUM_ARGS() TSRMLS_CC, "Sa|ss", &string, &filter_list, &charset_in_name, &charset_in_len, &charset_out_name, &charset_out_len) == FAILURE) {
 #else
-	if (zend_parse_parameters(ZEND_NUM_ARGS() TSRMLS_CC, "sa|ss", &string, &str_len, &filter_list, &charset_in_name, &charset_in_len, &charset_out_name, &charset_out_len) == FAILURE) {
+	if (zend_parse_parameters(ZEND_NUM_ARGS() TSRMLS_CC, "sa|ss", &string, &string_len, &filter_list, &charset_in_name, &charset_in_len, &charset_out_name, &charset_out_len) == FAILURE) {
 #endif
 		return;
 	}
@@ -159,7 +159,7 @@ PHP_FUNCTION(transliterate)
 #if PHP_VERSION_ID >= 70000
 	if (!string->len) {
 #else
-	if (!str_len) {
+	if (!string_len) {
 #endif
 		RETURN_EMPTY_STRING();
 	}
@@ -169,25 +169,25 @@ PHP_FUNCTION(transliterate)
 
 #if PHP_VERSION_ID >= 70000
 	in = out = string;
-	str_len_i = string->len;
+	string_len_i = string->len;
 #else
 	in = out = (unsigned short*) string;
-	str_len_i = str_len;
+	string_len_i = string_len;
 #endif
 
 	if (charset_in_name && charset_in_len) {
 #if PHP_VERSION_ID >= 70000
-		php_iconv_string(string->val, (size_t) str_len_i, (zend_string **) &in, "ucs-2le", charset_in_name);
-		str_len_o = in->len;
+		php_iconv_string(string->val, (size_t) string_len_i, (zend_string **) &in, "ucs-2le", charset_in_name);
+		string_len_o = in->len;
 #else
-		php_iconv_string(string, (size_t) str_len_i, (char **) &in, &str_len_o, "ucs-2le", charset_in_name);
+		php_iconv_string(string, (size_t) string_len_i, (char **) &in, &string_len_o, "ucs-2le", charset_in_name);
 #endif
 		efree_it = 1;
 	} else {
-		str_len_o = str_len_i;
+		string_len_o = string_len_i;
 	}
 
-	inl = outl = str_len_o/2;
+	inl = outl = string_len_o/2;
 
 #if PHP_VERSION_ID >= 70000
 	ZEND_HASH_FOREACH_KEY_VAL(target_hash, num_key, key, val) {
