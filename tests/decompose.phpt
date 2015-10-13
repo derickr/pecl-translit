@@ -5,7 +5,7 @@ Test for decomposition filters
 $filters = array(
 	'decompose_special', 'decompose_currency_signs', 'decompose', 'normalize_numbers', 'normalize_superscript', 'normalize_subscript'
 );
-$string = iconv("utf-8", "ucs-2", file_get_contents('tests/decompose.txt'));
+$string = iconv("utf-8", "ucs-2", file_get_contents(__DIR__.'/decompose.txt'));
 
 $res = transliterate($string, $filters);
 echo iconv('ucs-2', 'utf-8', $res);

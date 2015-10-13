@@ -6,7 +6,7 @@ $filters = array(
 	'normalize_superscript_numbers', 'normalize_subscript_numbers',
 	'normalize_superscript', 'normalize_subscript', 'normalize_numbers',
 );
-$string = file_get_contents('tests/numbers.txt');
+$string = file_get_contents(__DIR__.'/numbers.txt');
 foreach ($filters as $filter) {
 	echo "\n===================================================\n";
 	echo "Running filter '$filter':\n";

@@ -5,7 +5,7 @@ Test for greek transliterate filter
 $filters = array(
 	'greek_transliterate', 'greek_lowercase'
 );
-$string = iconv("utf-8", "ucs-2", file_get_contents('tests/greek-transliterate.txt'));
+$string = iconv("utf-8", "ucs-2", file_get_contents(__DIR__.'/greek-transliterate.txt'));
 foreach ($filters as $filter) {
 	echo "============================\n";
 	echo "Running filter '$filter':\n\n";

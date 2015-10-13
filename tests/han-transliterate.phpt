@@ -5,7 +5,7 @@ Test for han transliterate filter
 $filters = array(
 	'han_transliterate',
 );
-$string = iconv("utf-8", "ucs-2", file_get_contents('tests/han-transliterate.txt'));
+$string = iconv("utf-8", "ucs-2", file_get_contents(__DIR__.'/han-transliterate.txt'));
 foreach ($filters as $filter) {
 	echo "Running filter '$filter':\n\n";
 	$res = transliterate($string, array($filter));

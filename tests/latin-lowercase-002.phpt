@@ -5,7 +5,7 @@ Test for lowercasing latin filter
 $filters = array(
 	'latin_lowercase'
 );
-$string = file_get_contents('tests/latin-lowercase.txt');
+$string = file_get_contents(__DIR__.'/latin-lowercase.txt');
 echo transliterate($string, $filters, 'utf-8', 'utf-8');
 ?>
 --EXPECT--

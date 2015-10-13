@@ -5,7 +5,7 @@ Test for special decomposition filters
 	$filters = array(
 		'decompose_special', 'decompose_currency_signs', 'decompose',
 	);
-	$string = iconv("utf-8", "ucs-2", file_get_contents('tests/special_decompose.txt'));
+	$string = iconv("utf-8", "ucs-2", file_get_contents(__DIR__.'/special_decompose.txt'));
 	foreach ($filters as $filter) {
 		echo "\n===================================================\n";
 		echo "Running filter '$filter':\n";
