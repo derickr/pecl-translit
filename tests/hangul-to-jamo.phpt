@@ -5,7 +5,7 @@ Test for hangul to jamo conversion filter
 $filters = array(
 	'hangul_to_jamo', 'jamo_transliterate'
 );
-$string = iconv("utf-8", "ucs-2", file_get_contents('tests/hangul-to-jamo.txt'));
+$string = iconv("utf-8", "ucs-2", file_get_contents(__DIR__.'/hangul-to-jamo.txt'));
 $res = transliterate($string, $filters);
 echo iconv('ucs-2', 'utf-8', $res);
 ?>

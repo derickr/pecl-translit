@@ -5,7 +5,7 @@ Test for cyrillic transliterate filter
 $filters = array(
 	'cyrillic_transliterate', 'cyrillic_transliterate_bulgarian', 'cyrillic_lowercase'
 );
-$string = iconv("utf-8", "ucs-2", file_get_contents('tests/cyrillic-transliterate.txt'));
+$string = iconv("utf-8", "ucs-2", file_get_contents(__DIR__.'/cyrillic-transliterate.txt'));
 foreach ($filters as $filter) {
 	echo "============================\n";
 	echo "Running filter '$filter':\n\n";

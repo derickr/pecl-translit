@@ -5,7 +5,7 @@ Test for hebrew transliterate filter
 $filters = array(
 	'hebrew_transliterate',
 );
-$string = iconv("utf-8", "ucs-2", file_get_contents('tests/hebrew-transliterate.txt'));
+$string = iconv("utf-8", "ucs-2", file_get_contents(__DIR__.'/hebrew-transliterate.txt'));
 foreach ($filters as $filter) {
 	echo "Running filter '$filter':\n\n";
 	$res = transliterate($string, array($filter));

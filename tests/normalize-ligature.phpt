@@ -5,7 +5,7 @@ Test for normalizing ligature filter
 $filters = array(
 	'normalize_ligature',
 );
-$string = iconv("utf-8", "ucs-2", file_get_contents('tests/normalize-ligature.txt'));
+$string = iconv("utf-8", "ucs-2", file_get_contents(__DIR__.'/normalize-ligature.txt'));
 foreach ($filters as $filter) {
 	echo "Running filter '$filter':\n\n";
 	$res = transliterate($string, array($filter));
