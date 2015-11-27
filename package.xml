@@ -20,19 +20,19 @@ punctuation and spacing.
   <email>derick@php.net</email>
   <active>yes</active>
  </lead>
- <date>2011-06-15</date>
- <time>12:12:58</time>
+ <date>2015-11-27</date>
+ <time>11:11:11</time>
  <version>
-  <release>0.6.1</release>
-  <api>0.6.1</api>
+  <release>0.6.2</release>
+  <api>0.6.2</api>
  </version>
  <stability>
   <release>beta</release>
   <api>beta</api>
  </stability>
  <license uri="http://www.php.net/license">PHP</license>
- <notes>- Release to make it compile against PHP 5.4 and trunk (due to the function_entry->zend_function_entry change).
-  
+ <notes>
+PHP 7 support
  </notes>
  <contents>
   <dir name="/">
@@ -78,6 +78,24 @@ punctuation and spacing.
  <providesextension>translit</providesextension>
  <extsrcrelease />
  <changelog>
+
+  <release>
+   <date>2011-06-15</date>
+   <time>12:12:58</time>
+   <version>
+    <release>0.6.1</release>
+    <api>0.6.1</api>
+   </version>
+   <stability>
+    <release>beta</release>
+    <api>beta</api>
+   </stability>
+   <license uri="http://www.php.net/license">PHP</license>
+   <notes>- Release to make it compile against PHP 5.4 and trunk (due to the function_entry->zend_function_entry change).
+    
+   </notes>
+  </release>
+
   <release>
    <date>2008-04-01</date>
    <time>20:35:48</time>
@@ -186,3 +204,6 @@ and normalizing punctuation.
   </release>
  </changelog>
 </package>
+<!--
+vim:et:ts=1:sw=1
+-->
