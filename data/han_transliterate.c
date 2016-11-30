@@ -6195,7 +6195,7 @@ int han_transliterate_convert(unsigned short *in, unsigned int in_length, unsign
 
 	/* Loop over input array */
 	for (i = 0; i < in_length; i++) {
-		if (out_idx > str_length) {
+		if (out_idx >= str_length) {
 			str_length += 128;
 			tmp_out = (unsigned short *) realloc(tmp_out, str_length * sizeof(unsigned short));
 		}
