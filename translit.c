@@ -200,6 +200,7 @@ PHP_FUNCTION(transliterate)
 				} else {
 					free_it = 1;
 				}
+				free(tmp_out);
 #else
 	while (zend_hash_get_current_data_ex(target_hash, (void **)&entry, &pos) == SUCCESS) {
 		if (Z_TYPE_PP(entry) == IS_STRING) {

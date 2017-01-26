@@ -293,6 +293,11 @@ int cyrillic_transliterate_bulgarian_convert(unsigned short *in, unsigned int in
 				for (j = 1; j <= expand_map[cp][0]; j++) {
 					tmp_out[out_idx] = expand_map[cp][j];
 					out_idx++;
+
+					if (out_idx >= str_length) {
+						str_length += 128;
+						tmp_out = (unsigned short *) realloc(tmp_out, str_length * sizeof(unsigned short));
+					}
 				}
 				break;
 		}
