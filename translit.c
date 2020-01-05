@@ -163,6 +163,8 @@ PHP_FUNCTION(transliterate)
 				} else {
 					free_it = 1;
 				}
+				free(tmp_out);
+
 				in = out;
 				inl = outl;
 			} else {
