@@ -271,7 +271,7 @@ int {$function_name}_convert(unsigned short *in, unsigned int in_length, unsigne
 
 	/* Loop over input array */
 	for (i = 0; i < in_length; i++) {
-		if (out_idx > str_length) {
+		if (out_idx >= str_length) {
 			str_length += 128;
 			tmp_out = (unsigned short *) realloc(tmp_out, str_length * sizeof(unsigned short));
 		}
@@ -331,6 +331,11 @@ ENDCODE;
 				for (j = 1; j <= expand_map[cp][0]; j++) {
 					tmp_out[out_idx] = expand_map[cp][j];
 					out_idx++;
+
+					if (out_idx >= str_length) {
+						str_length += 128;
+						tmp_out = (unsigned short *) realloc(tmp_out, str_length * sizeof(unsigned short));
+					}
 				}
 				break;
 
@@ -463,7 +468,7 @@ ENDCODE;
 
 			if (preg_match("/^(U\+[0-9A-F]{4})(,U\+[0-9A-F]{4})*$/", $res, $match)) {
 				$res_nrs   = array();
-				foreach (split(',', preg_replace('/U\+/', '', $match[0])) as $cp) {
+				foreach (explode(',', preg_replace('/U\+/', '', $match[0])) as $cp) {
 					$res_nrs[] = hexdec($cp);
 				}
 			} else
@@ -505,7 +510,7 @@ ENDCODE;
 					$func($i, $res_nrs);
 				}
 			} else if (preg_match("/^(U\+[0-9A-F]{4})(,U\+[0-9A-F]{4})*$/", $def, $m)) {
-				foreach (split(',', preg_replace('/U\+/', '', $m[0])) as $cp) {
+				foreach (explode(',', preg_replace('/U\+/', '', $m[0])) as $cp) {
 					$func(hexdec($cp), $res_nrs);
 				}
 			}
