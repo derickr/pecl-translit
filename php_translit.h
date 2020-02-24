@@ -1,6 +1,6 @@
 /*
    +----------------------------------------------------------------------+
-   | Copyright (c) 1997-2015 Derick Rethans                               |
+   | Copyright (c) 1997-2020 Derick Rethans                               |
    +----------------------------------------------------------------------+
    | This source file is subject to the 2-Clause BSD license which is     |
    | available through the LICENSE file, or online at                     |
@@ -26,7 +26,7 @@ typedef struct translit_filter_entry {
 extern zend_module_entry translit_module_entry;
 #define phpext_translit_ptr &translit_module_entry
 
-#define PHP_TRANSLIT_VERSION "0.7.0-dev"
+#define PHP_TRANSLIT_VERSION "0.7.0"
 
 #ifdef PHP_WIN32
 #define PHP_TRANSLIT_API __declspec(dllexport)

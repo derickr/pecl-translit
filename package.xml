@@ -21,11 +21,11 @@ punctuation and spacing.
   <active>yes</active>
  </lead>
 
- <date>2019-05-29</date>
- <time>11:02:12</time>
+ <date>2020-02-24</date>
+ <time>11:37:57</time>
  <version>
-  <release>0.6.3</release>
-  <api>0.6.3</api>
+  <release>0.7.0</release>
+  <api>0.7.0</api>
  </version>
  <stability>
   <release>beta</release>
@@ -33,7 +33,8 @@ punctuation and spacing.
  </stability>
  <license uri="http://www.opensource.org/licenses/bsd-license.php">BSD style</license>
  <notes>
-Repackage, and drop PHP &lt; 5.6 support.
+- Fixed compilation on some PHP 7.4 builds (Elan Ruusamäe)
+- Fixed buffer overflows (Antony Dovgal)
  </notes>
 
  <contents>
@@ -111,149 +112,6 @@ Repackage, and drop PHP &lt; 5.6 support.
  </dependencies>
  <providesextension>translit</providesextension>
  <extsrcrelease />
- <changelog>
-
-  <release>
-   <date>2015-11-27</date>
-   <time>11:11:11</time>
-   <version>
-    <release>0.6.2</release>
-    <api>0.6.2</api>
-   </version>
-   <stability>
-    <release>beta</release>
-    <api>beta</api>
-   </stability>
-   <license uri="http://www.opensource.org/licenses/bsd-license.php">BSD style</license>
-   <notes>
-  PHP 7 support
-   </notes>
-  </release>
-
-  <release>
-   <date>2011-06-15</date>
-   <time>12:12:58</time>
-   <version>
-    <release>0.6.1</release>
-    <api>0.6.1</api>
-   </version>
-   <stability>
-    <release>beta</release>
-    <api>beta</api>
-   </stability>
-   <license uri="http://www.php.net/license">PHP</license>
-   <notes>- Release to make it compile against PHP 5.4 and trunk (due to the function_entry->zend_function_entry change).
-    
-   </notes>
-  </release>
-
-  <release>
-   <date>2008-04-01</date>
-   <time>20:35:48</time>
-   <version>
-    <release>0.6.0</release>
-    <api>0.6.0</api>
-   </version>
-   <stability>
-    <release>beta</release>
-    <api>beta</api>
-   </stability>
-   <license uri="http://www.php.net/license">PHP</license>
-   <notes>- Fixed typing issues, fixes segfaults and strange behavior.
-  
-   </notes>
-  </release>
-  <release>
-   <version>
-    <release>0.5</release>
-    <api>0.5</api>
-   </version>
-   <stability>
-    <release>beta</release>
-    <api>beta</api>
-   </stability>
-   <date>2005-01-17</date>
-   <license uri="http://www.php.net/license">PHP</license>
-   <notes>Added new filters: compact_underscores, remove_punctuation and
-spaces_to_underscore.  Added missing Latin Extended-B conversions for the
-latin_uppercase and latin_lowercase filters, missing punctuation for the
-normalize_punctuation filter and a missing conversion for uppercase_greek.
-Change the han_transliterate filter to add spaces after ideograms.
-Fixed memory leak.
-   
-   </notes>
-  </release>
-  <release>
-   <version>
-    <release>0.4</release>
-    <api>0.4</api>
-   </version>
-   <stability>
-    <release>beta</release>
-    <api>beta</api>
-   </stability>
-   <date>2004-11-23</date>
-   <license uri="http://www.php.net/license">PHP</license>
-   <notes>Added support for diffent incoming and outgoing encodings to the
-transliterator. This makes the extension depend on the iconv extension.  Added
-a new function &quot;transliterate_filters_get()&quot; to return a list of all available
-filters and added support for aliases of filters with the ALIAS pragma in the
-.tr files. Also removed the special decomposition of the paragraph sign.
-   
-   </notes>
-  </release>
-  <release>
-   <version>
-    <release>0.3</release>
-    <api>0.3</api>
-   </version>
-   <stability>
-    <release>beta</release>
-    <api>beta</api>
-   </stability>
-   <date>2004-11-14</date>
-   <license uri="http://www.php.net/license">PHP</license>
-   <notes>Generate better (and less) code, make Windows compiles happy too.
-   
-   </notes>
-  </release>
-  <release>
-   <version>
-    <release>0.2</release>
-    <api>0.2</api>
-   </version>
-   <stability>
-    <release>beta</release>
-    <api>beta</api>
-   </stability>
-   <date>2004-11-10</date>
-   <license uri="http://www.php.net/license">PHP</license>
-   <notes>Added more filters: hangul to jamo, jamo to latin, normalize numbers and
-digits, special decompositions (© -&gt; (c)). And fixed some small bugs in filters
-and the extension.
-   
-   </notes>
-  </release>
-  <release>
-   <version>
-    <release>0.1</release>
-    <api>0.1</api>
-   </version>
-   <stability>
-    <release>beta</release>
-    <api>beta</api>
-   </stability>
-   <date>2004-10-24</date>
-   <license uri="http://www.php.net/license">PHP</license>
-   <notes>Initial release, supported transliteration filters include: Cyrillic-to-Latin
-transliteration, Greek-to-Latin transliteration, Han-to-Latin transliteration,
-Hebrew-to-Latin transliteration; case converting filters for Greek, Latin and
-Cyrillic and filters to remove diacriticals from text, normalizing ligatures
-and normalizing punctuation.
-   
-   </notes>
-  </release>
- </changelog>
 </package>
 <!--
 vim:et:ts=1:sw=1
