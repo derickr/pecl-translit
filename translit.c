@@ -116,7 +116,7 @@ PHP_FUNCTION(transliterate)
 
 	char *charset_in_name = NULL, *charset_out_name = NULL;
 	zend_string *in, *out, *tmp;
-	ulong num_key;
+	zend_ulong num_key;
 	zend_string *key;
 	zval *val;
 	zend_string *string;
