@@ -61,6 +61,37 @@ Repackage, and drop PHP &lt; 5.6 support.
     <file name="uppercase_greek.c" role="src" />
     <file name="uppercase_latin.c" role="src" />
    </dir> <!-- //data -->
+   <dir name="tests">
+    <file name="cyrillic-transliterate.phpt" role="test" />
+    <file name="cyrillic-transliterate.txt" role="test" />
+    <file name="decompose.phpt" role="test" />
+    <file name="decompose.txt" role="test" />
+    <file name="diacritical-remove.phpt" role="test" />
+    <file name="diacritical-remove.txt" role="test" />
+    <file name="greek-transliterate.phpt" role="test" />
+    <file name="greek-transliterate.txt" role="test" />
+    <file name="han-transliterate.phpt" role="test" />
+    <file name="han-transliterate.txt" role="test" />
+    <file name="han-transliterate1.phpt" role="test" />
+    <file name="han-transliterate1.txt" role="test" />
+    <file name="hangul-to-jamo.phpt" role="test" />
+    <file name="hangul-to-jamo.txt" role="test" />
+    <file name="hebrew-transliterate.phpt" role="test" />
+    <file name="hebrew-transliterate.txt" role="test" />
+    <file name="latin-lowercase-001.phpt" role="test" />
+    <file name="latin-lowercase-002.phpt" role="test" />
+    <file name="latin-lowercase.txt" role="test" />
+    <file name="normalize-ligature.phpt" role="test" />
+    <file name="normalize-ligature.txt" role="test" />
+    <file name="numbers.phpt" role="test" />
+    <file name="numbers.txt" role="test" />
+    <file name="punctuation.phpt" role="test" />
+    <file name="punctuation.txt" role="test" />
+    <file name="simple-filter.phpt" role="test" />
+    <file name="special-decompose.phpt" role="test" />
+    <file name="special_decompose.txt" role="test" />
+    <file name="test.utf8" role="test" />
+   </dir> <!-- //tests -->
    <file name="LICENSE" role="doc" />
    <file name="config.m4" role="src" />
    <file name="config.w32" role="src" />
