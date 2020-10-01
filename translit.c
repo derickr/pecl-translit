@@ -22,29 +22,42 @@
 #include "ext/iconv/php_iconv.h"
 #include "php_translit.h"
 
-/* {{{ translit_functions[] */
-zend_function_entry translit_functions[] = {
-	PHP_FE(transliterate, NULL)
-	PHP_FE(transliterate_filters_get, NULL)
-	{NULL, NULL, NULL, 0, 0}
+/* PHP < 8 */
+#ifndef RETURN_THROWS
+#define RETURN_THROWS() return
+#endif
+
+#if PHP_VERSION_ID < 70200
+#undef  ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX
+#define ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(name, return_reference, required_num_args, type, allow_null) \
+		ZEND_BEGIN_ARG_INFO_EX(name, 0, return_reference, required_num_args)
+#endif
+
+#ifndef ZEND_ARG_TYPE_INFO_WITH_DEFAULT_VALUE
+#define ZEND_ARG_TYPE_INFO_WITH_DEFAULT_VALUE(pass_by_ref, name, type_hint, allow_null, default_value) \
+		ZEND_ARG_TYPE_INFO(pass_by_ref, name, type_hint, allow_null)
+#endif
+
+#include "translit_arginfo.h"
+
+static const zend_module_dep translit_deps[] = {
+     ZEND_MOD_REQUIRED("iconv")
+     ZEND_MOD_END
 };
-/* }}} */
 
 /* {{{ translit_module_entry */
 zend_module_entry translit_module_entry = {
-#if ZEND_MODULE_API_NO >= 20010901
-	STANDARD_MODULE_HEADER,
-#endif
+	STANDARD_MODULE_HEADER_EX,
+	NULL,
+	translit_deps,
 	"translit",
-	translit_functions,
+	ext_functions,
 	PHP_MINIT(translit),
 	NULL,
 	NULL,
 	NULL,
 	PHP_MINFO(translit),
-#if ZEND_MODULE_API_NO >= 20010901
 	PHP_TRANSLIT_VERSION,
-#endif
 	STANDARD_MODULE_PROPERTIES
 };
 /* }}} */
@@ -94,6 +107,10 @@ PHP_FUNCTION(transliterate_filters_get)
 {
 	translit_filter_entry *entry = translit_filters;
 
+	if (zend_parse_parameters_none() == FAILURE) {
+		RETURN_THROWS();
+	}
+
 	array_init(return_value);
 	while (entry->name != NULL) {
 		add_next_index_string(return_value, entry->name);
@@ -124,7 +141,7 @@ PHP_FUNCTION(transliterate)
 	unsigned int outl = 0;
 	
 	if (zend_parse_parameters(ZEND_NUM_ARGS(), "Sa|ss", &string, &filter_list, &charset_in_name, &charset_in_len, &charset_out_name, &charset_out_len) == FAILURE) {
-		return;
+		RETURN_THROWS();
 	}
 
 	if (!string->len) {
@@ -148,6 +165,9 @@ PHP_FUNCTION(transliterate)
 	inl = outl = string_len_o/2;
 
 	ZEND_HASH_FOREACH_KEY_VAL(target_hash, num_key, key, val) {
+		(void)key;
+		(void)num_key;
+
 		if (val) {
 			if ((filter = translit_find_filter(Z_STRVAL_P(val)))) {
 				short unsigned int *tmp_out;

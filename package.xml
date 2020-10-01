@@ -98,6 +98,8 @@ punctuation and spacing.
    <file name="config.w32" role="src" />
    <file name="php_translit.h" role="src" />
    <file name="translit.c" role="src" />
+   <file name="translit.stub.php" role="src" />
+   <file name="translit_arginfo.h" role="src" />
   </dir> <!-- / -->
  </contents>
  <dependencies>
