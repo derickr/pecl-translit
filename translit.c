@@ -38,23 +38,7 @@
 		ZEND_ARG_TYPE_INFO(pass_by_ref, name, type_hint, allow_null)
 #endif
 
-ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_transliterate_filters_get, 0, 0, IS_ARRAY, 0)
-ZEND_END_ARG_INFO()
-
-ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_transliterate, 0, 2, IS_STRING, 0)
-	ZEND_ARG_TYPE_INFO(0, string, IS_STRING, 0)
-	ZEND_ARG_TYPE_INFO(0, filter_list, IS_ARRAY, 0)
-	ZEND_ARG_TYPE_INFO_WITH_DEFAULT_VALUE(0, charset_in, IS_STRING, 0, "\"\"")
-	ZEND_ARG_TYPE_INFO_WITH_DEFAULT_VALUE(0, charset_out, IS_STRING, 0, "\"\"")
-ZEND_END_ARG_INFO()
-
-/* {{{ translit_functions[] */
-zend_function_entry translit_functions[] = {
-	PHP_FE(transliterate, arginfo_transliterate)
-	PHP_FE(transliterate_filters_get, arginfo_transliterate_filters_get)
-	PHP_FE_END
-};
-/* }}} */
+#include "translit_arginfo.h"
 
 /* {{{ translit_module_entry */
 zend_module_entry translit_module_entry = {
@@ -62,7 +46,7 @@ zend_module_entry translit_module_entry = {
 	STANDARD_MODULE_HEADER,
 #endif
 	"translit",
-	translit_functions,
+	ext_functions,
 	PHP_MINIT(translit),
 	NULL,
 	NULL,
