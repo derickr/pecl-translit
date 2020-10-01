@@ -40,11 +40,16 @@
 
 #include "translit_arginfo.h"
 
+static const zend_module_dep translit_deps[] = {
+     ZEND_MOD_REQUIRED("iconv")
+     ZEND_MOD_END
+};
+
 /* {{{ translit_module_entry */
 zend_module_entry translit_module_entry = {
-#if ZEND_MODULE_API_NO >= 20010901
-	STANDARD_MODULE_HEADER,
-#endif
+	STANDARD_MODULE_HEADER_EX,
+	NULL,
+	translit_deps,
 	"translit",
 	ext_functions,
 	PHP_MINIT(translit),
@@ -52,9 +57,7 @@ zend_module_entry translit_module_entry = {
 	NULL,
 	NULL,
 	PHP_MINFO(translit),
-#if ZEND_MODULE_API_NO >= 20010901
 	PHP_TRANSLIT_VERSION,
-#endif
 	STANDARD_MODULE_PROPERTIES
 };
 /* }}} */
