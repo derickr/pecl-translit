@@ -5,9 +5,9 @@ Test for lowercasing latin filter
 $filters = array(
 	'latin_lowercase'
 );
-$string = iconv("utf-8", "ucs-2", file_get_contents(__DIR__.'/latin-lowercase.txt'));
+$string = iconv("utf-8", "ucs-2le", file_get_contents(__DIR__.'/latin-lowercase.txt'));
 $res = transliterate($string, $filters);
-echo iconv('ucs-2', 'utf-8', $res);
+echo iconv('ucs-2le', 'utf-8', $res);
 ?>
 --EXPECT--
 diacritical remove:
