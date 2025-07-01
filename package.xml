@@ -21,11 +21,11 @@ punctuation and spacing.
   <active>yes</active>
  </lead>
 
- <date>2020-10-01</date>
- <time>11:39:31</time>
+ <date>2025-07-01</date>
+ <time>16:20:45</time>
  <version>
-  <release>0.7.1</release>
-  <api>0.7.1</api>
+  <release>0.7.2</release>
+  <api>0.7.2</api>
  </version>
  <stability>
   <release>beta</release>
@@ -33,7 +33,7 @@ punctuation and spacing.
  </stability>
  <license uri="http://www.opensource.org/licenses/bsd-license.php">BSD style</license>
  <notes>
-- Added support for PHP 8.0 (Remi Collet)
+- PIE support
  </notes>
 
  <contents>
